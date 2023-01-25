@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObjectDrag : MonoBehaviour
 {
 
+    //Estos métodos habrá que investigar como usarlos con el touch del móvil
     private Vector3 offset;
 
     private void Update()

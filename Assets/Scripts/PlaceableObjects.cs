@@ -32,6 +32,7 @@ public class PlaceableObjects : MonoBehaviour
     }
     
 
+    //Obtenemos las esquinas del box colider para generar su posicion
     private void GetColliderVertexPositionLocal()
     {
         BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
@@ -46,6 +47,7 @@ public class PlaceableObjects : MonoBehaviour
                       new Vector3(-boxCollider.size.x, -boxCollider.size.y, boxCollider.size.z) * 0.25f;
     }
 
+    //Calculamos el tamaño necesario por celda
     private void CalculateSizeInCells()
     {
         Vector3Int[] verticesTemp = new Vector3Int[vertices.Length];
@@ -71,7 +73,7 @@ public class PlaceableObjects : MonoBehaviour
 
         Placed = true;
         
-        
+        //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
     
 }

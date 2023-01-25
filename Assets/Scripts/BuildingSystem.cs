@@ -30,6 +30,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void Update()
     {
+        //Creamos un objeto que seguirá al ratón
         if (Input.GetKeyDown(KeyCode.A) && !isPlacingAObj)
         {
             InitializeWithObj(prefab1);
@@ -46,6 +47,7 @@ public class BuildingSystem : MonoBehaviour
             return;
         }
 
+        //Si hay un objeto creado rotamos
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (!objToPlace.Placed)
@@ -53,7 +55,7 @@ public class BuildingSystem : MonoBehaviour
                 objToPlace.Rotate();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Space))//Con el espacio colocamos
         {
             if (CanBePlaced(objToPlace))
             {
@@ -67,12 +69,14 @@ public class BuildingSystem : MonoBehaviour
                 Destroy(objToPlace.gameObject);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Escape))//Con escape cancelamos la accion y destruimos el objeto
         {
             if (objToPlace.Placed)
             {
                 return;
             }
+
+            isPlacingAObj = false;
             Destroy(objToPlace.gameObject);
         }
     }
