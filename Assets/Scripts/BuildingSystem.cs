@@ -32,54 +32,60 @@ public class BuildingSystem : MonoBehaviour
     private void Update()
     {
         //Creamos un objeto que seguirá al ratón
-        if (Input.GetKeyDown(KeyCode.A) && !isPlacingAObj)
-        {
-            InitializeWithObj(prefab1);
-            isPlacingAObj = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.S) && !isPlacingAObj)
-        {
-            InitializeWithObj(prefab2);
-            isPlacingAObj = true;
-        }
-
         if (!objToPlace)
         {
             return;
         }
-
-        //Si hay un objeto creado rotamos
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+    }
+    
+    //BUILD METHODS//
+    public void PreviewSelectedObj(GameObject prefabSelected)
+    {
+        if (!isPlacingAObj)
         {
-            if (!objToPlace.Placed)
-            {
-                objToPlace.Rotate();
-            }
+            InitializeWithObj(prefabSelected);
+            isPlacingAObj = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Space))//Con el espacio colocamos
+        else if (!isPlacingAObj)
         {
-            if (CanBePlaced(objToPlace))
-            {
-                objToPlace.Place();
-                Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());
-                TakeArea(start, objToPlace.Size);
-                isPlacingAObj = false;
-            }
-            else
-            {
-                Destroy(objToPlace.gameObject);
-            }
+            InitializeWithObj(prefabSelected);
+            isPlacingAObj = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))//Con escape cancelamos la accion y destruimos el objeto
-        {
-            if (objToPlace.Placed)
-            {
-                return;
-            }
+    }
 
+    public void RotateSelectedObj()
+    {
+        if (!objToPlace.Placed)
+        {
+            objToPlace.Rotate();
+        }
+    }
+
+    public void PlaceSelectedObjAndBuy()
+    {
+        if (CanBePlaced(objToPlace) && tempObjDrag.canBePlaced)
+        {
+            objToPlace.Place();
+            Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());
+            TakeArea(start, objToPlace.Size);
             isPlacingAObj = false;
-            Destroy(objToPlace.gameObject);
         }
+        else
+        {
+            //Destroy(objToPlace.gameObject);
+            Debug.Log("No puedes hacer place ahi");
+        }
+    }
+
+    public void CancelSelectedObj()
+    {
+        if (objToPlace.Placed)
+        {
+            return;
+        }
+
+        isPlacingAObj = false;
+        Destroy(objToPlace.gameObject);
     }
 
     
@@ -123,6 +129,7 @@ public class BuildingSystem : MonoBehaviour
     
     /////////////////////////////////////////////////
     //Prefabs instanciacion
+    private ObjectDrag tempObjDrag;
     public void InitializeWithObj(GameObject prefab)
     {
         Vector3 position = SnapCoordinateToGrid(GetMouseWorldPosition());
@@ -130,6 +137,8 @@ public class BuildingSystem : MonoBehaviour
         GameObject obj = Instantiate(prefab, position, Quaternion.identity);
         objToPlace = obj.GetComponent<PlaceableObjects>();
         obj.AddComponent<ObjectDrag>();
+
+        tempObjDrag = objToPlace.GetComponent<ObjectDrag>();
 
     }
 
@@ -145,6 +154,7 @@ public class BuildingSystem : MonoBehaviour
         {
             if (tileBase == whiteTile)
             {
+                Debug.Log("Detectando tile blanco");
                 return false;
             }
         }
@@ -154,15 +164,7 @@ public class BuildingSystem : MonoBehaviour
 
     public void TakeArea(Vector3Int start, Vector3Int size)
     {
-        if (objToPlace.canBePlaced)
-        {
-            mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
-        }
-        else if (!objToPlace.canBePlaced)
-        {
-            mainTileMap.BoxFill(start, redTile, start.x, start.y, start.x + size.x, start.y + size.y);
-        }
-        
+        mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
     }
     
 }
