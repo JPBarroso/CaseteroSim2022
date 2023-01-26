@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic tiles_4
+      name: red
       rect:
         serializedVersion: 2
         x: 618
@@ -390,9 +390,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic tiles_4: 1753871924
       white: 156792060
       Basic tiles_5: -1219903723
+      red: 1753871924
       Basic tiles_3: 351405121
       Basic tiles_10: 1295819057
       Basic tiles_0: -542713962

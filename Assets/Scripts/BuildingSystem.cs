@@ -154,7 +154,15 @@ public class BuildingSystem : MonoBehaviour
 
     public void TakeArea(Vector3Int start, Vector3Int size)
     {
-        mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
+        if (objToPlace.canBePlaced)
+        {
+            mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
+        }
+        else if (!objToPlace.canBePlaced)
+        {
+            mainTileMap.BoxFill(start, redTile, start.x, start.y, start.x + size.x, start.y + size.y);
+        }
+        
     }
     
 }

@@ -7,6 +7,7 @@ public class PlaceableObjects : MonoBehaviour
 {
 
     public bool Placed { get; private set; }
+    public bool canBePlaced;
     public Vector3Int Size { get; private set; }
     private Vector3[] vertices;
 
@@ -76,12 +77,20 @@ public class PlaceableObjects : MonoBehaviour
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
 
+    private void ChangeAlphaObj(float value)
+    {
+        
+    }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Furniture"))
         {
-            Debug.Log("Collision is exist");
+            canBePlaced = false;
+        }
+        else
+        {
+            canBePlaced = true;
         }
     }
 }
