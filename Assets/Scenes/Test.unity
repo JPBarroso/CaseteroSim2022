@@ -1499,6 +1499,7 @@ MonoBehaviour:
   gridLayout: {fileID: 2064543041}
   mainTileMap: {fileID: 1422848325}
   whiteTile: {fileID: 11400000, guid: 29085a85a49a6364db4d88bfcc6c16c5, type: 2}
+  redTile: {fileID: 0}
   prefab1: {fileID: 2161749621390965670, guid: 3da9ce2226670bf499d5e097fd049f62, type: 3}
-  prefab2: {fileID: 5768937375227343178, guid: 04ab5fb54b806594da56999ccd166ad3, type: 3}
+  prefab2: {fileID: 8687047540664224006, guid: e9d7a32cd3a49704181b00cb83965962, type: 3}
   isPlacingAObj: 0

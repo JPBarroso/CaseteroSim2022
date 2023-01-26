@@ -75,5 +75,13 @@ public class PlaceableObjects : MonoBehaviour
         
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
-    
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Furniture"))
+        {
+            Debug.Log("Collision is exist");
+        }
+    }
 }

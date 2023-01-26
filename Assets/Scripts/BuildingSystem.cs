@@ -13,6 +13,7 @@ public class BuildingSystem : MonoBehaviour
     private Grid grid;
     [SerializeField] private Tilemap mainTileMap;
     [SerializeField] private TileBase whiteTile;
+    [SerializeField] private TileBase redTile;
 
     public GameObject prefab1;
     public GameObject prefab2;
