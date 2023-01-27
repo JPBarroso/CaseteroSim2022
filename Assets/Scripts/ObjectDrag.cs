@@ -16,8 +16,8 @@ public class ObjectDrag : MonoBehaviour
         {
             
         }
-        Vector3 pos = BuildingSystem.GetMouseWorldPosition() + offset;
-        transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
+        //Vector3 pos = BuildingSystem.GetMouseWorldPosition() + offset;
+        //transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
     }
 
     
@@ -28,10 +28,8 @@ public class ObjectDrag : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        /*
         Vector3 pos = BuildingSystem.GetMouseWorldPosition() + offset;
         transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
-        */
     }
 
     public bool canBePlaced;
