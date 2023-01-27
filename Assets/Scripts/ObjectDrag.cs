@@ -10,6 +10,11 @@ public class ObjectDrag : MonoBehaviour
     private Vector3 offset;
     private bool isClicked;
 
+    private void Start()
+    {
+        canBePlaced = true;
+    }
+
     private void Update()
     {
         if (isClicked)
