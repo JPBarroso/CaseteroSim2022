@@ -132,7 +132,7 @@ public class BuildingSystem : MonoBehaviour
     private ObjectDrag tempObjDrag;
     public void InitializeWithObj(GameObject prefab)
     {
-        Vector3 position = SnapCoordinateToGrid(Vector3.up);
+        Vector3 position = SnapCoordinateToGrid(Vector3.zero);
 
         GameObject obj = Instantiate(prefab, position, Quaternion.identity);
         objToPlace = obj.GetComponent<PlaceableObjects>();

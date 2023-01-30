@@ -23,8 +23,6 @@ public class PlaceableObjects : MonoBehaviour
     {
         GetColliderVertexPositionLocal();
         CalculateSizeInCells();
-        
-        RepositionObj();
     }
 
     public void Rotate()
@@ -69,38 +67,6 @@ public class PlaceableObjects : MonoBehaviour
         }
 
         Size = new Vector3Int(Math.Abs((verticesTemp[0] - verticesTemp[1]).x), Math.Abs((verticesTemp[0] - verticesTemp[3]).y), 1);
-    }
-
-    private void RepositionObj()
-    {
-        BoxCollider boxCollider = gameObject.GetComponent<BoxCollider>();
-
-        float boxSize = boxCollider.size.y;
-        float boxCenter = boxCollider.center.y;
-        float testValueY = (boxSize + boxCenter) / 2;
-        float testPlaneValueDistance = testValueY - plane.transform.position.y;
-        float newPositionTest = plane.transform.position.y + boxSize / 2;
-
-        transform.position = new Vector3(transform.position.x, newPositionTest, transform.position.z);
-        
-        Debug.Log("El tamaño de la y del collider es" + boxCollider.size.y);
-        Debug.Log("El centro de la y del colider es" + boxCollider.center.y);
-        Debug.Log("El test da" + testValueY);
-        Debug.Log("El valor de la distancia del plano y lo otro es" + testPlaneValueDistance);
-        Debug.Log("La distancia del centro hasta el plano es" + TestWithRay().y);
-    }
-
-    private Vector3 TestWithRay()
-    {
-        Ray ray = new Ray(transform.position, Vector3.down);
-        if (Physics.Raycast(ray, out  RaycastHit hit))
-        {
-            return hit.point;
-        }
-        else
-        {
-            return Vector3.zero;
-        }
     }
 
     public Vector3 GetStartPosition()

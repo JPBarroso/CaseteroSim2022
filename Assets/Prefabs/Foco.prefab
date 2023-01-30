@@ -47,7 +47,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.26397872, y: 0.21387902, z: 0.48202723}
-  m_Center: {x: 0.005914092, y: 0.006550297, z: 0.0021214187}
+  m_Center: {x: 0.005914092, y: 0.11, z: 0.0021214187}
 --- !u!54 &2699266321790217349
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -106,37 +106,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5000007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.4999993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.5000007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.4999993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -5709813923534110999, guid: 3919e06d5e3819f42bbf6ee65ddb338c,
         type: 3}

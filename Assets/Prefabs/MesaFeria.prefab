@@ -47,7 +47,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5817418, y: 0.5175918, z: 0.5689119}
-  m_Center: {x: 0.0038490295, y: -0.24120411, z: -0.00256598}
+  m_Center: {x: 0.0038490295, y: 0.28, z: -0.00256598}
 --- !u!54 &-3544210092947322709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,6 +143,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 97b4215068a4cea458c84cf690732a97, type: 2}
+    - target: {fileID: -6824671537096292372, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6659471700543612096, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6052800388672348386, guid: e32f997cdb457c843afb5d317e0065b3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -153,11 +163,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 97b4215068a4cea458c84cf690732a97, type: 2}
+    - target: {fileID: -3026678401912944582, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1933380671710842587, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -83665950244040663, guid: e32f997cdb457c843afb5d317e0065b3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f5e1709e15bb2c34ab9194b203dab414, type: 2}
+    - target: {fileID: -21567735823676725, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 316373646315389585, guid: e32f997cdb457c843afb5d317e0065b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e32f997cdb457c843afb5d317e0065b3,
         type: 3}
       propertyPath: m_Name
