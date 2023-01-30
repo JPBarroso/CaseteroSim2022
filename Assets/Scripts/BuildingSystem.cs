@@ -72,7 +72,7 @@ public class BuildingSystem : MonoBehaviour
         }
         else
         {
-            //Destroy(objToPlace.gameObject);
+            Destroy(objToPlace.gameObject);
             Debug.Log("No puedes hacer place ahi");
         }
     }
@@ -132,7 +132,7 @@ public class BuildingSystem : MonoBehaviour
     private ObjectDrag tempObjDrag;
     public void InitializeWithObj(GameObject prefab)
     {
-        Vector3 position = SnapCoordinateToGrid(GetMouseWorldPosition());
+        Vector3 position = SnapCoordinateToGrid(Vector3.up);
 
         GameObject obj = Instantiate(prefab, position, Quaternion.identity);
         objToPlace = obj.GetComponent<PlaceableObjects>();
