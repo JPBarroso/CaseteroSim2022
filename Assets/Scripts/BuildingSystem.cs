@@ -60,6 +60,14 @@ public class BuildingSystem : MonoBehaviour
             objToPlace.Rotate();
         }
     }
+    
+    public void ChangePositionOfSelectedObj(float value)
+    {
+        if (!objToPlace.Placed)
+        {
+            objToPlace.ChangeYPositionOfObject(objToPlace.gameObject, value);
+        }
+    }
 
     public void PlaceSelectedObjAndBuy()
     {

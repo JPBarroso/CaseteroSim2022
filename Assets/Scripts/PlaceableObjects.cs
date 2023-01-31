@@ -13,10 +13,15 @@ public class PlaceableObjects : MonoBehaviour
     private GameObject plane;
     private Transform planeTransform;
 
+    private Furniture furniture;
+    private Sprite test;
+
     private void Awake()
     {
         plane = GameObject.FindGameObjectWithTag("Ground");
         planeTransform = plane.transform;
+
+        furniture = new Furniture("Test", Furniture.Maker.PALOMA, Furniture.FurnitureType.BAR ,this.gameObject, test, 12f);
     }
 
     private void Start()
@@ -38,7 +43,13 @@ public class PlaceableObjects : MonoBehaviour
 
         vertices = verticesTemp;
     }
-    
+
+    public void ChangeYPositionOfObject(GameObject obj, float valueToAdd)
+    {
+        Vector3 objPosition = obj.transform.position;
+        obj.transform.position = new Vector3(objPosition.x, objPosition.y + valueToAdd,
+            objPosition.z);
+    }
 
     //Obtenemos las esquinas del box colider para generar su posicion
     private void GetColliderVertexPositionLocal()
