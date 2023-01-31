@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -14,14 +15,11 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private Tilemap mainTileMap;
     [SerializeField] private TileBase whiteTile;
     [SerializeField] private TileBase redTile;
-
-    public GameObject prefab1;
-    public GameObject prefab2;
+    
     public bool isPlacingAObj;
 
     private PlaceableObjects objToPlace;
-
-
+    
     //Inicialzacion
     private void Awake()
     {
@@ -29,26 +27,17 @@ public class BuildingSystem : MonoBehaviour
         grid = gridLayout.gameObject.GetComponent<Grid>();
     }
 
-    private void Update()
-    {
-        //Creamos un objeto que seguirá al ratón
-        if (!objToPlace)
-        {
-            return;
-        }
-    }
-    
     //BUILD METHODS//
-    public void PreviewSelectedObj(GameObject prefabSelected)
+    public void PreviewSelectedObj(Furniture furniture)
     {
         if (!isPlacingAObj)
         {
-            InitializeWithObj(prefabSelected);
+            InitializeWithObj(furniture);
             isPlacingAObj = true;
         }
         else if (!isPlacingAObj)
         {
-            InitializeWithObj(prefabSelected);
+            InitializeWithObj(furniture);
             isPlacingAObj = true;
         }
     }
@@ -80,7 +69,7 @@ public class BuildingSystem : MonoBehaviour
         }
         else
         {
-            Destroy(objToPlace.gameObject);
+            //Destroy(objToPlace.gameObject);
             Debug.Log("No puedes hacer place ahi");
         }
     }
@@ -138,11 +127,11 @@ public class BuildingSystem : MonoBehaviour
     /////////////////////////////////////////////////
     //Prefabs instanciacion
     private ObjectDrag tempObjDrag;
-    public void InitializeWithObj(GameObject prefab)
+    private void InitializeWithObj(Furniture furniture)
     {
         Vector3 position = SnapCoordinateToGrid(Vector3.zero);
 
-        GameObject obj = Instantiate(prefab, position, Quaternion.identity);
+        GameObject obj = Instantiate(furniture.furniturePrefab, position, Quaternion.identity);
         objToPlace = obj.GetComponent<PlaceableObjects>();
         obj.AddComponent<ObjectDrag>();
 
@@ -170,7 +159,7 @@ public class BuildingSystem : MonoBehaviour
         return true;
     }
 
-    public void TakeArea(Vector3Int start, Vector3Int size)
+    private void TakeArea(Vector3Int start, Vector3Int size)
     {
         mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
     }

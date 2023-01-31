@@ -4,9 +4,9 @@ using UnityEngine;
 public class BuildButtonController : MonoBehaviour
 {
     
-    public void BuildPreviewObjectButton(GameObject selectPrefab)
+    public void BuildPreviewObjectButton(Furniture furniture)
     {
-        BuildingSystem.Instance.PreviewSelectedObj(selectPrefab);
+        BuildingSystem.Instance.PreviewSelectedObj(furniture);
     }
 
     public void RotatePreviewObjButton()

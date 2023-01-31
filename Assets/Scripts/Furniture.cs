@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[System.Serializable]
-public class Furniture
+[CreateAssetMenu(menuName = "Scriptables/Furniture Data")]
+public class Furniture : ScriptableObject
 {
     public string furnitureName;
     public enum Maker
@@ -33,15 +33,5 @@ public class Furniture
     public GameObject furniturePrefab;
     public Sprite spriteFurniture;
     public float furniturePrice;
-
-    public Furniture(string name, Maker maker, FurnitureType type, GameObject prefab, Sprite sprite, float value)
-    {
-        furnitureName = name;
-        makerEnum = maker;
-        typeEnum = type;
-        furniturePrefab = prefab;
-        spriteFurniture = sprite;
-        furniturePrice = value;
-    }
 
 }

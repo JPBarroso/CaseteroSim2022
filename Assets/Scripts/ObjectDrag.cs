@@ -37,8 +37,8 @@ public class ObjectDrag : MonoBehaviour
         transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
     }
 
-    public bool canBePlaced;
-    private void OnTriggerStay(Collider other)
+    public bool canBePlaced = true;
+    /*private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Furniture"))
         {
@@ -50,5 +50,5 @@ public class ObjectDrag : MonoBehaviour
             Debug.Log("no esta tocando");
             canBePlaced = true;
         }
-    }
+    }*/
 }

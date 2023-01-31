@@ -20,8 +20,6 @@ public class PlaceableObjects : MonoBehaviour
     {
         plane = GameObject.FindGameObjectWithTag("Ground");
         planeTransform = plane.transform;
-
-        furniture = new Furniture("Test", Furniture.Maker.PALOMA, Furniture.FurnitureType.BAR ,this.gameObject, test, 12f);
     }
 
     private void Start()
