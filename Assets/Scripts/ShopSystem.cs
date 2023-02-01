@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ShopSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Shop shop;
+    [SerializeField] private TMP_Text moneyText;
+
+    private void Start()
     {
-        
+        shop.InitAmountOfMoney();
+        UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateUI()
     {
-        
+        moneyText.text = shop.moneyAvailable.ToString(CultureInfo.CurrentCulture);
     }
 }

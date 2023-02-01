@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: Chair
+  m_Name: SillaNormal
   m_EditorClassIdentifier: 
   furnitureName: Silla
   makerEnum: 0

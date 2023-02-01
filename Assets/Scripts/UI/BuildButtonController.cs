@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class BuildButtonController : MonoBehaviour
 {
+    public Shop shopTest;
+    private Furniture furnitureGlobal;
     
     public void BuildPreviewObjectButton(Furniture furniture)
     {
-        BuildingSystem.Instance.PreviewSelectedObj(furniture);
+        furnitureGlobal = furniture;
+        BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
     }
 
     public void RotatePreviewObjButton()
@@ -22,6 +25,10 @@ public class BuildButtonController : MonoBehaviour
     public void PlaceSelectedObjButton()
     {
         BuildingSystem.Instance.PlaceSelectedObjAndBuy();
+        
+        ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
+        shopTest.BuyFurniture(furnitureGlobal);
+        shopSystem.UpdateUI();
     }
     
     

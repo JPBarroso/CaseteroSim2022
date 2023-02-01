@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
+  m_Name: Soporte Grande
+  m_EditorClassIdentifier: 
+  furnitureName: Soporte Grande
+  makerEnum: 0
+  typeEnum: 0
+  furniturePrefab: {fileID: 971671876056459902, guid: 2185e449290a45d42b29c4418363fd66,
+    type: 3}
+  spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  furniturePrice: 10
