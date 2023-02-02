@@ -30,6 +30,7 @@ public class BuildingSystem : MonoBehaviour
     //BUILD METHODS//
     public void PreviewSelectedObj(Furniture furniture)
     {
+        //Si no tenemos un objeto puesto, instanciamos el prefab tirando desde el scriptable Furniture que pasamos por param
         if (!isPlacingAObj)
         {
             InitializeWithObj(furniture);
@@ -42,6 +43,7 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    //Llamamos al método Rotate para rotar el objeto puesto(objToPlace)
     public void RotateSelectedObj(float value)
     {
         if (!objToPlace.placed)
@@ -50,6 +52,7 @@ public class BuildingSystem : MonoBehaviour
         }
     }
     
+    //Este método es para varias su posicion en Y. Por ahora está descartado pero lo dejo por si algo
     public void ChangePositionOfSelectedObj(float value)
     {
         if (!objToPlace.placed)
@@ -58,14 +61,15 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    //Colocamos el objeto y aplicamos el Place(esto lo coloca y lo compra además de poner el Place a true)
     public void PlaceSelectedObjAndBuy()
     {
         if (CanBePlaced(objToPlace) && tempObjDrag.canBePlaced)
         {
-            objToPlace.furnitureMode = PlaceableObjects.MODE.Buymode;
-            objToPlace.Place();
-            Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());
-            TakeArea(start, objToPlace.Size);
+            objToPlace.furnitureMode = PlaceableObjects.MODE.Buymode;//Cambiamos el modo
+            objToPlace.Place();//Colocamos el prefab
+            Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());//Posicionamos en el grid
+            TakeArea(start, objToPlace.Size);//Esto es para colocar los cuadritos blancos, es temporal.
             isPlacingAObj = false;
         }
         else
@@ -75,6 +79,7 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    //Si nos hemos arrepentido, este metodo cancela la construcción
     public void CancelSelectedObj()
     {
         if (objToPlace.placed)
@@ -132,15 +137,15 @@ public class BuildingSystem : MonoBehaviour
     {
         Vector3 position = SnapCoordinateToGrid(Vector3.zero);
 
-        GameObject obj = Instantiate(furniture.furniturePrefab, position, Quaternion.identity);
+        GameObject obj = Instantiate(furniture.furniturePrefab, position, Quaternion.identity);//Instan el obj
         objToPlace = obj.GetComponent<PlaceableObjects>();
-        obj.AddComponent<ObjectDrag>();
+        obj.AddComponent<ObjectDrag>();//Añadimos el componente drag para poder moverlo con el raton
 
         tempObjDrag = objToPlace.GetComponent<ObjectDrag>();
 
     }
 
-    private bool CanBePlaced(PlaceableObjects placeableObjects)
+    private bool CanBePlaced(PlaceableObjects placeableObjects)//Esto debería de detectar cosas de detectar para ver si podemos colocar o no pero no me funciona bien del todo
     {
         BoundsInt area = new BoundsInt();
         area.position = gridLayout.WorldToCell(objToPlace.GetStartPosition());
@@ -160,7 +165,7 @@ public class BuildingSystem : MonoBehaviour
         return true;
     }
 
-    private void TakeArea(Vector3Int start, Vector3Int size)
+    private void TakeArea(Vector3Int start, Vector3Int size)//Para los cuadritos blancos
     {
         //mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
     }

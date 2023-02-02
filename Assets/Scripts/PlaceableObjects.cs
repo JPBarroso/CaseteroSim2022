@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Este script está en todos los objetos y se encarga de darle su comportamiento además de ser quien se comunica con otros componentes
 public class PlaceableObjects : MonoBehaviour
 {
 
@@ -13,7 +14,7 @@ public class PlaceableObjects : MonoBehaviour
     private Furniture furniture;
     public bool isAlreadyBougth;
     
-    public enum MODE
+    public enum MODE//Modos en los que puede estar el objeto
     {
         Buymode,
         Editmode,

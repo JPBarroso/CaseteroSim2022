@@ -1,23 +1,24 @@
 
 using UnityEngine;
 
+//Clase que se encarga de dar comportamientos a los botones de la UI
 public class BuildButtonController : MonoBehaviour
 {
     public Shop shopTest;
     private Furniture furnitureGlobal;
     
-    public void BuildPreviewObjectButton(Furniture furniture)
+    public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
         furnitureGlobal = furniture;
         BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
     }
 
-    public void RotatePreviewObjButton(float value)
+    public void RotatePreviewObjButton(float value)//Rotamos este objeto
     {
         BuildingSystem.Instance.RotateSelectedObj(value);
     }
 
-    public void CancelSelectedObjButton()
+    public void CancelSelectedObjButton()//Cancelamos compra
     {
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         if (objPLaced.isAlreadyBougth == false)
@@ -26,7 +27,7 @@ public class BuildButtonController : MonoBehaviour
         }
     }
 
-    public void PlaceSelectedObjButton()
+    public void PlaceSelectedObjButton()//Confirmamos la compra del objeto, gastamos dinero y actualizamos la UI
     {
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         if (objPLaced.isAlreadyBougth == false)
@@ -39,7 +40,7 @@ public class BuildButtonController : MonoBehaviour
 
     }
     
-    public void StartEditObj()
+    public void StartEditObj()//Este metodo va en el boton de MOVER(Es para empezar a editar). Si el objeto ya está comprado volvemos a meterle el componente drag para mover y rotar
     {
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         objPLaced.furnitureMode = PlaceableObjects.MODE.Editmode;
@@ -53,7 +54,7 @@ public class BuildButtonController : MonoBehaviour
         }
     }
 
-    public void ConfirmEdit(GameObject panel)
+    public void ConfirmEdit(GameObject panel)//Cuando pulsamos en confirmar la edicion volvemos a quitar el componente drag(Igual mas alante activo y desactivo en vez de destruir y añadir)
     {
         panel.SetActive(false);
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
@@ -63,11 +64,10 @@ public class BuildButtonController : MonoBehaviour
         objPLaced = null;
     }
     
-    public void SoldItemAfterBuy()
+    public void SoldItemAfterBuy()//Aqui quiero ver como hcaer para vender los items
     {
         shopTest.ReturnMoney(furnitureGlobal);
         BuildingSystem.Instance.CancelSelectedObj();
     }
-    
     
 }

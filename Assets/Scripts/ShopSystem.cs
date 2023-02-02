@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//Clase para actualiar la UI
 public class ShopSystem : MonoBehaviour
 {
     [SerializeField] private Shop shop;

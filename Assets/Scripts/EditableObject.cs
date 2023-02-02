@@ -9,20 +9,27 @@ public class EditableObject : MonoBehaviour
     private GameObject editPanel;
     private PlaceableObjects placeableObjects;
 
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Material[] originalMaterials;
+
     private void Start()
     {
         placeableObjects = GetComponent<PlaceableObjects>();
+
+        meshRenderer = GetComponentInChildren<MeshRenderer>(); 
+        originalMaterials = meshRenderer.materials;
     }
 
     private void OnMouseDown()
     {
+        //Activamos la UI de edicion(el panel)
         ActivateEditableUI();
         BuildingSystem.Instance.objToPlace = this.gameObject.GetComponent<PlaceableObjects>();
     }
 
     private void ActivateEditableUI()
     {
-        if (placeableObjects.isAlreadyBougth)
+        if (placeableObjects.isAlreadyBougth)//Solo activamos esto si al clicar el objeto ya está comprado
         {
             Debug.Log("puedes editar el objeto");
             ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
