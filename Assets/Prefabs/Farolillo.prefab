@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3251806473415491098}
   - component: {fileID: 3251806473415491097}
   - component: {fileID: 3251806473415491096}
+  - component: {fileID: -3839474722784410003}
   m_Layer: 0
   m_Name: Farolillo
   m_TagString: Furniture
@@ -74,6 +75,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9e5abe73b51a5847beef0a2b1f37f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3839474722784410003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251806473415491103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3251806472832164219

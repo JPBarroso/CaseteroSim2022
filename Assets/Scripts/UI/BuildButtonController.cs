@@ -12,9 +12,9 @@ public class BuildButtonController : MonoBehaviour
         BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
     }
 
-    public void RotatePreviewObjButton()
+    public void RotatePreviewObjButton(float value)
     {
-        BuildingSystem.Instance.RotateSelectedObj();
+        BuildingSystem.Instance.RotateSelectedObj(value);
     }
 
     public void CancelSelectedObjButton()

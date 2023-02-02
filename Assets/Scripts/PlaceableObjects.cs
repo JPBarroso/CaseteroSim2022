@@ -10,17 +10,8 @@ public class PlaceableObjects : MonoBehaviour
     public Vector3Int Size { get; private set; }
     private Vector3[] vertices;
 
-    private GameObject plane;
-    private Transform planeTransform;
-
     private Furniture furniture;
     private Sprite test;
-
-    private void Awake()
-    {
-        plane = GameObject.FindGameObjectWithTag("Ground");
-        planeTransform = plane.transform;
-    }
 
     private void Start()
     {
@@ -28,9 +19,9 @@ public class PlaceableObjects : MonoBehaviour
         CalculateSizeInCells();
     }
 
-    public void Rotate()
+    public void Rotate(float value)
     {
-        transform.Rotate(new Vector3(0,45,0));
+        transform.Rotate(new Vector3(0,value,0));
         Size = new Vector3Int(Size.y, Size.x, 1);
 
         Vector3[] verticesTemp = new Vector3[vertices.Length];

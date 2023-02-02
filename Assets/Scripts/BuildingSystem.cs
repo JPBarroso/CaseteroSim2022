@@ -17,6 +17,7 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private TileBase redTile;
     
     public bool isPlacingAObj;
+    public bool objectHasBeenPurchase;
 
     private PlaceableObjects objToPlace;
     
@@ -25,6 +26,11 @@ public class BuildingSystem : MonoBehaviour
     {
         Instance = this;
         grid = gridLayout.gameObject.GetComponent<Grid>();
+    }
+
+    private void Start()
+    {
+        objectHasBeenPurchase = false;
     }
 
     //BUILD METHODS//
@@ -42,11 +48,11 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
-    public void RotateSelectedObj()
+    public void RotateSelectedObj(float value)
     {
         if (!objToPlace.Placed)
         {
-            objToPlace.Rotate();
+            objToPlace.Rotate(value);
         }
     }
     
@@ -66,6 +72,7 @@ public class BuildingSystem : MonoBehaviour
             Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());
             TakeArea(start, objToPlace.Size);
             isPlacingAObj = false;
+            objectHasBeenPurchase = true;
         }
         else
         {

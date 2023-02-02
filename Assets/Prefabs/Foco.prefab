@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2699266321790217348}
   - component: {fileID: 2699266321790217349}
   - component: {fileID: 2699266321790217350}
+  - component: {fileID: 3895892500464738099}
   m_Layer: 0
   m_Name: Foco
   m_TagString: Furniture
@@ -74,6 +75,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9e5abe73b51a5847beef0a2b1f37f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3895892500464738099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699266321790217351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2699266322756890120

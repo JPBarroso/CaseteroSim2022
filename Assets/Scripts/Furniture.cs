@@ -4,22 +4,6 @@ using UnityEngine;
 public class Furniture : ScriptableObject
 {
     public string furnitureName;
-    public enum Maker
-    {
-        SEBILA,
-        ERBETI,
-        ALBA,
-        SANPABLO,
-        GUADALQUIVIR,
-        TRIANA,
-        CAMAS,
-        PALOMA,
-        MDOSIS,
-        KORA,
-        SERVA
-    }
-    public Maker makerEnum;
-    
     public enum FurnitureType
     {
         CHAIR,
