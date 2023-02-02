@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildButtonController : MonoBehaviour
 {
     public Shop shopTest;
-    private Furniture furnitureGlobal;
+    [SerializeField] private Furniture furnitureGlobal;
     
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
@@ -57,17 +57,29 @@ public class BuildButtonController : MonoBehaviour
     public void ConfirmEdit(GameObject panel)//Cuando pulsamos en confirmar la edicion volvemos a quitar el componente drag(Igual mas alante activo y desactivo en vez de destruir y añadir)
     {
         panel.SetActive(false);
-        PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-        objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
-        ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
-        Destroy(drag);
-        objPLaced = null;
+        if (BuildingSystem.Instance.objToPlace != null)
+        {
+            PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+            objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
+            ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
+            Destroy(drag);
+            objPLaced = null;
+        }
+
     }
     
     public void SoldItemAfterBuy()//Aqui quiero ver como hcaer para vender los items
     {
-        shopTest.ReturnMoney(furnitureGlobal);
-        BuildingSystem.Instance.CancelSelectedObj();
+        if (BuildingSystem.Instance.objToPlace != null)
+        {
+            PlaceableObjects objPlaced = BuildingSystem.Instance.objToPlace;
+            FurnitureData data = objPlaced.GetComponent<FurnitureData>();
+            shopTest.ReturnMoney(data.Data);
+            ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
+            shopSystem.UpdateUI();
+            Destroy(objPlaced.gameObject);
+        }
+
     }
     
 }
