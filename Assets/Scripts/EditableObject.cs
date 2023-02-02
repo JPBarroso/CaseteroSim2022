@@ -7,23 +7,26 @@ public class EditableObject : MonoBehaviour
 {
 
     private GameObject editPanel;
+    private PlaceableObjects placeableObjects;
+
+    private void Start()
+    {
+        placeableObjects = GetComponent<PlaceableObjects>();
+    }
 
     private void OnMouseDown()
     {
-        if (BuildingSystem.Instance.objectHasBeenPurchase)
+        ActivateEditableUI();
+        BuildingSystem.Instance.objToPlace = this.gameObject.GetComponent<PlaceableObjects>();
+    }
+
+    private void ActivateEditableUI()
+    {
+        if (placeableObjects.isAlreadyBougth)
         {
             Debug.Log("puedes editar el objeto");
             ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
             activate.ActivateThisUIComponent();
         }
-        else
-        {
-            return;
-        }
-    }
-
-    private GameObject SetThisFurnitureEditable()
-    {
-        return this.gameObject;
     }
 }

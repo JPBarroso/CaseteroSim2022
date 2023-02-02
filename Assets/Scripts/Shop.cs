@@ -20,6 +20,10 @@ public class Shop : ScriptableObject
         {
             moneyAvailable -= furniture.furniturePrice;
         }
-        
+    }
+
+    public void ReturnMoney(Furniture furniture)
+    {
+        moneyAvailable += furniture.furniturePrice;
     }
 }

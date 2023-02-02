@@ -17,20 +17,14 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private TileBase redTile;
     
     public bool isPlacingAObj;
-    public bool objectHasBeenPurchase;
 
-    private PlaceableObjects objToPlace;
+    public PlaceableObjects objToPlace;
     
     //Inicialzacion
     private void Awake()
     {
         Instance = this;
         grid = gridLayout.gameObject.GetComponent<Grid>();
-    }
-
-    private void Start()
-    {
-        objectHasBeenPurchase = false;
     }
 
     //BUILD METHODS//
@@ -50,7 +44,7 @@ public class BuildingSystem : MonoBehaviour
 
     public void RotateSelectedObj(float value)
     {
-        if (!objToPlace.Placed)
+        if (!objToPlace.placed)
         {
             objToPlace.Rotate(value);
         }
@@ -58,7 +52,7 @@ public class BuildingSystem : MonoBehaviour
     
     public void ChangePositionOfSelectedObj(float value)
     {
-        if (!objToPlace.Placed)
+        if (!objToPlace.placed)
         {
             objToPlace.ChangeYPositionOfObject(objToPlace.gameObject, value);
         }
@@ -68,11 +62,11 @@ public class BuildingSystem : MonoBehaviour
     {
         if (CanBePlaced(objToPlace) && tempObjDrag.canBePlaced)
         {
+            objToPlace.furnitureMode = PlaceableObjects.MODE.Buymode;
             objToPlace.Place();
             Vector3Int start = gridLayout.WorldToCell(objToPlace.GetStartPosition());
             TakeArea(start, objToPlace.Size);
             isPlacingAObj = false;
-            objectHasBeenPurchase = true;
         }
         else
         {
@@ -83,7 +77,7 @@ public class BuildingSystem : MonoBehaviour
 
     public void CancelSelectedObj()
     {
-        if (objToPlace.Placed)
+        if (objToPlace.placed)
         {
             return;
         }
@@ -168,7 +162,7 @@ public class BuildingSystem : MonoBehaviour
 
     private void TakeArea(Vector3Int start, Vector3Int size)
     {
-        mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
+        //mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
     }
     
 }

@@ -6,17 +6,27 @@ using UnityEngine;
 public class PlaceableObjects : MonoBehaviour
 {
 
-    public bool Placed { get; private set; }
+    public bool placed;
     public Vector3Int Size { get; private set; }
     private Vector3[] vertices;
 
     private Furniture furniture;
-    private Sprite test;
+    public bool isAlreadyBougth;
+    
+    public enum MODE
+    {
+        Buymode,
+        Editmode,
+        Putmode
+    }
+    public MODE furnitureMode;
 
     private void Start()
     {
         GetColliderVertexPositionLocal();
         CalculateSizeInCells();
+
+        isAlreadyBougth = false;
     }
 
     public void Rotate(float value)
@@ -79,8 +89,9 @@ public class PlaceableObjects : MonoBehaviour
         ObjectDrag drag = gameObject.GetComponent<ObjectDrag>();
         Destroy(drag);
 
-        Placed = true;
-        
+        placed = true;
+        isAlreadyBougth = true;
+
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
 
