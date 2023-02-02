@@ -32,6 +32,8 @@ public class BuildButtonController : MonoBehaviour
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         if (objPLaced.isAlreadyBougth == false)
         {
+            EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+            editableComponent.ReturnMaterialsWhenFinishEdit();
             BuildingSystem.Instance.PlaceSelectedObjAndBuy();
             ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
             shopTest.BuyFurniture(furnitureGlobal);
@@ -44,6 +46,8 @@ public class BuildButtonController : MonoBehaviour
     {
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         objPLaced.furnitureMode = PlaceableObjects.MODE.Editmode;
+        EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+        editableComponent.ChangeMaterialWhenEdit();
         if (objPLaced.isAlreadyBougth == true)
         {
             if (objPLaced.gameObject.GetComponent<ObjectDrag>() == null)
@@ -61,6 +65,8 @@ public class BuildButtonController : MonoBehaviour
         {
             PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
             objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
+            EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+            editableComponent.ReturnMaterialsWhenFinishEdit();
             ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
             Destroy(drag);
             objPLaced = null;

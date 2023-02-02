@@ -11,6 +11,7 @@ public class EditableObject : MonoBehaviour
 
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material[] originalMaterials;
+    [SerializeField] private Material newmaterial;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class EditableObject : MonoBehaviour
 
         meshRenderer = GetComponentInChildren<MeshRenderer>(); 
         originalMaterials = meshRenderer.materials;
+        
+        ChangeMaterialWhenEdit();
     }
 
     private void OnMouseDown()
@@ -35,5 +38,20 @@ public class EditableObject : MonoBehaviour
             ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
             activate.ActivateThisUIComponent();
         }
+    }
+
+    public void ChangeMaterialWhenEdit()
+    {
+        Material[] mats = meshRenderer.materials;
+        for (int i = 0; i < meshRenderer.materials.Length; i++)
+        {
+            mats[i] = newmaterial;
+        }
+        meshRenderer.materials = mats;
+    }
+
+    public void ReturnMaterialsWhenFinishEdit()
+    {
+        meshRenderer.materials = originalMaterials;
     }
 }
