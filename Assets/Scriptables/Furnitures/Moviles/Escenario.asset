@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: Altavoz
+  m_Name: Escenario
   m_EditorClassIdentifier: 
-  furnitureName: Altavoz
-  makerEnum: 0
-  typeEnum: 4
-  furniturePrefab: {fileID: 6642556693816863331, guid: cda7ee77f003e0e4c9bf6b1919b76ba1,
+  furnitureName: Silla
+  typeEnum: 0
+  furniturePrefab: {fileID: 6904745059013160807, guid: ccd51f646a6c9ec4abbf0807a61df88e,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
   furniturePrice: 10

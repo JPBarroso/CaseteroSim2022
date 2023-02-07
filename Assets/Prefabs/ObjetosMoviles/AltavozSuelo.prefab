@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4587350322000126894}
   - component: {fileID: -1696251088981784110}
   m_Layer: 0
-  m_Name: Altavoz
+  m_Name: AltavozSuelo
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   originalMaterials: []
+  newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
 --- !u!114 &-1696251088981784110
 MonoBehaviour:
   m_ObjectHideFlags: 0

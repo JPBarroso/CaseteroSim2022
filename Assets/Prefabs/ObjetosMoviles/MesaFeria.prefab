@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   originalMaterials: []
+  newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
 --- !u!114 &-5662447355608093248
 MonoBehaviour:
   m_ObjectHideFlags: 0
