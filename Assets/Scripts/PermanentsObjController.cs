@@ -3,18 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Clase que controlla la construccion de los items fijos. Estan las cosas con serialized para hacer comprobaciones en el editor
 public class PermanentsObjController : MonoBehaviour
 {
     [Header("Shop Reference")]
     [SerializeField] private Shop shopData;
+    
     [Header("Actual Obj References")]
     [SerializeField] private HouseConfigData actualDataInScene;
     [SerializeField] private GameObject actualObjHouseInScene;
     [SerializeField] private HouseConfig actualHouseConfig;
+    [SerializeField] private float priceActualConfigBuy;
+    
     [Header("Latest Obj References")]
     [SerializeField] private HouseConfigData latestDataInScene;
     [SerializeField] private GameObject latestHouseObj;
     [SerializeField] private HouseConfig latestHouseConfig;
+    [SerializeField] private float priceLatestConfigBuy;
 
 
     private void Awake()
@@ -22,6 +27,7 @@ public class PermanentsObjController : MonoBehaviour
         actualDataInScene = FindObjectOfType<HouseConfigData>();
         actualObjHouseInScene = actualDataInScene.gameObject;
         actualHouseConfig = actualDataInScene.config;
+        priceActualConfigBuy = actualHouseConfig.price;
     }
 
     public void BuildANewConfig(GameObject newBuy)
@@ -34,11 +40,10 @@ public class PermanentsObjController : MonoBehaviour
         
         //Aplicamos referencias sobre el nuevo objeto
         actualObjHouseInScene = newBuy;
-        
-        UpdateUI();
         NewHouseReferences(newBuy);
-        
-        shopData.BuyAConfiguration(actualHouseConfig);
+        //Descontamos el dinero
+        CheckForPriceDifference();
+        UpdateUI();
     }
 
     private void LatestHouseReference()
@@ -46,12 +51,29 @@ public class PermanentsObjController : MonoBehaviour
         latestDataInScene = actualDataInScene;
         latestHouseObj = actualObjHouseInScene;
         latestHouseConfig = actualHouseConfig;
+        priceLatestConfigBuy = actualHouseConfig.price;
     }
     
     private void NewHouseReferences(GameObject newBuy)
     {
         actualDataInScene = newBuy.GetComponent<HouseConfigData>();
         actualHouseConfig = actualDataInScene.config;
+        priceActualConfigBuy = actualHouseConfig.price;
+    }
+
+    private void CheckForPriceDifference()
+    {
+        if (priceActualConfigBuy < priceLatestConfigBuy)
+        {
+            shopData.ReturnBuyConfigurationMoney(latestHouseConfig);
+            shopData.BuyAConfiguration(actualHouseConfig);
+        }
+        else
+        {
+            shopData.BuyAConfiguration(actualHouseConfig);
+        }
+        
+        
     }
 
     private void UpdateUI()

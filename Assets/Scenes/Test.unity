@@ -1454,6 +1454,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1303767537}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &278749500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5776,7 +5788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1303767538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5961,7 +5973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651ab392cc932994bb2d01587655c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopTest: {fileID: 11400000, guid: 8bbec9dde0f5b0d4b997b3a2defe8c68, type: 2}
+  shopData: {fileID: 11400000, guid: 8bbec9dde0f5b0d4b997b3a2defe8c68, type: 2}
   furnitureGlobal: {fileID: 0}
 --- !u!114 &1357022084
 MonoBehaviour:
@@ -5979,8 +5991,11 @@ MonoBehaviour:
   actualDataInScene: {fileID: 0}
   actualObjHouseInScene: {fileID: 0}
   actualHouseConfig: {fileID: 0}
+  priceActualConfigBuy: 0
+  latestDataInScene: {fileID: 0}
+  latestHouseObj: {fileID: 0}
   latestHouseConfig: {fileID: 0}
-  latestHouseConfigPriceValue: 0
+  priceLatestConfigBuy: 0
 --- !u!1 &1359134920
 GameObject:
   m_ObjectHideFlags: 0
@@ -8879,7 +8894,6 @@ MonoBehaviour:
   gridLayout: {fileID: 2064543041}
   mainTileMap: {fileID: 1422848325}
   whiteTile: {fileID: 11400000, guid: 29085a85a49a6364db4d88bfcc6c16c5, type: 2}
-  redTile: {fileID: 11400000, guid: 51790f7d08d09694586f6dca831dd291, type: 2}
   isPlacingAObj: 0
   objToPlace: {fileID: 0}
 --- !u!1 &2065792380
