@@ -63,17 +63,8 @@ public class PermanentsObjController : MonoBehaviour
 
     private void CheckForPriceDifference()
     {
-        if (priceActualConfigBuy < priceLatestConfigBuy)
-        {
-            shopData.ReturnBuyConfigurationMoney(latestHouseConfig);
-            shopData.BuyAConfiguration(actualHouseConfig);
-        }
-        else
-        {
-            shopData.BuyAConfiguration(actualHouseConfig);
-        }
-        
-        
+        shopData.ReturnBuyConfigurationMoney(latestHouseConfig);
+        shopData.BuyAConfiguration(actualHouseConfig);
     }
 
     private void UpdateUI()
