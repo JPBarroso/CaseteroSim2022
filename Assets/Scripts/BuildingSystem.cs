@@ -7,17 +7,17 @@ using UnityEngine.Tilemaps;
 
 public class BuildingSystem : MonoBehaviour
 {
-
+    //Instancia singleton
     public static BuildingSystem Instance;
 
+    [Header("Grid stuffs")]
     public GridLayout gridLayout;
     private Grid grid;
     [SerializeField] private Tilemap mainTileMap;
     [SerializeField] private TileBase whiteTile;
-    [SerializeField] private TileBase redTile;
-    
-    public bool isPlacingAObj;
 
+    [Header("GameObj variables")]
+    public bool isPlacingAObj;
     public PlaceableObjects objToPlace;
     
     //Inicialzacion

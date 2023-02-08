@@ -26,4 +26,14 @@ public class Shop : ScriptableObject
     {
         moneyAvailable += furniture.furniturePrice;
     }
+
+    public void BuyAConfiguration(HouseConfig houseConfig)
+    {
+        moneyAvailable -= houseConfig.price;
+    }
+
+    public void ReturnBuyConfigurationMoney(HouseConfig houseConfig)
+    {
+        moneyAvailable += houseConfig.price;
+    }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 //Clase que se encarga de dar comportamientos a los botones de la UI
 public class BuildButtonController : MonoBehaviour
 {
-    public Shop shopTest;
+    [Header("Shop Data Reference")]
+    public Shop shopData;
+    [Header("Furniture Data Reference")]
     [SerializeField] private Furniture furnitureGlobal;
     
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
@@ -35,8 +37,9 @@ public class BuildButtonController : MonoBehaviour
             EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
             editableComponent.ReturnMaterialsWhenFinishEdit();
             BuildingSystem.Instance.PlaceSelectedObjAndBuy();
+            shopData.BuyFurniture(furnitureGlobal);
+            
             ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
-            shopTest.BuyFurniture(furnitureGlobal);
             shopSystem.UpdateUI();
         }
 
@@ -80,7 +83,7 @@ public class BuildButtonController : MonoBehaviour
         {
             PlaceableObjects objPlaced = BuildingSystem.Instance.objToPlace;
             FurnitureData data = objPlaced.GetComponent<FurnitureData>();
-            shopTest.ReturnMoney(data.Data);
+            shopData.ReturnMoney(data.Data);
             ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
             shopSystem.UpdateUI();
             Destroy(objPlaced.gameObject);
