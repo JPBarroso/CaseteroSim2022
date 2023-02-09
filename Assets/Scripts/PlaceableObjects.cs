@@ -30,6 +30,11 @@ public class PlaceableObjects : MonoBehaviour
         isAlreadyBougth = false;
     }
 
+    private void Update()
+    {
+        CheckForGround();
+    }
+
     public void Rotate(float value)
     {
         transform.Rotate(new Vector3(0,value,0));
@@ -83,6 +88,14 @@ public class PlaceableObjects : MonoBehaviour
     public Vector3 GetStartPosition()
     {
         return transform.TransformPoint(vertices[0]);
+    }
+
+    public bool isTouchingGround;
+    private void CheckForGround()
+    {
+        Vector3 pos = this.transform.position;
+        isTouchingGround = (Physics.Raycast((new Vector2(pos.x, pos.y + 1f)), Vector3.down, 5f, 1 << LayerMask.NameToLayer("Ground")));
+        Debug.DrawRay((new Vector3(pos.x, pos.y, pos.z)), Vector3.down, Color.green);
     }
 
     public virtual void Place()

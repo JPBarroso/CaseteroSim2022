@@ -94,7 +94,7 @@ public class BuildingSystem : MonoBehaviour
     
     ///////////////Pôsiciones//////////////////////////////////////
     //Retornamos la posicion del raton en caso de que toque algo
-    public static Vector3 GetMouseWorldPosition()
+    public Vector3 GetMouseWorldPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out  RaycastHit hit))
