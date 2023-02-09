@@ -18,17 +18,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 46989bbbb1446d84f8767cdcd44ce677, type: 2}
+    second: {fileID: 2100000, guid: 0c3ac782e5c8c924686e23ece321212e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: 6f251c3c2134f5f4bba8540b87b8e989, type: 2}
+    second: {fileID: 2100000, guid: f92c66a5aad48094cb5b35be9d0d1788, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.005
-    second: {fileID: 2100000, guid: 97b4215068a4cea458c84cf690732a97, type: 2}
+    second: {fileID: 2100000, guid: 46989bbbb1446d84f8767cdcd44ce677, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -37,11 +37,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 6f251c3c2134f5f4bba8540b87b8e989, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 97b4215068a4cea458c84cf690732a97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: c3bfc1a2131ff284a92a732dfa06b43f, type: 2}
+    second: {fileID: 2100000, guid: 4eb6a0a5e13336a438f3602ce22b560a, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
