@@ -94,8 +94,8 @@ public class PlaceableObjects : MonoBehaviour
     private void CheckForGround()
     {
         Vector3 pos = this.transform.position;
-        isTouchingGround = (Physics.Raycast((new Vector2(pos.x, pos.y + 1f)), Vector3.down, 5f, 1 << LayerMask.NameToLayer("Ground")));
-        Debug.DrawRay((new Vector3(pos.x, pos.y, pos.z)), Vector3.down, Color.green);
+        isTouchingGround = Physics.Raycast(new Vector3(pos.x, pos.y + 1, pos.z), Vector3.down, 5f, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(pos, Vector3.down * 2, Color.green);
     }
 
     public virtual void Place()

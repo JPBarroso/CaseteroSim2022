@@ -9,7 +9,7 @@ public class EditableObject : MonoBehaviour
     private GameObject editPanel;
     private PlaceableObjects placeableObjects;
 
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshRenderer[] meshRenderer;
     [SerializeField] private Material[] originalMaterials;
     [SerializeField] private Material newmaterial;
 
@@ -17,9 +17,15 @@ public class EditableObject : MonoBehaviour
     {
         placeableObjects = GetComponent<PlaceableObjects>();
 
-        meshRenderer = GetComponentInChildren<MeshRenderer>(); 
-        originalMaterials = meshRenderer.materials;
+        meshRenderer = GetComponentsInChildren<MeshRenderer>();
+        originalMaterials = new Material[meshRenderer.Length];
         
+        for (int i = 0; i < meshRenderer.Length; i++)
+        {
+            originalMaterials[i] = meshRenderer[i].material;
+        }
+        
+        Debug.Log("editable" + originalMaterials.Length);
         ChangeMaterialWhenEdit();
     }
 
@@ -42,16 +48,21 @@ public class EditableObject : MonoBehaviour
 
     public void ChangeMaterialWhenEdit()
     {
-        Material[] mats = meshRenderer.materials;
-        for (int i = 0; i < meshRenderer.materials.Length; i++)
+        for (int i = 0; i < meshRenderer.Length; i++)
         {
-            mats[i] = newmaterial;
+            meshRenderer[i].material = newmaterial;
         }
-        meshRenderer.materials = mats;
     }
 
     public void ReturnMaterialsWhenFinishEdit()
     {
-        meshRenderer.materials = originalMaterials;
+        for (int i = 0; i < meshRenderer.Length; i++)
+        {
+            meshRenderer[i].material = originalMaterials[i];
+        }
+        
     }
+    
+    
+    
 }
