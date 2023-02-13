@@ -10,6 +10,9 @@ public class BuildButtonController : MonoBehaviour
     
     [Header("Furniture Data Reference")]
     [SerializeField] private Furniture furnitureGlobal;
+
+    [Header("Save Reference")] 
+    public SaveAndLoadManager saveManager;
     
     [Header("Controller Reference")] 
     private GameModeController gm;
@@ -26,6 +29,8 @@ public class BuildButtonController : MonoBehaviour
         {
             furnitureGlobal = furniture;
             BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
+            PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+            saveManager.AddGameObjToList(objPLaced.gameObject);
         }
     }
 
@@ -39,6 +44,7 @@ public class BuildButtonController : MonoBehaviour
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         if (objPLaced.isAlreadyBougth == false)
         {
+            saveManager.DeleteFromList(objPLaced.gameObject);
             BuildingSystem.Instance.CancelSelectedObj();
         }
     }

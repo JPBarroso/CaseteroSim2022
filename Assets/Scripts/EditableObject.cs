@@ -25,7 +25,6 @@ public class EditableObject : MonoBehaviour
             originalMaterials[i] = meshRenderer[i].material;
         }
         
-        Debug.Log("editable" + originalMaterials.Length);
         ChangeMaterialWhenEdit();
     }
 
