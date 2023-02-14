@@ -13,7 +13,7 @@ public class PermanentsObjController : MonoBehaviour
     [SerializeField] private HouseConfigData actualDataInScene;
     [SerializeField] private GameObject actualObjHouseInScene;
     [SerializeField] private HouseConfig actualHouseConfig;
-    [SerializeField] private float priceActualConfigBuy;
+    public float priceActualConfigBuy;
     
     [Header("Latest Obj References")]
     [SerializeField] private HouseConfigData latestDataInScene;
@@ -71,6 +71,7 @@ public class PermanentsObjController : MonoBehaviour
     {
         ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
         shopSystem.UpdateUI();
+        NotificationCenter.DefaultCenter().PostNotification(this,"PriceChange");
     }
     
     
