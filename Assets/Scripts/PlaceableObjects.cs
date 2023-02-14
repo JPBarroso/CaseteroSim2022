@@ -26,7 +26,7 @@ public class PlaceableObjects : MonoBehaviour
         if (ES3.FileExists(SaveAndLoadManager.FileName))
         {
            placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
-            isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
+           isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
         }
     }
 
