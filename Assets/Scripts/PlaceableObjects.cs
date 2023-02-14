@@ -8,11 +8,10 @@ public class PlaceableObjects : MonoBehaviour
 {
 
     public bool placed;
+    public bool isAlreadyBougth;
     public Vector3Int Size { get; private set; }
     private Vector3[] vertices;
-
     private Furniture furniture;
-    public bool isAlreadyBougth;
     
     public enum MODE//Modos en los que puede estar el objeto
     {
@@ -22,12 +21,19 @@ public class PlaceableObjects : MonoBehaviour
     }
     public MODE furnitureMode;
 
+    private void Awake()
+    {
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+           placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
+            isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
+        }
+    }
+
     private void Start()
     {
         GetColliderVertexPositionLocal();
         CalculateSizeInCells();
-
-        isAlreadyBougth = false;
     }
 
     private void Update()
@@ -105,13 +111,11 @@ public class PlaceableObjects : MonoBehaviour
 
         placed = true;
         isAlreadyBougth = true;
+        
+        ES3.Save("isAlreadyBougth",isAlreadyBougth, SaveAndLoadManager.FileName);
+        ES3.Save("isAlreadyPlaced",placed, SaveAndLoadManager.FileName);
 
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
 
-    private void ChangeAlphaObj(float value)//Cambiar el alfa, mas adelante
-    {
-        
-    }
-    
 }

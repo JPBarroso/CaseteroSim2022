@@ -24,8 +24,11 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
-        
-        ChangeMaterialWhenEdit();
+
+        if (!placeableObjects.isAlreadyBougth)
+        {
+            ChangeMaterialWhenEdit();
+        }
     }
 
     private void OnMouseDown()
