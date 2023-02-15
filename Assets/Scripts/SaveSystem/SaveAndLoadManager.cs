@@ -26,17 +26,16 @@ public class SaveAndLoadManager : MonoBehaviour
             PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
             p.placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
             p.isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
-            Debug.Log("count");
         }
     }
 
     private void LoadMateriales()
     {
-        for (int i = 0; i < prefabsToSaveList.Count; i++)
-        {
-            EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
-            e.originalMaterials = ES3.Load<Material[]>("OriginalMat", FileName);
-        }
+        // for (int i = 0; i < prefabsToSaveList.Count; i++)
+        // {
+        //     EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
+        //     e.originalMaterials = ES3.Load<Material[]>("OriginalMat", FileName);
+        // }
 
     }
 
@@ -47,6 +46,13 @@ public class SaveAndLoadManager : MonoBehaviour
         {
             Debug.Log("guardado con exito");
             ES3.Save("furnituresInstance", prefabsToSaveList, FileName);
+            
+            //Guardado de materiales
+            for (int i = 0; i < prefabsToSaveList.Count; i++)
+            {
+                EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
+                ES3.Save("OriginalMat", e.originalMaterials, SaveAndLoadManager.FileName);
+            }
         }
         
     }

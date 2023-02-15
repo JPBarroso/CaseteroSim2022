@@ -24,10 +24,12 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
-        
-        //Guardado de materiales
-        ES3.Save("OriginalMat", originalMaterials, SaveAndLoadManager.FileName);
 
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            originalMaterials = ES3.Load<Material[]>("OriginalMat", SaveAndLoadManager.FileName);
+        }
+        
         if (!placeableObjects.isAlreadyBougth)
         {
             ChangeMaterialWhenEdit();
