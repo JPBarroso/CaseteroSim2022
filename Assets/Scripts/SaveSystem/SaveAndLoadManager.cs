@@ -19,6 +19,27 @@ public class SaveAndLoadManager : MonoBehaviour
         prefabsToSaveList.Remove(prefabToAdd);
     }
 
+    private void LoadPlaceableBooleans()
+    {
+        for (int i = 0; i < prefabsToSaveList.Count; i++)
+        {
+            PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
+            p.placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
+            p.isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
+            Debug.Log("count");
+        }
+    }
+
+    private void LoadMateriales()
+    {
+        for (int i = 0; i < prefabsToSaveList.Count; i++)
+        {
+            EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
+            e.originalMaterials = ES3.Load<Material[]>("OriginalMat", FileName);
+        }
+
+    }
+
     public void SaveGame()
     {
         Debug.Log("Estoy guardando");
@@ -37,6 +58,8 @@ public class SaveAndLoadManager : MonoBehaviour
         {
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
+            LoadPlaceableBooleans();
+            LoadMateriales();
         }
         
     }

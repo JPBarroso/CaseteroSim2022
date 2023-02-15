@@ -10,7 +10,7 @@ public class EditableObject : MonoBehaviour
     private PlaceableObjects placeableObjects;
 
     [SerializeField] private MeshRenderer[] meshRenderer;
-    [SerializeField] private Material[] originalMaterials;
+    public Material[] originalMaterials;
     [SerializeField] private Material newmaterial;
 
     private void Start()
@@ -24,6 +24,9 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
+        
+        //Guardado de materiales
+        ES3.Save("OriginalMat", originalMaterials, SaveAndLoadManager.FileName);
 
         if (!placeableObjects.isAlreadyBougth)
         {
@@ -64,7 +67,4 @@ public class EditableObject : MonoBehaviour
         }
         
     }
-    
-    
-    
 }
