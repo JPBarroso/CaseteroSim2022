@@ -35,6 +35,8 @@ public class SaveAndLoadManager : MonoBehaviour
             for (int i = 0; i < prefabsToSaveList.Count; i++)
             {
                 PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
+                EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
+                e.SaveMaterials();
                 p.SavePlacedBooleans();
             }
         }
@@ -46,6 +48,8 @@ public class SaveAndLoadManager : MonoBehaviour
         for (int i = 0; i < prefabsToSaveList.Count; i++)
         {
             PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
+            EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
+            e.LoadMaterials();
             p.placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
             p.isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
         }

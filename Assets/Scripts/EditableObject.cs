@@ -24,6 +24,11 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
+        
+        if (ES3.FileExists(SaveAndLoadManager.FileName) && placeableObjects.isAlreadyBougth)
+        {
+            originalMaterials = ES3.Load<Material[]>(this.gameObject.name, SaveAndLoadManager.FileName);
+        }
 
         if (!placeableObjects.isAlreadyBougth)
         {
@@ -62,6 +67,23 @@ public class EditableObject : MonoBehaviour
         {
             meshRenderer[i].material = originalMaterials[i];
         }
-        
+    }
+
+    public void SaveMaterials()
+    {
+        ES3.Save(this.gameObject.name, originalMaterials, SaveAndLoadManager.FileName);
+    }
+
+    public void LoadMaterials()
+    {
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            originalMaterials = ES3.Load<Material[]>(this.gameObject.name, SaveAndLoadManager.FileName);
+            meshRenderer = GetComponentsInChildren<MeshRenderer>();
+            for (int i = 0; i < meshRenderer.Length; i++)
+            {
+                meshRenderer[i].material = originalMaterials[i];
+            }
+        }
     }
 }
