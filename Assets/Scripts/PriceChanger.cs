@@ -13,6 +13,7 @@ public class PriceChanger : MonoBehaviour
     [SerializeField]
     PermanentsObjController _POC;
     // Es San Valentín y lo estoy pasando con Visual Studio
+    //Pasate a Rider
     void Start()
     {
         NotificationCenter.DefaultCenter().AddObserver(this, "PriceChange");

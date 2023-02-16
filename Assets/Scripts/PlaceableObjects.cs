@@ -21,11 +21,6 @@ public class PlaceableObjects : MonoBehaviour
     }
     public MODE furnitureMode;
 
-    private void Awake()
-    {
-
-    }
-
     private void Start()
     {
         GetColliderVertexPositionLocal();

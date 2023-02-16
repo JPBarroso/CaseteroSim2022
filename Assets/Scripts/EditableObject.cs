@@ -24,12 +24,9 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
-
-        if (ES3.FileExists(SaveAndLoadManager.FileName))
-        {
-            originalMaterials = ES3.Load<Material[]>("OriginalMat", SaveAndLoadManager.FileName);
-        }
         
+        LoadMaterialIfFileExist();
+
         if (!placeableObjects.isAlreadyBougth)
         {
             ChangeMaterialWhenEdit();
@@ -68,5 +65,13 @@ public class EditableObject : MonoBehaviour
             meshRenderer[i].material = originalMaterials[i];
         }
         
+    }
+
+    private void LoadMaterialIfFileExist()
+    {
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            originalMaterials = ES3.Load<Material[]>("OriginalMat", SaveAndLoadManager.FileName);
+        }
     }
 }
