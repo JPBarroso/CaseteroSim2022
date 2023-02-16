@@ -25,23 +25,20 @@ public class SaveAndLoadManager : MonoBehaviour
     
     public void SaveGame()
     {
-        // Debug.Log("Estoy guardando");
-        // if (prefabsToSaveList.Count > 0)
-        // {
-        //     Debug.Log("guardado con exito");
-        //     ES3.Save("furnituresInstance", prefabsToSaveList, FileName);
-        //     
-        //     //Guardado de materiales
-        //     for (int i = 0; i < prefabsToSaveList.Count; i++)
-        //     {
-        //         PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
-        //         p.SavePlacedBooleans();
-        //     }
-        // }
-        
-        Debug.Log("autosaveSave");
-        ES3AutoSaveMgr.Current.Save();
-        
+        Debug.Log("Estoy guardando");
+        if (prefabsToSaveList.Count > 0)
+        {
+            Debug.Log("guardado con exito");
+            ES3.Save("furnituresInstance", prefabsToSaveList, FileName);
+            
+            //Guardado de materiales
+            for (int i = 0; i < prefabsToSaveList.Count; i++)
+            {
+                PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
+                p.SavePlacedBooleans();
+            }
+        }
+
     }
 
     private void LoadPlaceableBooleans()
@@ -56,17 +53,13 @@ public class SaveAndLoadManager : MonoBehaviour
 
     public void LoadGame()
     {
-        // Debug.Log("Intento Cargar");
-        // if (ES3.FileExists(FileName))
-        // {
-        //     Debug.Log("Estoy cargando");
-        //     prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
-        //     LoadPlaceableBooleans();
-        // }
-        
-        Debug.Log("autosaveload");
-        ES3AutoSaveMgr.Current.Load();
-        
+        Debug.Log("Intento Cargar");
+        if (ES3.FileExists(FileName))
+        {
+            Debug.Log("Estoy cargando");
+            prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
+            LoadPlaceableBooleans();
+        }
     }
 
     public void DeleteGame()
