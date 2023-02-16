@@ -102,20 +102,13 @@ public class PlaceableObjects : MonoBehaviour
 
         placed = true;
         isAlreadyBougth = true;
-        
-        ES3.Save("isAlreadyBougth",isAlreadyBougth, SaveAndLoadManager.FileName);
-        ES3.Save("isAlreadyPlaced",placed, SaveAndLoadManager.FileName);
-
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
 
-    public void LoadPlacedBooleans()
+    public void SavePlacedBooleans()
     {
-        if (ES3.FileExists(SaveAndLoadManager.FileName))
-        {
-            placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
-            isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
-        }
+        ES3.Save("isAlreadyBougth",isAlreadyBougth, SaveAndLoadManager.FileName);
+        ES3.Save("isAlreadyPlaced",placed, SaveAndLoadManager.FileName);
     }
 
 }

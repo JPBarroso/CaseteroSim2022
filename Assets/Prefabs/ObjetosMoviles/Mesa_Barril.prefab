@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6375035559811413958}
+  - component: {fileID: 6932876743993208200}
   m_Layer: 0
   m_Name: barril
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   m_Father: {fileID: 6913610839539932059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6932876743993208200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5995273776168349052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 1
+  saveTag: 1
+  saveName: 1
+  saveHideFlags: 1
+  saveActive: 1
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 6375035559811413958}
+  - {fileID: 6932876743993208200}
 --- !u!1 &6913610839539932037
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,6 +69,7 @@ GameObject:
   - component: {fileID: 6913610839539932039}
   - component: {fileID: 6913610839539932038}
   - component: {fileID: 3977744372592462240}
+  - component: {fileID: 727083254967817453}
   m_Layer: 0
   m_Name: Mesa_Barril
   m_TagString: Furniture
@@ -194,6 +217,33 @@ MonoBehaviour:
     - {fileID: 2800000, guid: 0e1998f941eea6a489152c3adcf84878, type: 3}
     - {fileID: 2800000, guid: e7b0143153eaf5749a8c23a82ef8d005, type: 3}
     _Values: 969124077e7c806baeb8b7cb0ceb137ef2075b838174275fa9cc60b3efb44c6e56346124fc648b2cfe203c5d2d0f8070f2f2de6bb36e9d0aba83b04add335b066c4921404c377b576e777b9ec735ce654befa4e292b7211968a994874cbfb03285bd0e1b11c0db2892ca01c40c01bd7cb64b96ccd73d984bd9f8285c5d0bf42cd752e5f5d94dab0bcbcd4fc8b65d0c6715e7c368aa82f54625c34319977ecb6242d11345e4385d03f7a297a58d610135fa70b78ab7737d5a472c199c91c4a34998b2098770524b2475408df715af463d3ef2ecf8caa9e64bb09272efae066b4446e13e3f6b89a657dc6ceb891979ba671a23a16027548010cbbed7dedf5c756f2bb6c209127a57379844d336946f642a
+--- !u!114 &727083254967817453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913610839539932037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 1
+  saveTag: 1
+  saveName: 1
+  saveHideFlags: 1
+  saveActive: 1
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 6913610839539932059}
+  - {fileID: 6913610839539932058}
+  - {fileID: 6913610839539932057}
+  - {fileID: 6913610839539932056}
+  - {fileID: 6913610839539932039}
+  - {fileID: 6913610839539932038}
+  - {fileID: 3977744372592462240}
+  - {fileID: 727083254967817453}
 --- !u!1 &7875458693708160557
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +255,7 @@ GameObject:
   - component: {fileID: 272645794198227484}
   - component: {fileID: 1552187156356524136}
   - component: {fileID: 4323895272336140018}
+  - component: {fileID: 7894471917263820504}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -278,3 +329,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7894471917263820504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875458693708160557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 1
+  saveTag: 1
+  saveName: 1
+  saveHideFlags: 1
+  saveActive: 1
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 272645794198227484}
+  - {fileID: 1552187156356524136}
+  - {fileID: 4323895272336140018}
+  - {fileID: 7894471917263820504}
