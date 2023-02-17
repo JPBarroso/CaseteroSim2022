@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,11 +59,28 @@ public class SaveAndLoadManager : MonoBehaviour
     public void LoadGame()
     {
         Debug.Log("Intento Cargar");
+        StartCoroutine(WaitAFramToDestroyObj());
+
+    }
+
+    private IEnumerator WaitAFramToDestroyObj()
+    {
         if (ES3.FileExists(FileName))
         {
+            GameObject[] allGo = GameObject.FindGameObjectsWithTag("Furniture");
+            foreach (var variGameObject in allGo)
+            {
+                Destroy(variGameObject);
+            }
+
+            yield return new WaitForEndOfFrame();
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
             LoadPlaceableBooleans();
+        }
+        else
+        {
+            yield return null;
         }
     }
 

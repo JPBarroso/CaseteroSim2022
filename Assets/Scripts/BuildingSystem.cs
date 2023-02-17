@@ -64,7 +64,7 @@ public class BuildingSystem : MonoBehaviour
     //Colocamos el objeto y aplicamos el Place(esto lo coloca y lo compra además de poner el Place a true)
     public void PlaceSelectedObjAndBuy()
     {
-        if (CanBePlaced(objToPlace) && tempObjDrag.canBePlaced)
+        if (CanBePlaced(objToPlace))
         {
             objToPlace.furnitureMode = PlaceableObjects.MODE.Buymode;//Cambiamos el modo
             objToPlace.Place();//Colocamos el prefab

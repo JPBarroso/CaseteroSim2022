@@ -52,7 +52,8 @@ public class BuildButtonController : MonoBehaviour
     public void PlaceSelectedObjButton()//Confirmamos la compra del objeto, gastamos dinero y actualizamos la UI
     {
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-        if (objPLaced.isAlreadyBougth == false)
+        ObjectDrag objDrag = objPLaced.GetComponent<ObjectDrag>();
+        if (objPLaced.isAlreadyBougth == false && objDrag.canBePlaced)
         {
             EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
             editableComponent.ReturnMaterialsWhenFinishEdit();
@@ -85,10 +86,12 @@ public class BuildButtonController : MonoBehaviour
     public void ConfirmEdit(GameObject panel)//Cuando pulsamos en confirmar la edicion volvemos a quitar el componente drag(Igual mas alante activo y desactivo en vez de destruir y añadir)
     {
         panel.SetActive(false);
+        
         if (BuildingSystem.Instance.objToPlace != null)
         {
             PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-            if (objPLaced.isAlreadyBougth)
+            ObjectDrag objDrag = objPLaced.GetComponent<ObjectDrag>();
+            if (objPLaced.isAlreadyBougth  && objDrag.canBePlaced)
             {
                 objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();

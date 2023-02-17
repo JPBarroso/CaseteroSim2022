@@ -47,13 +47,11 @@ public class ObjectDrag : MonoBehaviour
     {
         if (placeableObjects.isTouchingGround && outOfMouse)
         {
-            Debug.Log("1111");
             Vector3 pos = BuildingSystem.Instance.GetMouseWorldPosition() + offset;
             transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
         }
         else
         {
-            Debug.Log("0000");
             outOfMouse = false;
             transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(Vector3.zero);
         }
@@ -61,17 +59,20 @@ public class ObjectDrag : MonoBehaviour
     }
 
     public bool canBePlaced = true;
-    /*private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Furniture"))
         {
             canBePlaced = false;
             Debug.Log("Esta tocando");
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Furniture"))
         {
-            Debug.Log("no esta tocando");
             canBePlaced = true;
         }
-    }*/
+    }
 }
