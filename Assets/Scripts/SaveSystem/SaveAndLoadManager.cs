@@ -6,8 +6,11 @@ using UnityEngine;
 public class SaveAndLoadManager : MonoBehaviour
 {
 
-    public List<GameObject> prefabsToSaveList = new List<GameObject>();
+    [SerializeField] private List<GameObject> prefabsToSaveList = new List<GameObject>();
+    [SerializeField] private List<GameObject> prefabConfigSaveList = new List<GameObject>();
     public static string FileName => "SaveCasetaFile" + ".es3";
+    [SerializeField] private Shop shopAvailable;
+    [SerializeField] private ShopSystem shopSystem;
 
     void OnEnable()
     {
@@ -26,6 +29,13 @@ public class SaveAndLoadManager : MonoBehaviour
     
     public void SaveGame()
     {
+        SavePrefabs();
+        SaveMoney();
+        SaveConfig();
+    }
+
+    private void SavePrefabs()
+    {
         Debug.Log("Estoy guardando");
         if (prefabsToSaveList.Count > 0)
         {
@@ -41,7 +51,16 @@ public class SaveAndLoadManager : MonoBehaviour
                 p.SavePlacedBooleans();
             }
         }
+    }
 
+    private void SaveMoney()
+    {
+        ES3.Save("Money", shopAvailable.moneyAvailable, FileName);
+    }
+
+    private void SaveConfig()
+    {
+        ES3.Save("Config", prefabConfigSaveList, FileName);
     }
 
     private void LoadPlaceableBooleans()
@@ -59,11 +78,11 @@ public class SaveAndLoadManager : MonoBehaviour
     public void LoadGame()
     {
         Debug.Log("Intento Cargar");
-        StartCoroutine(WaitAFramToDestroyObj());
+        StartCoroutine(WaitAFramToDestroyObjAndLoad());
 
     }
 
-    private IEnumerator WaitAFramToDestroyObj()
+    private IEnumerator WaitAFramToDestroyObjAndLoad()
     {
         if (ES3.FileExists(FileName))
         {
@@ -76,7 +95,10 @@ public class SaveAndLoadManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
+            prefabConfigSaveList = ES3.Load("Config", FileName, new List<GameObject>());
             LoadPlaceableBooleans();
+            shopAvailable.LoadAmountOfMoney();
+            shopSystem.UpdateUI();
         }
         else
         {

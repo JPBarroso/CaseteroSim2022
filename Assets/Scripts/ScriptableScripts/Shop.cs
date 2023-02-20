@@ -14,6 +14,18 @@ public class Shop : ScriptableObject
         moneyAvailable = maxMoney;
     }
 
+    public void LoadAmountOfMoney()
+    {
+        if (!ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            moneyAvailable = maxMoney;
+        }
+        else
+        {
+            moneyAvailable = ES3.Load<float>("Money", SaveAndLoadManager.FileName);
+        }
+    }
+
     public void BuyFurniture(Furniture furniture)
     {
         if (moneyAvailable >= furniture.furniturePrice)
