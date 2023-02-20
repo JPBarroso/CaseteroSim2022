@@ -61,7 +61,7 @@ public class ObjectDrag : MonoBehaviour
     public bool canBePlaced = true;
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Furniture"))
+        if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = false;
             Debug.Log("Esta tocando");
@@ -70,7 +70,7 @@ public class ObjectDrag : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Furniture"))
+        if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = true;
         }
