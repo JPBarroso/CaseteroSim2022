@@ -61,6 +61,14 @@ public class PermanentsObjController : MonoBehaviour
         priceActualConfigBuy = actualHouseConfig.price;
     }
 
+    public void FindForActualHouseReferences()
+    {
+        actualDataInScene = FindObjectOfType<HouseConfigData>();
+        actualHouseConfig = actualDataInScene.config;
+        actualObjHouseInScene = actualDataInScene.gameObject;
+        priceActualConfigBuy = actualHouseConfig.price;
+    }
+
     private void CheckForPriceDifference()
     {
         shopData.ReturnBuyConfigurationMoney(latestHouseConfig);

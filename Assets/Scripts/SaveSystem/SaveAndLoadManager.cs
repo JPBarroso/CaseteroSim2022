@@ -11,6 +11,7 @@ public class SaveAndLoadManager : MonoBehaviour
     public static string FileName => "SaveCasetaFile" + ".es3";
     [SerializeField] private Shop shopAvailable;
     [SerializeField] private ShopSystem shopSystem;
+    [SerializeField] private PermanentsObjController pObjController;
 
     void OnEnable()
     {
@@ -99,6 +100,7 @@ public class SaveAndLoadManager : MonoBehaviour
             LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
             shopSystem.UpdateUI();
+            pObjController.FindForActualHouseReferences();
         }
         else
         {
