@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: SillaNormal
   m_EditorClassIdentifier: 
   furnitureName: Silla
-  makerEnum: 0
   typeEnum: 0
+  colorEnum: 0
   furniturePrefab: {fileID: 2161749621390965670, guid: 3da9ce2226670bf499d5e097fd049f62,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  ArtisticValue: 0
+  LuxuryValue: 1
   furniturePrice: 10

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Silla Negra
   m_EditorClassIdentifier: 
   furnitureName: Silla Negra
-  makerEnum: 0
   typeEnum: 0
+  colorEnum: 3
   furniturePrefab: {fileID: 2161749621390965670, guid: 7e081fe53be26684e9ef04d7dd0fe878,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  ArtisticValue: 0
+  LuxuryValue: 0
   furniturePrice: 10

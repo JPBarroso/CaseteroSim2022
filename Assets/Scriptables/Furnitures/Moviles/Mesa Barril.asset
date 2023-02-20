@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Mesa Barril
   m_EditorClassIdentifier: 
   furnitureName: Mesa Barril
-  typeEnum: 0
+  typeEnum: 1
+  colorEnum: 4
   furniturePrefab: {fileID: 6913610839539932037, guid: f4e5a739aea0fac4ea66e2d26a3890c8,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  ArtisticValue: 1
+  LuxuryValue: 1
   furniturePrice: 10

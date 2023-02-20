@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Silla Pleable
   m_EditorClassIdentifier: 
   furnitureName: Silla Plegable
-  makerEnum: 0
   typeEnum: 0
+  colorEnum: 4
   furniturePrefab: {fileID: 8687047540664224006, guid: e9d7a32cd3a49704181b00cb83965962,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  ArtisticValue: 0
+  LuxuryValue: -1
   furniturePrice: 10

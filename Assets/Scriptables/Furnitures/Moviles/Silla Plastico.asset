@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureName: Silla Plastico
   typeEnum: 0
+  colorEnum: 2
   furniturePrefab: {fileID: 7227709877547991477, guid: 7df11037abc43e740a70f3d2d9eaa594,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  ArtisticValue: 0
+  LuxuryValue: -1
   furniturePrice: 10
