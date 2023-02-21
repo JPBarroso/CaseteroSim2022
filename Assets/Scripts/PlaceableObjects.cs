@@ -107,7 +107,7 @@ public class PlaceableObjects : MonoBehaviour
         Transform[] allObj = this.gameObject.GetComponentsInChildren<Transform>();
         foreach (var g in allObj)
         {
-            g.gameObject.layer = LayerMask.NameToLayer("Build");
+            g.gameObject.layer = LayerMask.NameToLayer("Default");
         }
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
