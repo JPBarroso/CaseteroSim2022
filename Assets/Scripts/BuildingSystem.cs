@@ -141,7 +141,11 @@ public class BuildingSystem : MonoBehaviour
         objToPlace = obj.GetComponent<PlaceableObjects>();
         obj.AddComponent<ObjectDrag>();//Añadimos el componente drag para poder moverlo con el raton
         obj.layer = LayerMask.NameToLayer("Build");
-
+        Transform[] allObj = obj.GetComponentsInChildren<Transform>();
+        foreach (var g in allObj)
+        {
+            g.gameObject.layer = LayerMask.NameToLayer("Build");
+        }
         tempObjDrag = objToPlace.GetComponent<ObjectDrag>();
 
     }
