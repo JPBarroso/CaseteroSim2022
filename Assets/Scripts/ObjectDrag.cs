@@ -47,8 +47,8 @@ public class ObjectDrag : MonoBehaviour
     {
         if (placeableObjects.isTouchingGround && outOfMouse)
         {
-            Vector3 pos = BuildingSystem.Instance.GetMouseWorldPosition() + offset;
-            transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);
+            Vector3 pos = BuildingSystem.Instance.GetMouseWorldPosition() + offset;         
+            transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(pos);     
         }
         else
         {

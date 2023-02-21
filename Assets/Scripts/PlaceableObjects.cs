@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //Este script está en todos los objetos y se encarga de darle su comportamiento además de ser quien se comunica con otros componentes
@@ -102,6 +103,7 @@ public class PlaceableObjects : MonoBehaviour
 
         placed = true;
         isAlreadyBougth = true;
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
         //Aqui colocamos. Podemos suscribir aqui distintos eventos para descontar dinero o lo que necesitemos
     }
 

@@ -140,6 +140,7 @@ public class BuildingSystem : MonoBehaviour
         GameObject obj = Instantiate(furniture.furniturePrefab, position, Quaternion.identity);//Instan el obj
         objToPlace = obj.GetComponent<PlaceableObjects>();
         obj.AddComponent<ObjectDrag>();//Añadimos el componente drag para poder moverlo con el raton
+        obj.layer = LayerMask.NameToLayer("Build");
 
         tempObjDrag = objToPlace.GetComponent<ObjectDrag>();
 
