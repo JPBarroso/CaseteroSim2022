@@ -20,4 +20,4 @@ MonoBehaviour:
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
   ArtisticValue: 1
   LuxuryValue: 1
-  furniturePrice: 10
+  furniturePrice: 80

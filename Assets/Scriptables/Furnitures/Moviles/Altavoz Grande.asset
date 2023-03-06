@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: Altavozsuelo
+  m_Name: Altavoz Grande
   m_EditorClassIdentifier: 
-  furnitureName: Altavoz
+  furnitureName: Altavoz Grande
   typeEnum: 4
   colorEnum: 3
-  furniturePrefab: {fileID: 6642556693816863331, guid: cda7ee77f003e0e4c9bf6b1919b76ba1,
+  furniturePrefab: {fileID: 2385793946475166471, guid: 5f454a8643cfb5943bb0e6fd298ac5bb,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
-  ArtisticValue: 0
-  LuxuryValue: 1
-  furniturePrice: 10
+  ArtisticValue: 2
+  LuxuryValue: 2
+  furniturePrice: 180

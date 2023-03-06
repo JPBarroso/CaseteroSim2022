@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2418334683328549163}
   - component: {fileID: 2645783058225254262}
   m_Layer: 0
-  m_Name: Silla
+  m_Name: Silla Sevillana
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

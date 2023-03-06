@@ -18,6 +18,6 @@ MonoBehaviour:
   furniturePrefab: {fileID: 6545699917571888087, guid: dc99f38fb66811e43bed9b96e87ae864,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
-  ArtisticValue: 0
-  LuxuryValue: 0
-  furniturePrice: 10
+  ArtisticValue: 1
+  LuxuryValue: 1
+  furniturePrice: 90

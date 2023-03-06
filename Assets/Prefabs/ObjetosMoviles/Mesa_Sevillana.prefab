@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5662447355608093248}
   - component: {fileID: 5219392233977027798}
   m_Layer: 0
-  m_Name: MesaFeria
+  m_Name: Mesa_Sevillana
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

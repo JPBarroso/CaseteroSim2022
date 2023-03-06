@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: Mesa Plegable Normal
+  m_Name: Silla Lujo
   m_EditorClassIdentifier: 
-  furnitureName: Mesa Plegable Normal
-  typeEnum: 1
-  colorEnum: 2
-  furniturePrefab: {fileID: 9050323623821334311, guid: feedcebdd576b9b49afdb87d60ece50b,
+  furnitureName: Silla Lujo
+  typeEnum: 0
+  colorEnum: 0
+  furniturePrefab: {fileID: 7478655275582743251, guid: d5bc4de98d9440441b0fcb1b838088fc,
     type: 3}
   spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
-  ArtisticValue: -1
-  LuxuryValue: -1
-  furniturePrice: 40
+  ArtisticValue: 0
+  LuxuryValue: 2
+  furniturePrice: 60
