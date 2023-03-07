@@ -26,7 +26,7 @@ public class EditorUpdater : MonoBehaviour
     public GameObject lujo, eco, arte, simple;
 
     // Update is called once per frame
-    [ContextMenu("¡Al lío!")]
+    [ContextMenu("Pablo puto")]
     void Update()
     {
         this.transform.name = datos.name;
