@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: FocoPie
   m_EditorClassIdentifier: 
   furnitureName: Foco Pie
-  typeEnum: 0
-  colorEnum: 0
-  furniturePrefab: {fileID: 0}
-  spriteFurniture: {fileID: 0}
+  typeEnum: 4
+  colorEnum: 3
+  furniturePrefab: {fileID: 5021275207296231207, guid: 645a1d6941c248042a6009ab416d955c,
+    type: 3}
+  spriteFurniture: {fileID: 21300000, guid: 69349f91159ed9b4696054fa4822eebe, type: 3}
   ArtisticValue: 0
   LuxuryValue: 1
   furniturePrice: 70

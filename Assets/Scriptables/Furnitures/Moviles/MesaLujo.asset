@@ -17,7 +17,7 @@ MonoBehaviour:
   colorEnum: 4
   furniturePrefab: {fileID: 2520158480417974603, guid: 037756cc4b444ce4cb15d1a33870c4c1,
     type: 3}
-  spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  spriteFurniture: {fileID: 21300000, guid: 85c35d61a9d1b3746937123306dcc85d, type: 3}
   ArtisticValue: 0
   LuxuryValue: 2
   furniturePrice: 75

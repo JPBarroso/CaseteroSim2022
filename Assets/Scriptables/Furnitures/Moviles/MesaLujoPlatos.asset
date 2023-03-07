@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureName: Mesa Lujo Platos
   typeEnum: 1
-  colorEnum: 0
+  colorEnum: 4
   furniturePrefab: {fileID: 1571470407700757080, guid: fc7bfbcca613b5a4ba0a8a4b3859bb41,
     type: 3}
-  spriteFurniture: {fileID: -542713962, guid: a7380c0a2c2d3f74386845b2f3ac33a6, type: 3}
+  spriteFurniture: {fileID: 21300000, guid: 875a8a407c06efb4e9b7c1e95fc64add, type: 3}
   ArtisticValue: 1
   LuxuryValue: 2
   furniturePrice: 80
