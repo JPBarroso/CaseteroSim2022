@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
-  m_Name: Config01
+  m_Name: Config07
   m_EditorClassIdentifier: 
-  gameObjConfiguration: {fileID: 1415297313697568845, guid: 0e4fa4a738eab1347a9954b88c2468dd,
+  gameObjConfiguration: {fileID: 926260395708200381, guid: 7780963b98ee4a748810a361eac1bd41,
     type: 3}
   price: 500
