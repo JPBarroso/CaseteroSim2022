@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: MesaLujo
+  m_Name: Mesa_Sevillana_Verde 1
   m_EditorClassIdentifier: 
-  furnitureName: Mesa Lujo
+  furnitureName: Mesa Sevillana Verde Platos
   typeEnum: 1
-  colorEnum: 4
-  furniturePrefab: {fileID: 2520158480417974603, guid: 037756cc4b444ce4cb15d1a33870c4c1,
+  colorEnum: 1
+  furniturePrefab: {fileID: 5349513829149577901, guid: e648f8e892376cf428a25aa1b8c91135,
     type: 3}
-  spriteFurniture: {fileID: 21300000, guid: 85c35d61a9d1b3746937123306dcc85d, type: 3}
-  ArtisticValue: 0
-  LuxuryValue: 2
-  furniturePrice: 75
+  spriteFurniture: {fileID: 21300000, guid: 20baaf8baba8cef4e8a52635d8b46804, type: 3}
+  ArtisticValue: 1
+  LuxuryValue: 1
+  furniturePrice: 50
