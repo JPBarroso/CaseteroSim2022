@@ -14,6 +14,8 @@ public class SaveAndLoadManager : MonoBehaviour
     [SerializeField] private ShopSystem shopSystem;
     [SerializeField] private PermanentsObjController pObjController;
 
+    private GameObject[] allConfigInScene;
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
@@ -94,7 +96,6 @@ public class SaveAndLoadManager : MonoBehaviour
     {
         Debug.Log("Intento Cargar");
         StartCoroutine(WaitAFramToDestroyObjAndLoad());
-
     }
 
     private IEnumerator WaitAFramToDestroyObjAndLoad()
@@ -109,11 +110,12 @@ public class SaveAndLoadManager : MonoBehaviour
                     Destroy(variGameObject);
                 }
             }
+            DesactiveAllConfigBeforeActive();
             yield return new WaitForEndOfFrame();
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
             prefabConfigSave = ES3.Load<GameObject>("Config", FileName);
-            //prefabConfigSave.SetActive(true);
+            prefabConfigSave.SetActive(true);
             LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
             shopSystem.UpdateUI();
@@ -123,6 +125,16 @@ public class SaveAndLoadManager : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    private void DesactiveAllConfigBeforeActive()
+    {
+        allConfigInScene = GameObject.FindGameObjectsWithTag("Config");
+        foreach (var config in allConfigInScene)
+        {
+            config.SetActive(false);
+        }
+
     }
 
     public void DeleteGame()
