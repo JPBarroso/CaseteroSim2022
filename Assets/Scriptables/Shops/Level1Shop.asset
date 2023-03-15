@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
-  m_Name: Config13
+  m_Script: {fileID: 11500000, guid: b3e38982adeb8e94a8a18611c53345cd, type: 3}
+  m_Name: Level1Shop
   m_EditorClassIdentifier: 
-  gameObjConfiguration: {fileID: 7800411998004188986, guid: 6ec95ca41e708d941b31ac58d0a4f8db,
-    type: 3}
-  price: 1500
+  maxMoney: 5000
+  moneyAvailable: 5000

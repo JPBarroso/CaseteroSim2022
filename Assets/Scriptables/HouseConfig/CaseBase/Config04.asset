@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjConfiguration: {fileID: 391573378738495564, guid: 9fe618a500d6b5240815eeb7e415e5d0,
     type: 3}
-  price: 500
+  price: 750

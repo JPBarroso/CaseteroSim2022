@@ -71,6 +71,8 @@ public class PermanentsObjController : MonoBehaviour
 
     private void CheckForPriceDifference()
     {
+        Debug.Log("CheckPrice");
+        Debug.Log("el valor es" + actualHouseConfig.price);
         shopData.ReturnBuyConfigurationMoney(latestHouseConfig);
         shopData.BuyAConfiguration(actualHouseConfig);
     }
