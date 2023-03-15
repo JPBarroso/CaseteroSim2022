@@ -32,6 +32,8 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - NativeShare.Editor
+    - NativeShare.Runtime
     - PPv2URPConverters
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0

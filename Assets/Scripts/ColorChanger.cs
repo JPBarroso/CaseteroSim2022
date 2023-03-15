@@ -26,4 +26,15 @@ public class ColorChanger : MonoBehaviour
             material.color = _verde;
         }
     }
+    public void cambiaBoton(int valor)
+    {
+        if(valor == 0)
+        {
+            material.color = _rojo;
+        }
+        else
+        {
+            material.color = _verde;
+        }
+    }
 }
