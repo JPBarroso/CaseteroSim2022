@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
@@ -17,7 +18,15 @@ public class SaveAndLoadManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
-    
+
+    private void Awake()
+    {
+        if (ES3.FileExists(FileName))
+        {
+            LoadGame();
+        }
+    }
+
     public void AddGameObjToList(GameObject prefabToAdd)
     {
         prefabsToSaveList.Add(prefabToAdd);
