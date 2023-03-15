@@ -21,6 +21,8 @@ public class PermanentsObjController : MonoBehaviour
     [SerializeField] private HouseConfig latestHouseConfig;
     [SerializeField] private float priceLatestConfigBuy;
 
+    [SerializeField] private SaveAndLoadManager saveManager;
+
 
     private void Awake()
     {
@@ -30,17 +32,23 @@ public class PermanentsObjController : MonoBehaviour
         priceActualConfigBuy = actualHouseConfig.price;
     }
 
+    private void Start()
+    {
+        saveManager.AddToPlaceReference(actualObjHouseInScene);
+    }
+
     public void BuildANewConfig(GameObject newBuy)
     {
         if (newBuy.activeInHierarchy) return;//Si clicamos en un objeto ya existentes nada
+        Debug.Log("continua build new config");
 
         LatestHouseReference();//Guardamos los datos en la "ultima compra"
         actualObjHouseInScene.SetActive(false);//Desactivamos este objeto
         newBuy.SetActive(true);//Activamos la nueva configuracion de caseta
-        
         //Aplicamos referencias sobre el nuevo objeto
         actualObjHouseInScene = newBuy;
         NewHouseReferences(newBuy);
+        saveManager.AddToPlaceReference(newBuy);
         //Descontamos el dinero
         CheckForPriceDifference();
         UpdateUI();

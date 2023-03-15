@@ -8,7 +8,7 @@ public class SaveAndLoadManager : MonoBehaviour
 {
 
     [SerializeField] private List<GameObject> prefabsToSaveList = new List<GameObject>();
-    [SerializeField] private List<GameObject> prefabConfigSaveList = new List<GameObject>();
+    [SerializeField] private GameObject prefabConfigSave;
     public static string FileName => "SaveCasetaFile" + ".es3";
     [SerializeField] private Shop shopAvailable;
     [SerializeField] private ShopSystem shopSystem;
@@ -35,6 +35,11 @@ public class SaveAndLoadManager : MonoBehaviour
     public void DeleteFromList(GameObject prefabToAdd)
     {
         prefabsToSaveList.Remove(prefabToAdd);
+    }
+
+    public void AddToPlaceReference(GameObject placedObj)
+    {
+        prefabConfigSave = placedObj;
     }
     
     public void SaveGame()
@@ -70,7 +75,7 @@ public class SaveAndLoadManager : MonoBehaviour
 
     private void SaveConfig()
     {
-        ES3.Save("Config", prefabConfigSaveList, FileName);
+        ES3.Save("Config", prefabConfigSave, FileName);
     }
 
     private void LoadPlaceableBooleans()
@@ -97,15 +102,18 @@ public class SaveAndLoadManager : MonoBehaviour
         if (ES3.FileExists(FileName))
         {
             GameObject[] allGo = GameObject.FindGameObjectsWithTag("Furniture");
-            foreach (var variGameObject in allGo)
+            if (allGo != null)
             {
-                Destroy(variGameObject);
+                foreach (var variGameObject in allGo)
+                {
+                    Destroy(variGameObject);
+                }
             }
-
             yield return new WaitForEndOfFrame();
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
-            prefabConfigSaveList = ES3.Load("Config", FileName, new List<GameObject>());
+            prefabConfigSave = ES3.Load<GameObject>("Config", FileName);
+            //prefabConfigSave.SetActive(true);
             LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
             shopSystem.UpdateUI();
