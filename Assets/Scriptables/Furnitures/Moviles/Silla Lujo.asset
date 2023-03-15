@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureName: Silla Lujo
   typeEnum: 0
-  colorEnum: 0
+  colorEnum: 4
   furniturePrefab: {fileID: 7478655275582743251, guid: d5bc4de98d9440441b0fcb1b838088fc,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 875142747e751794b8e237049155f50e, type: 3}

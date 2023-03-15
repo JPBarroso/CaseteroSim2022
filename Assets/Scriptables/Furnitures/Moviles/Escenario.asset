@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Escenario
   m_EditorClassIdentifier: 
   furnitureName: Escenario
-  typeEnum: 4
-  colorEnum: 2
+  typeEnum: 3
+  colorEnum: 4
   furniturePrefab: {fileID: 6904745059013160807, guid: ccd51f646a6c9ec4abbf0807a61df88e,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 1a8b60df718dc03439266235e3f598ba, type: 3}

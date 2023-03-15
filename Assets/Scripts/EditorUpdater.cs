@@ -37,6 +37,7 @@ public class EditorUpdater : MonoBehaviour
         muebleSprite.sprite = datos.spriteFurniture;
         EffectColourer();
         StatsShow();
+        this.enabled = false;
     }
 
     void EffectColourer()

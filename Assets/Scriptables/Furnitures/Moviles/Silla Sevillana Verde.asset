@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureName: Silla Sevillana Verde
   typeEnum: 0
-  colorEnum: 0
+  colorEnum: 1
   furniturePrefab: {fileID: 725437622161861392, guid: 8fb04ba40fdd31a4997ff378e20be362,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: af23be9f455d91945a90427cf9bfc621, type: 3}
