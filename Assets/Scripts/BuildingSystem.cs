@@ -107,6 +107,14 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    public Vector3 GetTouchPosition()
+    {
+        Vector3 fingerPos = Input.GetTouch(0).position;
+        Vector3 posInWorl = Camera.main.ScreenToWorldPoint(fingerPos);
+
+        return posInWorl;
+    }
+
     //Retornamos la posicion dentro del grid
     public Vector3 SnapCoordinateToGrid(Vector3 position)
     {
