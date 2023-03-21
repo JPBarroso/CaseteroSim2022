@@ -14,7 +14,7 @@ public class CameraZoomer : MonoBehaviour
 
     public void OnValueChange()
     {
-        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, _slider.value, Camera.main.transform.position.z);
+        Camera.main.orthographicSize = 3.81f + _slider.value;
     }
     public void Reset()
     {
