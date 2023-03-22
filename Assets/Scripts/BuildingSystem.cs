@@ -155,7 +155,6 @@ public class BuildingSystem : MonoBehaviour
             g.gameObject.layer = LayerMask.NameToLayer("Build");
         }
         tempObjDrag = objToPlace.GetComponent<ObjectDrag>();
-
     }
 
     private bool CanBePlaced(PlaceableObjects placeableObjects)//Esto debería de detectar cosas de detectar para ver si podemos colocar o no pero no me funciona bien del todo

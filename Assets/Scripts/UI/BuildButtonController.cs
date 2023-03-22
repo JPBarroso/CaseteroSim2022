@@ -96,14 +96,13 @@ public class BuildButtonController : MonoBehaviour
 
     public void ConfirmEdit(GameObject panel)//Cuando pulsamos en confirmar la edicion volvemos a quitar el componente drag(Igual mas alante activo y desactivo en vez de destruir y añadir)
     {
-        panel.SetActive(false);
-        
         if (BuildingSystem.Instance.objToPlace != null)
         {
             PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
             ObjectDrag objDrag = objPLaced.GetComponent<ObjectDrag>();
             if (objPLaced.isAlreadyBougth  && objDrag.canBePlaced)
             {
+                panel.SetActive(false);
                 objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
                 editableComponent.ReturnMaterialsWhenFinishEdit();
