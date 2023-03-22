@@ -11,10 +11,11 @@ public class ShareScreenshot : MonoBehaviour
     public string mensaje;
     public RenderTexture rtex;
     bool isTakingScreenshot = false;
+    RenderTextureFormat format;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
    public void Capturar()
@@ -62,7 +63,7 @@ public class ShareScreenshot : MonoBehaviour
             botones[i].SetActive(false);
         }
         yield return new WaitForEndOfFrame();
-        Texture2D tx = new Texture2D(rtex.width, rtex.height, TextureFormat.RGB24, false);
+        Texture2D tx = new Texture2D(rtex.width, rtex.height, TextureFormat.RGBAHalf, false);
         RenderTexture.active = rtex;
         tx.ReadPixels(new Rect(0, 0, rtex.width, rtex.height), 0, 0);
         tx.Apply();
