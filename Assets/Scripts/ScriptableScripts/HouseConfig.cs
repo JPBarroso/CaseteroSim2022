@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptables/Caseta Data")]
 public class HouseConfig : ScriptableObject
 {
+    public string configName;
     public GameObject gameObjConfiguration;
     public float price;
     
