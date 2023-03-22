@@ -110,6 +110,12 @@ public class BuildButtonController : MonoBehaviour
                 Destroy(drag);
                 objPLaced = null;
                 gm.actualMode = GameModeController.GameActualMode.WAIT;
+                GameObject temp = GameObject.FindGameObjectWithTag("Pick");
+        
+                if (temp != null)
+                {
+                    Destroy(temp);
+                }
             }
         }
 
