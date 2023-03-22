@@ -63,9 +63,10 @@ public class ShareScreenshot : MonoBehaviour
             botones[i].SetActive(false);
         }
         yield return new WaitForEndOfFrame();
-        Texture2D tx = new Texture2D(rtex.width, rtex.height, TextureFormat.RGBAHalf, 1, false);
+        Texture2D tx = new Texture2D(rtex.width, rtex.height, TextureFormat.RGBAHalf, false);
         RenderTexture.active = rtex;
-        Graphics.CopyTexture(rtex, tx);
+        tx.ReadPixels(new Rect(0, 0, rtex.width, rtex.height), 0, 0);
+        tx.Apply();
         string path = Path.Combine(Application.temporaryCachePath, "sharedimage.png");
         File.WriteAllBytes(path, tx.EncodeToPNG());
         Destroy(tx);
