@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
   m_Name: Config08
   m_EditorClassIdentifier: 
+  configName: Arte III
   gameObjConfiguration: {fileID: 5408670688826236396, guid: 03372f36b7d6e54449ca47ab904d5be9,
     type: 3}
   price: 500

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
   m_Name: Config10
   m_EditorClassIdentifier: 
+  configName: Madera II
   gameObjConfiguration: {fileID: 6830027507507110538, guid: 5e1f1a1b3f2bece4da721a66daec4ad6,
     type: 3}
   price: 500

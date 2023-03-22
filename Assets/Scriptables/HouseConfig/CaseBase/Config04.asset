@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
   m_Name: Config04
   m_EditorClassIdentifier: 
+  configName: Cortinas II
   gameObjConfiguration: {fileID: 391573378738495564, guid: 9fe618a500d6b5240815eeb7e415e5d0,
     type: 3}
   price: 750

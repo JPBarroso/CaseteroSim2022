@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
   m_Name: Config02
   m_EditorClassIdentifier: 
+  configName: "B\xE1sica III"
   gameObjConfiguration: {fileID: 623478346282172179, guid: 1e4c03b05c1706447a4251d810201a27,
     type: 3}
-  price: 550
+  price: 150

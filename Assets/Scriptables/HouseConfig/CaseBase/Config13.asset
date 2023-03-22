@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
   m_Name: Config13
   m_EditorClassIdentifier: 
+  configName: Lujo II
   gameObjConfiguration: {fileID: 7800411998004188986, guid: 6ec95ca41e708d941b31ac58d0a4f8db,
     type: 3}
   price: 1500
