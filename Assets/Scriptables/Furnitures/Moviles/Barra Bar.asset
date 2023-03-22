@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Barra Bar
   m_EditorClassIdentifier: 
   furnitureName: Barra Bar
-  typeEnum: 1
+  typeEnum: 3
   colorEnum: 1
   furniturePrefab: {fileID: 5134878583493897746, guid: ce1bf49a4628b9949ba2debfaa38857c,
     type: 3}

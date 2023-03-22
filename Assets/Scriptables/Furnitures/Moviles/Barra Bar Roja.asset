@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-  m_Name: MesaPegableMantelPlatos
+  m_Name: Barra Bar Roja
   m_EditorClassIdentifier: 
-  furnitureName: Mesa Plegable Mantel Platos
-  typeEnum: 0
+  furnitureName: Barra Bar Roja
+  typeEnum: 3
   colorEnum: 0
-  furniturePrefab: {fileID: 1735934526882014878, guid: 5bede65a3c4d9164fbc4874549b22911,
+  furniturePrefab: {fileID: 5134878583493897746, guid: 251448d52ab666442a07d37ff329463c,
     type: 3}
-  spriteFurniture: {fileID: 21300000, guid: 45b0f802117523c46ad07e2b18be4d03, type: 3}
-  ArtisticValue: 2
-  LuxuryValue: -1
-  furniturePrice: 50
+  spriteFurniture: {fileID: 21300000, guid: 7008dc39adf3aeb4784ff59bb2e09227, type: 3}
+  ArtisticValue: 0
+  LuxuryValue: 1
+  furniturePrice: 100
