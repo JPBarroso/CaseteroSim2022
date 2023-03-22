@@ -40,16 +40,35 @@ public class EditableObject : MonoBehaviour
     {
         //Activamos la UI de edicion(el panel)
         ActivateEditableUI();
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
+        {
+            BuildingSystem.Instance.objToPlace = this.gameObject.GetComponent<PlaceableObjects>();
+        }
+
+    }
+
+    private void TouchAndEdit()
+    {
+        //Activamos la UI de edicion(el panel)
+        ActivateEditableUI();
         BuildingSystem.Instance.objToPlace = this.gameObject.GetComponent<PlaceableObjects>();
     }
 
     private void ActivateEditableUI()
     {
-        if (placeableObjects.isAlreadyBougth)//Solo activamos esto si al clicar el objeto ya está comprado
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
         {
-            Debug.Log("puedes editar el objeto");
-            ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
-            activate.ActivateThisUIComponent();
+            GameModeController.Instance.actualMode = GameModeController.GameActualMode.EDIT;
+        }
+        
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
+        {
+            if (placeableObjects.isAlreadyBougth)//Solo activamos esto si al clicar el objeto ya está comprado
+            {
+                Debug.Log("puedes editar el objeto");
+                ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
+                activate.ActivateThisUIComponent();
+            }
         }
     }
 

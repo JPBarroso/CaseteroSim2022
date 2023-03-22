@@ -25,6 +25,11 @@ public class BuildButtonController : MonoBehaviour
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
+        {
+            GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
+        }
+        
         if (gm.actualMode == GameModeController.GameActualMode.BUILD)
         {
             furnitureGlobal = furniture;
@@ -46,6 +51,7 @@ public class BuildButtonController : MonoBehaviour
         {
             saveManager.DeleteFromList(objPLaced.gameObject);
             BuildingSystem.Instance.CancelSelectedObj();
+            GameModeController.Instance.actualMode = GameModeController.GameActualMode.WAIT;
         }
     }
 
@@ -62,24 +68,29 @@ public class BuildButtonController : MonoBehaviour
             
             ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
             shopSystem.UpdateUI();
+            GameModeController.Instance.actualMode = GameModeController.GameActualMode.WAIT;
         }
 
     }
     
     public void StartEditObj()//Este metodo va en el boton de MOVER(Es para empezar a editar). Si el objeto ya está comprado volvemos a meterle el componente drag para mover y rotar
     {
-        gm.actualMode = GameModeController.GameActualMode.EDIT;
-        PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-        objPLaced.furnitureMode = PlaceableObjects.MODE.Editmode;
-        EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
-        editableComponent.ChangeMaterialWhenEdit();
-        if (objPLaced.isAlreadyBougth == true)
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
         {
-            if (objPLaced.gameObject.GetComponent<ObjectDrag>() == null)
+            gm.actualMode = GameModeController.GameActualMode.EDITING;
+            PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+            
+            objPLaced.furnitureMode = PlaceableObjects.MODE.Editmode;
+            EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+            editableComponent.ChangeMaterialWhenEdit();
+            if (objPLaced.isAlreadyBougth == true)
             {
-                objPLaced.gameObject.AddComponent<ObjectDrag>();
+                if (objPLaced.gameObject.GetComponent<ObjectDrag>() == null)
+                {
+                    objPLaced.gameObject.AddComponent<ObjectDrag>();
+                }
+                objPLaced.placed = false;
             }
-            objPLaced.placed = false;
         }
     }
 
@@ -99,15 +110,15 @@ public class BuildButtonController : MonoBehaviour
                 ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
                 Destroy(drag);
                 objPLaced = null;
-                gm.actualMode = GameModeController.GameActualMode.BUILD;
+                gm.actualMode = GameModeController.GameActualMode.WAIT;
             }
         }
 
     }
     
-    public void SoldItemAfterBuy()//Aqui quiero ver como hcaer para vender los items
+    public void SoldItemAfterBuy()
     {
-        gm.actualMode = GameModeController.GameActualMode.BUILD;
+        gm.actualMode = GameModeController.GameActualMode.WAIT;
         
         if (BuildingSystem.Instance.objToPlace != null)
         {
