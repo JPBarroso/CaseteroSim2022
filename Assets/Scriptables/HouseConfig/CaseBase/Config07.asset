@@ -15,4 +15,4 @@ MonoBehaviour:
   configName: Arte II
   gameObjConfiguration: {fileID: 926260395708200381, guid: 7780963b98ee4a748810a361eac1bd41,
     type: 3}
-  price: 500
+  price: 250

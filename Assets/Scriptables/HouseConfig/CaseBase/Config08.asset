@@ -15,4 +15,4 @@ MonoBehaviour:
   configName: Arte III
   gameObjConfiguration: {fileID: 5408670688826236396, guid: 03372f36b7d6e54449ca47ab904d5be9,
     type: 3}
-  price: 500
+  price: 350

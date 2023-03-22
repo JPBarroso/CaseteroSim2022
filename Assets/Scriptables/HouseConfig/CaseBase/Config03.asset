@@ -15,4 +15,4 @@ MonoBehaviour:
   configName: Cortinas I
   gameObjConfiguration: {fileID: 3343512516835473547, guid: 5e2a5f4db0ca3bf4abc0ae8e4c3cdc9f,
     type: 3}
-  price: 600
+  price: 100

@@ -15,4 +15,4 @@ MonoBehaviour:
   configName: Madera I
   gameObjConfiguration: {fileID: 2860180834736328652, guid: 80d8f7615e00d284ab69089932606ced,
     type: 3}
-  price: 500
+  price: 300
