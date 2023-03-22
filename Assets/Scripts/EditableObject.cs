@@ -10,6 +10,9 @@ public class EditableObject : MonoBehaviour
     private PlaceableObjects placeableObjects;
     [SerializeField] private GameObject objTop;
 
+    private Vector3 lastPosition;
+    private Quaternion triple;
+
     [SerializeField] private MeshRenderer[] meshRenderer;
     public Material[] originalMaterials;
     [SerializeField] private Material newmaterial;
@@ -66,7 +69,6 @@ public class EditableObject : MonoBehaviour
         {
             if (placeableObjects.isAlreadyBougth)//Solo activamos esto si al clicar el objeto ya está comprado
             {
-                Debug.Log("puedes editar el objeto");
                 ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
                 activate.ActivateThisUIComponent();
                 ActivateObjectWhenEdit();
@@ -86,7 +88,6 @@ public class EditableObject : MonoBehaviour
         Vector3 pos = this.transform.position + Vector3.up;
         GameObject pick = Instantiate(objTop, pos, Quaternion.identity);
         pick.transform.parent = gameObject.transform;
-
     }
 
     public void ChangeMaterialWhenEdit()
@@ -121,5 +122,20 @@ public class EditableObject : MonoBehaviour
                 meshRenderer[i].material = originalMaterials[i];
             }
         }
+    }
+
+    public void SaveLastPositionBeforeEdite()
+    {
+        var transform1 = this.transform;
+        lastPosition = transform1.position;
+        triple = transform1.rotation;
+    }
+
+    public void ReturnToLastPositionTest()
+    {
+        Debug.Log("return to" + lastPosition + triple);
+        var transform1 = this.transform;
+        transform1.position = lastPosition;
+        transform1.rotation = triple;
     }
 }

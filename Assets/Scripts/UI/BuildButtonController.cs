@@ -63,6 +63,7 @@ public class BuildButtonController : MonoBehaviour
         {
             EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
             editableComponent.ReturnMaterialsWhenFinishEdit();
+            editableComponent.SaveLastPositionBeforeEdite();
             BuildingSystem.Instance.PlaceSelectedObjAndBuy();
             shopData.BuyFurniture(furnitureGlobal);
             
@@ -83,6 +84,7 @@ public class BuildButtonController : MonoBehaviour
             objPLaced.furnitureMode = PlaceableObjects.MODE.Editmode;
             EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
             editableComponent.ChangeMaterialWhenEdit();
+            editableComponent.SaveLastPositionBeforeEdite();
             if (objPLaced.isAlreadyBougth == true)
             {
                 if (objPLaced.gameObject.GetComponent<ObjectDrag>() == null)
@@ -106,16 +108,11 @@ public class BuildButtonController : MonoBehaviour
                 objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
                 editableComponent.ReturnMaterialsWhenFinishEdit();
+                editableComponent.SaveLastPositionBeforeEdite();
                 ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
                 Destroy(drag);
                 objPLaced = null;
                 gm.actualMode = GameModeController.GameActualMode.WAIT;
-                GameObject temp = GameObject.FindGameObjectWithTag("Pick");
-        
-                if (temp != null)
-                {
-                    Destroy(temp);
-                }
             }
         }
 
@@ -135,6 +132,23 @@ public class BuildButtonController : MonoBehaviour
             Destroy(objPlaced.gameObject);
         }
 
+    }
+
+    public void CancelEdit()
+    {
+        PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+        EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+        editableComponent.ReturnToLastPositionTest();
+        editableComponent.ReturnMaterialsWhenFinishEdit();
+    }
+
+    public void FindSimsPickAndDestro()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Pick");
+        if (temp != null)
+        {
+            Destroy(temp);
+        }
     }
     
 }

@@ -99,7 +99,6 @@ public class ObjectDrag : MonoBehaviour
         if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = false;
-            Debug.Log("Esta tocando");
         }
     }
 
