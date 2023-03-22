@@ -8,6 +8,7 @@ public class EditableObject : MonoBehaviour
 
     private GameObject editPanel;
     private PlaceableObjects placeableObjects;
+    [SerializeField] private GameObject objTop;
 
     [SerializeField] private MeshRenderer[] meshRenderer;
     public Material[] originalMaterials;
@@ -68,8 +69,24 @@ public class EditableObject : MonoBehaviour
                 Debug.Log("puedes editar el objeto");
                 ActivateUIComponent activate = FindObjectOfType<ActivateUIComponent>();
                 activate.ActivateThisUIComponent();
+                ActivateObjectWhenEdit();
             }
         }
+    }
+
+    private void ActivateObjectWhenEdit()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Pick");
+        
+        if (temp != null)
+        {
+            Destroy(temp);
+        }
+
+        Vector3 pos = this.transform.position + Vector3.up;
+        GameObject pick = Instantiate(objTop, pos, Quaternion.identity);
+        pick.transform.parent = gameObject.transform;
+
     }
 
     public void ChangeMaterialWhenEdit()
