@@ -85,7 +85,8 @@ public class EditableObject : MonoBehaviour
             Destroy(temp);
         }
 
-        Vector3 pos = this.transform.position + Vector3.up;
+        Vector3 add = new Vector3(0f, 1.25f, 0f);
+        Vector3 pos = this.transform.position + add;
         GameObject pick = Instantiate(objTop, pos, Quaternion.identity);
         pick.transform.parent = gameObject.transform;
     }
