@@ -32,7 +32,7 @@ public class ObjectDrag : MonoBehaviour
     
     
     #if UNITY_EDITOR || UNITY_EDITOR_WIN
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         if (placeableObjects.isTouchingGround)
         {
@@ -54,7 +54,7 @@ public class ObjectDrag : MonoBehaviour
             transform.position = BuildingSystem.Instance.SnapCoordinateToGrid(Vector3.zero);
         }
         
-    }
+    }*/
     #endif
 
     
