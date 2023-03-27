@@ -23,24 +23,20 @@ public class PermanentsObjController : MonoBehaviour
 
     [SerializeField] private SaveAndLoadManager saveManager;
 
-
-    private void Awake()
+    private IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
         actualDataInScene = FindObjectOfType<HouseConfigData>();
         actualObjHouseInScene = actualDataInScene.gameObject;
         actualHouseConfig = actualDataInScene.config;
         priceActualConfigBuy = actualHouseConfig.price;
-    }
-
-    private void Start()
-    {
+        
         saveManager.AddToPlaceReference(actualObjHouseInScene);
     }
 
     public void BuildANewConfig(GameObject newBuy)
     {
         if (newBuy.activeInHierarchy) return;//Si clicamos en un objeto ya existentes nada
-        Debug.Log("continua build new config");
 
         LatestHouseReference();//Guardamos los datos en la "ultima compra"
         actualObjHouseInScene.SetActive(false);//Desactivamos este objeto
