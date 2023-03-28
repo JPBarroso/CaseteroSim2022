@@ -13,10 +13,12 @@ public class ObjectDrag : MonoBehaviour
     private bool outOfMouse;
 
     private PlaceableObjects placeableObjects;
+    private EditableObject editableObject;
 
     private void Awake()
     {
         placeableObjects = GetComponent<PlaceableObjects>();
+        editableObject = GetComponent<EditableObject>();
     }
 
     private void Start()
@@ -99,6 +101,7 @@ public class ObjectDrag : MonoBehaviour
         if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = false;
+            editableObject.ChangeMaterialWhenCantPlace();
         }
     }
 
@@ -107,6 +110,7 @@ public class ObjectDrag : MonoBehaviour
         if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = true;
+            editableObject.ChangeMaterialWhenEdit();
         }
     }
 }

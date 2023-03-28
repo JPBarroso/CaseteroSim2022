@@ -18,6 +18,10 @@ public class FloorChanger : MonoBehaviour
     public void CambiaSuelo(Material nuevomat)
     {
         suelo.material = nuevomat;
-        ES3.Save("SueloMaterial", nuevomat, SaveAndLoadManager.FileName);
+    }
+
+    public void SaveMaterial()
+    {
+        ES3.Save("SueloMaterial", suelo.material, SaveAndLoadManager.FileName);
     }
 }

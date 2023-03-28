@@ -20,7 +20,12 @@ public class InputTextChanger : MonoBehaviour
 
     private string CasetaNameLoad()
     {
-        return ES3.Load<string>("CasetaName", SaveAndLoadManager.FileName);
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            return ES3.Load<string>("CasetaName", SaveAndLoadManager.FileName);
+        }
+ 
+        return "Caseta Feria";
     }
     
 }

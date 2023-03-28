@@ -16,6 +16,7 @@ public class EditableObject : MonoBehaviour
     [SerializeField] private MeshRenderer[] meshRenderer;
     public Material[] originalMaterials;
     [SerializeField] private Material newmaterial;
+    [SerializeField] private Material redMaterial;
 
     private void Start()
     {
@@ -96,6 +97,14 @@ public class EditableObject : MonoBehaviour
         for (int i = 0; i < meshRenderer.Length; i++)
         {
             meshRenderer[i].material = newmaterial;
+        }
+    }
+
+    public void ChangeMaterialWhenCantPlace()
+    {
+        for (int i = 0; i < meshRenderer.Length; i++)
+        {
+            meshRenderer[i].material = redMaterial;
         }
     }
 

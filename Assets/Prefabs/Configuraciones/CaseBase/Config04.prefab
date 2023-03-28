@@ -343,10 +343,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &391573377609495102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,9 +456,10 @@ GameObject:
   - component: {fileID: 391573377688065095}
   - component: {fileID: 391573377688065093}
   - component: {fileID: 391573377688065094}
+  - component: {fileID: 360960176616464620}
   m_Layer: 0
   m_Name: Paredcortinas (3)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,6 +531,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &360960176616464620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391573377688065088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -0.0000000036507846, y: -0.0000000017881346, z: 0.015000003}
 --- !u!1 &391573377697106160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,9 +1138,10 @@ GameObject:
   - component: {fileID: 391573378354777579}
   - component: {fileID: 391573378354777577}
   - component: {fileID: 391573378354777578}
+  - component: {fileID: 7368912675539465406}
   m_Layer: 0
   m_Name: Paredcortinas (2)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,6 +1213,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7368912675539465406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391573378354777572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -8.5681695e-10, y: -0.0000000017881346, z: 0.015000003}
 --- !u!1 &391573378390198725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,10 +1320,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &391573378390198731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,10 +1433,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &391573378433066708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,10 +1660,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &391573378669710928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,6 +1953,7 @@ MonoBehaviour:
     - {fileID: 391573379304910318}
     - {fileID: -4836291575876022587, guid: f3b6f6c3a49c0e9488abfae6d45f6114, type: 3}
     - {fileID: -6154023077618165236, guid: f3b6f6c3a49c0e9488abfae6d45f6114, type: 3}
+    - {fileID: 83406570992168078}
     - {fileID: 391573378113522629}
     - {fileID: 391573378113522628}
     - {fileID: 391573378113522634}
@@ -1927,6 +1964,7 @@ MonoBehaviour:
     - {fileID: 391573378354777579}
     - {fileID: 391573378354777577}
     - {fileID: 391573378354777578}
+    - {fileID: 7368912675539465406}
     - {fileID: 391573377533251657}
     - {fileID: 391573377533251656}
     - {fileID: 391573377533251662}
@@ -1935,6 +1973,7 @@ MonoBehaviour:
     - {fileID: 391573377688065095}
     - {fileID: 391573377688065093}
     - {fileID: 391573377688065094}
+    - {fileID: 360960176616464620}
     - {fileID: 391573378892879715}
     - {fileID: 391573378892879714}
     - {fileID: 391573378892879712}
@@ -1984,11 +2023,12 @@ MonoBehaviour:
     - {fileID: 391573379451486218}
     - {fileID: 391573379451486216}
     - {fileID: 391573379451486217}
+    - {fileID: 4209132989941340432}
     - {fileID: 391573378981473867}
     - {fileID: 391573378981473866}
     - {fileID: 391573378981473864}
     - {fileID: 391573378981473865}
-    _Values: 4e13f2fbec6c0b1b7f0142abb4d2913a9eb84864a529bb4e489a0c95921c5604ae37643258711c1af1dd6fbe33ade464edda1303705b1125a95cbc78865f516254c2503a5dedf435eb9472c8b9fd1a0b8071826d2f597557ffaa292d26453a512ed269705daa0700e5de17dce8496b5a78c8f914dce33251c858c44d3c38f159a7de66196b5651297a82530e71523f4a3ecfa4ef3f4f2d1205ba38b56f553c1e318e7c38507b3a2078d09a599024df75e68573f4221f6609f387e1d971f86731c071dee2d606f94509c5660fea86a329665230151eb80450f5862cd75c13926f38cc9a1f45fd9f127eb9ea5db9561f6c1d47c03cd683af06927112b026dd161da929b949de3d9068b41d94d8a361094b596644ebadaa664b1d93b1b70f4f385fa2cd05e30f694b20b85889b8eed7630b85a2a94066d48f5291052d4b8bd85963e6357b7067ed5b0fe6dc5dfacce0c545d05acc935a0707765d5773159797ac2100da2c46a40d5b68b966a575896a7a4fc017e41a5a1342133df2cebe6070a67c897ffba60c0ce93d029c260c9e6d120d23dcab804d6d391298188396db1ac929f3dd02f799dea33301211bf6394eb130e0c09c84c5262f1b47e83f258f80181b674f19c06b1b7343c7877d9177d0b44a6652769cb64eef33afe6b0b19f7ea37d3a365d8967729c3b4e584c4da3c092166376741d084a2e4bc0b3ee7b953d5b45d504a9be8dd51d0bb63ae90e9a3cd612549a1416f2c186100711c8b48320a6744c6d8761e82c76386c8099319ee04f7b242330d0ad8ec7137f98c69e9dd18f6a6d8b3dd34a8ad67f124daa72275471179fbb2858ae88dd25359adf81f215d6650ed03aec5d83cf664eb0bf60e354eb29d850ff1d56c9441cae1708e56a587226241081f88e5e74228c8f0bfdc97d41758609a8a215b80f458c1d99748bb5d10bc267c32c2c0d65373bde561a2bbe19302a6d948cfeebc32321c685acf8e9ad409fe940cebf915d79a471dcf30f2a714bca35b5e2debbf3285d5fb30d6deed0503115ba15fee8ef67f1e51773f130eb4ac72f1c3dcb349e5a2496d5e0bb95196d422d2425e4874a1f474ef2f9a380372b7468d49c0b0e1c64b515f268130eac5b34554ae1abeed040e5fd83192698fe5da15693ad3f839d50b7762606864dcd37a2972ef9ca19d6623a15820892368b4c144f0969a1599a4fb8f9982115d7c732364544423908d8452df5e75505a5e27fecdaf23743639548fddfb1c4b1f87810deb5d34cf149120b883c6868bf0faa1216180cefc9fe762e5004baa5a9ec6b266ef832bb792f715ec8e7c07fccfd070b753b2436fa9725242d019df603b8b46330bd063922106619a6aeb7b1bef6fa4df53ad09138cad3292df1188532989e0f335c500ef7cee9795fc170b41f8c9a23fdea01c9e8232a651623f3ce081e193fb3391be4b8f6bb26afa9cc89a6e0f65f58f5884896d5270f32ea241ac1b8827ddcaf01e670b66a05d024876e0f4cf4352c9425fda761d522eef34d312e5f9b672b496455e2ddcf5f8c8218bb5c951f7edf5a4656de7f243d7adb2b9bfc64cb71892042c5e79e534e3c3977d5856e817ced34ef765a0eba546ea1db06b23462104f89447cd8e5657daf951aa4084eb716a35878cfacbd34682668a8ba3db263709c8886fc2a04a306cf72c8c5f3154c4259f2a90bac31bd6eab23a88fc254c004ce55f77f38441361b671003af46f750fe39aecd0a490e33246f5a74dac33c922cd336cb6f3348514de47c01d32f7631a98b7ab2867ef603d72c4c52dec610d7ea8dd0728db2c0250eb270ea32f3aff3d59c2e663dff28a21d32e442e6e57277dc6bd3bf00074093b4703ec7102fb9253c40285af48715d4b54e5fb0a7030be42b074218e00f0c31cbaab1ddb06191f303f6895932d87ca371c869c1a79feca1545a921761d21532cc197970c70c6ae3a393534f765d4ea383e59a9868dde9645e207965cf7a9131d1569d296efbec754d96254af33c17b196ba54b88352546602edd2a683051431cb8aef331587ed803e002a00fccba871f8d7cc89cf49b523a50cc97ed6ca1db782037f885cd4ac11583b198c839a9d273
+    _Values: 4e13f2fbec6c0b1b7f0142abb4d2913a9eb84864a529bb4e489a0c95921c5604ae37643258711c1af1dd6fbe33ade464edda1303705b1125a95cbc78865f516254c2503a5dedf435eb9472c8b9fd1a0b8071826d2f597557ffaa292d26453a512ed269705daa0700e5de17dce8496b5a78c8f914dce33251c858c44d3c38f159a7de66196b5651297a82530e71523f4a3ecfa4ef3f4f2d1205ba38b56f553c1e318e7c38507b3a2078d09a599024df75e68573f4221f6609f387e1d971f86731c071dee2d606f94509c5660fea86a329665230151eb80450f5862cd75c13926f38cc9a1f45fd9f127eb9ea5db9561f6c1d47c03cd683af06927112b026dd161da929b949de3d9068b41d94d8a361094b596644ebadaa664b1d93b1b70f4f385fa2cd05e30f694b20b85889b8eed7630b85a2a94066d48f5291052d4b8bd85963e6357b7067ed5b0fe6dc5dfacce0c545d05acc935a0707765d5773159797ac2100da2c46a40d5b68b966a575896a7a4fc017e41a5a1342133df2cebe6070a67c897ffba60c0ce93d029c260c9e6d120d23dcab804d6d391298188396db1ac929f3dd02f799dea33301211bf6394eb130e0c09c84c5262f1b47e83f258f80181b674f19c06b1b7343c7877d9177d0b44a6652769cb64eef33afe6b0b19f7ea37d3a365d8967729c3b4e584c4da3c092166376741d084a2e4bc0b3ee7b953d5b45d504a9be8dd51d0bb63ae90e9a3cd612549a1416f2c186100711c8b48320a6744c6d8761e82c76386c8099319ee04f7b242330d0ad8ec7137f98c69e9dd18f6a6d8b3dd34a8ad67f124daa72275471179fbb2858ae88dd25359adf81f215d6650ed03aec5d83cf664eb0bf60e354eb29d850ff1d56c9441cae1708e56a587226241081f88e5e74228c8f0bfdc97d41758609a8a215b80f458c1d99748bb5d10bc267c32c2c0d65373bde561a2bbe19302a6d948cfeebc32321c685acf8e9ad409fe940cebf915d79a471dcf30f2a714bca35b5e2debbf3285d5fb30d6deed0503115ba15fee8ef67f1e51773f130eb4ac72f1c3dcb349e5a2496d5e0bb95196d422d2425e4874a1f474ef2f9a380372b7468d49c0b0e1c64b515f268130eac5b34554ae1abeed040e5fd83192698fe5da15693ad3f839d50b7762606864dcd37a2972ef9ca19d6623a15820892368b4c144f0969a1599a4fb8f9982115d7c732364544423908d8452df5e75505a5e27fecdaf23743639548fddfb1c4b1f87810deb5d34cf149120b883c6868bf0faa1216180cefc9fe762e5004baa5a9ec6b26e8ca0bb396b229446ef832bb792f715ec8e7c07fccfd070b753b2436fa9725242d019df603b8b46330bd063922106619a6aeb7b1bef6fa4df53ad09138cad3292df1188532989e0f335c500ef7cee9795fc170b41f8c9a2399587173e3e63232fdea01c9e8232a651623f3ce081e193fb3391be4b8f6bb26afa9cc89a6e0f65f58f5884896d5270f32ea241ac1b8827ddcaf01e670b66a05d024876e0f4cf435047c00f9afd0cb442c9425fda761d522eef34d312e5f9b672b496455e2ddcf5f8c8218bb5c951f7edf5a4656de7f243d7adb2b9bfc64cb71892042c5e79e534e3c3977d5856e817ced34ef765a0eba546ea1db06b23462104f89447cd8e5657daf951aa4084eb716a35878cfacbd34682668a8ba3db263709c8886fc2a04a306cf72c8c5f3154c4259f2a90bac31bd6eab23a88fc254c004ce55f77f38441361b671003af46f750fe39aecd0a490e33246f5a74dac33c922cd336cb6f3348514de47c01d32f7631a98b7ab2867ef603d72c4c52dec610d7ea8dd0728db2c0250eb270ea32f3aff3d59c2e663dff28a21d32e442e6e57277dc6bd3bf00074093b4703ec7102fb9253c40285af48715d4b54e5fb0a7030be42b074218e00f0c31cbaab1ddb06191f303f6895932d87ca371c869c1a79feca1545a921761d21532cc197970c70c6ae3a393534f765d4ea383e59a9868dde9645e207965cf7a9131d1569d296efbec754d96254af33c17b196ba54b88352546602edd2a683051431cb8aef331587ed803e002a00fccba871fccf55986daf4f2428d7cc89cf49b523a50cc97ed6ca1db782037f885cd4ac11583b198c839a9d273
 --- !u!1 &391573378750056949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,10 +2459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &391573379192809342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2531,9 +2573,10 @@ GameObject:
   - component: {fileID: 391573379304910319}
   - component: {fileID: 391573379304910317}
   - component: {fileID: 391573379304910318}
+  - component: {fileID: 83406570992168078}
   m_Layer: 0
   m_Name: Paredcortinas (1)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2605,6 +2648,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &83406570992168078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391573379304910312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -7.4505624e-11, y: -0.0000000036507792, z: 0.015000003}
 --- !u!1 &391573379307602028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,9 +2838,10 @@ GameObject:
   - component: {fileID: 391573379451486218}
   - component: {fileID: 391573379451486216}
   - component: {fileID: 391573379451486217}
+  - component: {fileID: 4209132989941340432}
   m_Layer: 0
   m_Name: Paredcortinas (5)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2856,6 +2913,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4209132989941340432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391573379451486219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: 8.5681695e-10, y: -0.0000000036507792, z: 0.015000003}
 --- !u!1 &391573379480585261
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class SaveAndLoadManager : MonoBehaviour
     [SerializeField] private Shop shopAvailable;
     [SerializeField] private ShopSystem shopSystem;
     [SerializeField] private PermanentsObjController pObjController;
+    [SerializeField] private FloorChanger floorChanger;
     [SerializeField] private InputTextChanger inputFileTxt;
 
     private GameObject[] allConfigInScene;
@@ -51,6 +52,7 @@ public class SaveAndLoadManager : MonoBehaviour
         SaveMoney();
         SaveConfig();
         inputFileTxt.SetCasetaString();
+        floorChanger.SaveMaterial();
     }
 
     private void SavePrefabs()

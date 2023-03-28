@@ -94,9 +94,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431814294444974410}
+  - component: {fileID: 3499345541369176443}
   m_Layer: 0
   m_Name: paredfondo_hipoly (1)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +119,19 @@ Transform:
   m_Father: {fileID: 8315861875781420418}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3499345541369176443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059978122543528944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9841397, y: 2.9071932, z: 0.09062433}
+  m_Center: {x: 0.01933229, y: -0.08051872, z: 0.0031797886}
 --- !u!1 &7541057212830992454
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,10 +477,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &8315861875585074131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,10 +840,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &8315861875748784403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,9 +953,10 @@ GameObject:
   - component: {fileID: 8315861875761983105}
   - component: {fileID: 8315861875761983107}
   - component: {fileID: 8315861875761983104}
+  - component: {fileID: 7787006646044022931}
   m_Layer: 0
   m_Name: Paredcortinas (2)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,6 +1028,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7787006646044022931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8315861875761983118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -8.5681695e-10, y: -0.0000000017881346, z: 0.015000003}
 --- !u!1 &8315861875781420419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1224,7 @@ MonoBehaviour:
     - {fileID: 8315861877241180058}
     - {fileID: -4836291575876022587, guid: f3b6f6c3a49c0e9488abfae6d45f6114, type: 3}
     - {fileID: -6154023077618165236, guid: f3b6f6c3a49c0e9488abfae6d45f6114, type: 3}
+    - {fileID: 5709459495728947192}
     - {fileID: 8315861875655120620}
     - {fileID: 8315861875655120623}
     - {fileID: 8315861875655120609}
@@ -1202,6 +1235,7 @@ MonoBehaviour:
     - {fileID: 8315861875761983105}
     - {fileID: 8315861875761983107}
     - {fileID: 8315861875761983104}
+    - {fileID: 7787006646044022931}
     - {fileID: 8315861876187276093}
     - {fileID: 8315861876187276092}
     - {fileID: 8315861876187276094}
@@ -1210,6 +1244,7 @@ MonoBehaviour:
     - {fileID: 8315861875782775586}
     - {fileID: 8315861875782775588}
     - {fileID: 8315861875782775589}
+    - {fileID: 2775826784169452727}
     - {fileID: 8315861876174408854}
     - {fileID: 8315861876174408937}
     - {fileID: 8315861876174408939}
@@ -1257,6 +1292,7 @@ MonoBehaviour:
     - {fileID: -7805965318761107941, guid: 158a054e170f59f4bb4c0e3cd91b3fa4, type: 3}
     - {fileID: 1059978122543528944}
     - {fileID: 431814294444974410}
+    - {fileID: 3499345541369176443}
     - {fileID: 7541057212830992454}
     - {fileID: 1072919462616059141}
     - {fileID: 6513695760153939730}
@@ -1281,11 +1317,12 @@ MonoBehaviour:
     - {fileID: 8315861877002700631}
     - {fileID: 8315861877002700713}
     - {fileID: 8315861877002700630}
+    - {fileID: 5195101705359665681}
     - {fileID: 8315861877334334450}
     - {fileID: 8315861877334334453}
     - {fileID: 8315861877334334455}
     - {fileID: 8315861877334334452}
-    _Values: 9f89ed8cc2cceb758f30350f7f598d009589a9e9d679b74bab109c80a498823efbd67b2d5772b5115d7e52880eda12579987dd6659ce6419c0c61f4dd0942f27b374809f7eef682427048d58262e3d7add0c18e344e31b5dbc0b212daeea2b384f2bd6995972d877ef028c5d5bbc406f775b8e3b84b31d315a225b8a1096d31131c509fb58a4206934a1d2467079b900354e49aca40f4c0249074037174e667ad59d8e20c63bc81c7bf86f268663a11f695a56c24c276d2087f94cae9c16ad1a3c581c0e07dac76fe899d763808d7654aa60cebcf7a42e030baf99ccef1a7f654b5561de80b0277194e6aae6ffd0a10682f858fce46912692a1919b674945e31e68de8d4d3672c59883f2811f9480424b05fb5093d7c7f1e42f80899cadde50088790071e8cd331524b184249224621e15f50614de55f3680ec916cb70c52465dad7757fb76dc31dd35fd110fe5b4f1e6b1652401b0521318697641eb667a516d5ea4abaaee3667dba24e83d270367691a35615972e34a1ff9a7054fd1e2d33afc17c5ebee6a8f4d82307809e21cf57d30fa0580064ba3463469c106dd17ac6408dcbdf0c2838551a613dca35b530223b2887fcce754414f8b80e0a7d369d56b831300055e04bb4c8157dbf26e00eb77941babaa671f834c65919abe5c22810ee948266f5407815234cdb3c0d0cb427494a7c411eb802c5c69b3950f6085575d2a33f5d92684dc7366a68865933d846750262ab45e702368e435f95e8d8d0e527656eb03c11c9b187bc7886df76d105938fdbf3a5aa2ff64a9a10a0e74821a2768ca2416d777d63374edcfda066ea076259f968b4d48ad2d57865b20118ca301e1b0d4c192263140278baf4872d96b17be7ecbece75a8a5088ae40afe349dd016f2e07a966211b0092aa4d260809607c1c43de90588fe978db7bc71c1a7ea3706ab0d944d1c2b0206633816e574ea66d0ebdca27276e5920458eceea5affe61308ddbc58301baa586d42d5dbf284de742aa6d528b63568280bfa0043f3c6c666b39198856db1c2296823bae5997e2e366e431500d40fc93cba1ab1cae5989b33083b2760eb580679e3abc0937b828f772a37d5b0b0c5913da62a34ac0007bb2f8886dd5d56cd4a39b6701b7f30a2473775c50ce392b41c32339afae9724c851567f00bf4a5312009820e6621e0116d478d94c7c40527623ca20f8ff1c734ab02f630184097539259e61561844dfa5120d24d88f9ecb5e53f8dce5195a22e414a4596e7eed552203aff9255e47618766261b01f79abb21641b5274d37fe03481458abcae3e240f67fd3b20881f5354a59bb4bcb0ef038616c7fa6a3fd9f5739054b408dca4e927f5e5a61b3a14467c97eddf37cb23839231e4b5d6289e3f31e2aec0e36b4a87f0b28cd6cb48e84c0281890dd256d2b14c1101d6e80f02ff67a654389b6353114d65d18ab19337b6a6675cab506f9324e0128b3da68c600e4072af24f4bfb09f2e77bf8377a28d20a74782b0a441a028b676e752117f48263a2335c11da35499e8042637eff042c26a9579a1064095f12d87cb7ba702a09dcfd6a6cb87c1c1a563e367679837e759364643691716d38536c48c6a28171d2aac77981959873a98d3c43d22e94e68f590622570cf5786a9031184c33e3bcd7af0820bf03011f040f4557aad264f541794720a8a4c7dea03fe41064802775a97f6c222674a5925a262765aeb2ddc20ad8a63a7c03657b77e7c07f1ef0828436bb012ac279e54ae026853035d2d0129ddef93b2762faa619f1aa3db426b14ba8ac9c0c4f4d7b7c420ee4547e3547a416ade203eabdab99b6a7432f315869458ac5777837c3c350627df8177ea628e4a9052606bc52c999a8ca3d0992abad9b782adf43524091ac156e5f67b6c2165ccf28d936819076c70421300101cdbfb6cf5d9f53391bc815682ce44df362e2e5b3e03a467a1be4184ce7c0747093ade32d153714616a22b35fc4ce538b3b4599fbea4a1ef8f9cf15bd485f52a5ab5b2a80ffe022d6317cb64179184ab36e72ef5ed98779488fea3346225619f62fa7f4df062b751b686f2d66015f721219c82bba4fb035db1d8cf016eb9708776a3eee2ddc9553bd02f439b74a2047d188ded3a5d5a0441f232f026ce47430d067b5fbc27144367d8b9148a588826efc44c09eca6aae4cf57d30f5536c1927723b97af6adb7b42ce15561943589e57a59e052723d5656647960fbf5dc5760f736ad76af1d20328c0026be0c1c79063
+    _Values: 9f89ed8cc2cceb758f30350f7f598d009589a9e9d679b74bab109c80a498823efbd67b2d5772b5115d7e52880eda12579987dd6659ce6419c0c61f4dd0942f27b374809f7eef682427048d58262e3d7add0c18e344e31b5dbc0b212daeea2b384f2bd6995972d877ef028c5d5bbc406f775b8e3b84b31d315a225b8a1096d31131c509fb58a4206934a1d2467079b900354e49aca40f4c0249074037174e667ad59d8e20c63bc81c7bf86f268663a11f695a56c24c276d2087f94cae9c16ad1a3c581c0e07dac76fe899d763808d7654aa60cebcf7a42e030baf99ccef1a7f654b5561de80b0277194e6aae6ffd0a10682f858fce46912692a1919b674945e31e68de8d4d3672c59883f2811f9480424b05fb5093d7c7f1e42f80899cadde50088790071e8cd331524b184249224621e15f50614de55f3680ec916cb70c52465dad7757fb76dc31dd35fd110fe5b4f1e6b1652401b0521318697641eb667a516d5ea4abaaee3667dba24e83d270367691a35615972e34a1ff9a7054fd1e2d33afc17c5ebee6a8f4d82307809e21cf57d30fa0580064ba3463469c106dd17ac6408dcbdf0c2838551a613dca35b530223b2887fcce754414f8b80e0a7d369d56b831300055e04bb4c8157dbf26e00eb77941babaa671f834c65919abe5c22810ee948266f5407815234cdb3c0d0cb427494a7c411eb802c5c69b3950f6085575d2a33f5d92684dc7366a68865933d846750262ab45e702368e435f95e8d8d0e527656eb03c11c9b187bc7886df76d105938fdbf3a5aa2ff64a9a10a0e74821a2768ca2416d777d63374edcfda066ea076259f968b4d48ad2d57865b20118ca301e1b0d4c192263140278baf4872d96b17be7ecbece75a8a5088ae40afe349dd016f2e07a966211b0092aa4d260809607c1c43de90588fe978db7bc71c1a7ea3706ab0d944d1c2b0206633816e574ea66d0ebdca27276e5920458eceea5affe61308ddbc58301baa586d42d5dbf284de742aa6d528b63568280bfa0043f3c6c666b39198856db1c2296823bae5997e2e366e431500d40fc93cba1ab1cae5989b33083b2760eb580679e3abc0937b828f772a37d5b0b0c5913da62a34ac0007bb2f8886dd5d56cd4a39b6701b7f30a2473775c50ce392b41c32339afae9724c851567f00bf4a5312009820e6621e0116d478d94c7c40527623ca20f8ff1c734ab02f077f426690ac860f630184097539259e61561844dfa5120d24d88f9ecb5e53f8dce5195a22e414a4596e7eed552203aff9255e47618766261b01f79abb21641b5274d37fe03481458abcae3e240f67fd3b20881f5354a59316f26736fe4e75dbb4bcb0ef038616c7fa6a3fd9f5739054b408dca4e927f5e5a61b3a14467c97eddf37cb23839231e4b5d6289e3f31e2aec0e36b4a87f0b28cd6cb48e84c02818206b65148fbd747790dd256d2b14c1101d6e80f02ff67a654389b6353114d65d18ab19337b6a6675cab506f9324e0128b3da68c600e4072af24f4bfb09f2e77bf8377a28d20a74782b0a441a028b676e752117f48263a2335c11da35499e8042637eff042c26a9579a1064095f12d87cb7ba702a09dcfd6a6cb87c1c1a563e367679837e759364643691716d38536c48c6a28171d2aac77981959873a98d3c43d22e94e68f590622570cf5786a9031184c33e3bcd7af0820bf03011f040f4557aad264f541794720a8a4c7dea03fe41064802775a97f6c222674a5925a262765aeb2ddc20ad8a63a7c03657b77e7c07f1ef0828436bb012ac279e54ae026853035d2d0129ddef93b2762faa619f1aa3db426b14ba8ac9c0c4f4d7b7c420ee4547e3547a416ade203eabdab99b6a7432f315869458ac5777837c3c350627df8177ea628e4a9052606bc52c999a8ca3d0992abad9b782adf43524091ac156e5f67b6c2165ccf28d936819076c70421300101cdbfb6cf5d9f53391bc815682ce44dda90a4086b753b1bf362e2e5b3e03a467a1be4184ce7c0747093ade32d153714616a22b35fc4ce538b3b4599fbea4a1ef8f9cf15bd485f52a5ab5b2a80ffe022d6317cb64179184ab36e72ef5ed98779488fea3346225619f62fa7f4df062b751b686f2d66015f721219c82bba4fb035db1d8cf016eb9708776a3eee2ddc9553bd02f439b74a2047d188ded3a5d5a0441f232f026ce47430d067b5fbc27144367d8b9148a588826efc44c09eca6aae4cf57d30f5536c1927723b97af6adb7b42ce15561943589e57340a4124b0ddfd61a59e052723d5656647960fbf5dc5760f736ad76af1d20328c0026be0c1c79063
 --- !u!1 &8315861875782599521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,9 +1417,10 @@ GameObject:
   - component: {fileID: 8315861875782775586}
   - component: {fileID: 8315861875782775588}
   - component: {fileID: 8315861875782775589}
+  - component: {fileID: 2775826784169452727}
   m_Layer: 0
   m_Name: Paredcortinas (3)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,6 +1492,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2775826784169452727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8315861875782775587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -0.0000000036507846, y: -0.0000000017881346, z: 0.015000003}
 --- !u!1 &8315861875858412215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,10 +1683,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &8315861875949100215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,10 +2211,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &8315861876225909408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,10 +2408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objTop: {fileID: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 0}
+  redMaterial: {fileID: 0}
 --- !u!114 &8315861876328170566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,9 +2802,10 @@ GameObject:
   - component: {fileID: 8315861877002700631}
   - component: {fileID: 8315861877002700713}
   - component: {fileID: 8315861877002700630}
+  - component: {fileID: 5195101705359665681}
   m_Layer: 0
   m_Name: Paredcortinas (6)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2819,6 +2877,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5195101705359665681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8315861877002700628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: 8.5681695e-10, y: -0.0000000036507792, z: 0.015000003}
 --- !u!1 &8315861877093286982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,9 +3023,10 @@ GameObject:
   - component: {fileID: 8315861877241180059}
   - component: {fileID: 8315861877241180061}
   - component: {fileID: 8315861877241180058}
+  - component: {fileID: 5709459495728947192}
   m_Layer: 0
   m_Name: Paredcortinas (1)
-  m_TagString: Untagged
+  m_TagString: Config
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3026,6 +3098,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5709459495728947192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8315861877241180056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03000001, y: 0.0010000075, z: 0.03000001}
+  m_Center: {x: -7.4505624e-11, y: -0.0000000036507792, z: 0.015000003}
 --- !u!1 &8315861877309793847
 GameObject:
   m_ObjectHideFlags: 0
