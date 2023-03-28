@@ -88,11 +88,11 @@ public class FinishPanel : MonoBehaviour
                 luxTxt.text = lujoPositivo + " " + Mathf.Abs(luxValue) + " " + puntos;
                 break;
         }
-        moneyValue = sistema.EndMoney();
+        moneyValue = Mathf.Abs(sistema.EndMoney());
         moneyText.text = totalDinero + " " + moneyValue.ToString() + ".";
         
-        artTxt.text = "El valor de arte es" + artValue.ToString();
-        luxTxt.text = "El valor de lujo es" + luxValue.ToString();
+        //artTxt.text = "El valor de arte es" + artValue.ToString();
+        //luxTxt.text = "El valor de lujo es" + luxValue.ToString();
     }
 
     private void SetCasetaName()
