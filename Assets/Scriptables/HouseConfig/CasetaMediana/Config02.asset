@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773f54a56d576d34188a3f3a4a7fe651, type: 3}
+  m_Name: Config02
+  m_EditorClassIdentifier: 
+  configName: "B\xE1sica III"
+  gameObjConfiguration: {fileID: 623478346282172179, guid: 1e4c03b05c1706447a4251d810201a27,
+    type: 3}
+  price: 150
