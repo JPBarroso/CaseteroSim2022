@@ -7,6 +7,7 @@ public class ChallengeBase : MonoBehaviour
     public bool esDesafio;
     [SerializeField] private FurnitureData[] datas;
     [SerializeField] private int artValue, luxValue,bars,chairs,tables,electronics;
+    [SerializeField] private int rojo, verde, blanco, negro, marron;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,11 @@ public class ChallengeBase : MonoBehaviour
         chairs = 0;
         tables = 0;
         electronics = 0;
+        rojo = 0;
+        verde = 0;
+        blanco = 0;
+        negro = 0;
+        marron = 0;
 
         datas = FindObjectsOfType<FurnitureData>();
 
@@ -48,6 +54,24 @@ public class ChallengeBase : MonoBehaviour
                     break;
                 case Furniture.FurnitureType.ELECTRONICS:
                     electronics++;
+                    break;
+            }
+            switch (datas[i].Data.colorEnum)
+            {
+                case Furniture.FurnitureColor.RED:
+                    rojo++;
+                    break;
+                case Furniture.FurnitureColor.GREEN:
+                    verde++;
+                    break;
+                case Furniture.FurnitureColor.WHITE:
+                    blanco++;
+                    break;
+                case Furniture.FurnitureColor.BLACK:
+                    negro++;
+                    break;
+                case Furniture.FurnitureColor.BROWN:
+                    marron++;
                     break;
             }
         }
