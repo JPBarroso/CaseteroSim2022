@@ -11,7 +11,7 @@ public class SceneTransitioner : MonoBehaviour
     void Start()
     {
         anim = fader.GetComponent<Animator>();
-        if (!fader)
+        if (!fader.activeInHierarchy)
         {
             fader.SetActive(true);
         }
