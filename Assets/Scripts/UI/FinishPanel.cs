@@ -57,6 +57,9 @@ public class FinishPanel : MonoBehaviour
     //Cuando activamos este objeto buscamos todos los objetos para setear sus valores de arte y lujo y mostrarlos en pantalla
     private void SetArtAndLuxValues()
     {
+        artValue = 0;
+        luxValue = 0;
+        moneyValue = 0;
         datas = FindObjectsOfType<FurnitureData>();
 
         for (int i = 0; i < datas.Length; i++)
