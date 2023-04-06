@@ -11,11 +11,11 @@ public class LoadScene : MonoBehaviour
         LoadSceneByName(sceneName);
     }
 
-    public void ContinueGame(string sceneName)
+    public void ContinueGame()
     {
         if (ES3.FileExists(SaveAndLoadManager.FileName))
         {
-            LoadSceneByName(sceneName);
+            LoadSceneByIndex(ES3.Load<int>("sceneIndex", SaveAndLoadManager.FileName));
         }
         
     }
@@ -23,6 +23,11 @@ public class LoadScene : MonoBehaviour
     public void LoadSceneByName(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void LoadSceneByIndex(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 
     public void QuitGameButton()

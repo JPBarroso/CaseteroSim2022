@@ -17,6 +17,7 @@ public class SaveAndLoadManager : MonoBehaviour
     [SerializeField] private InputTextChanger inputFileTxt;
 
     private GameObject[] allConfigInScene;
+    private int sceneIndex;
 
     void OnEnable()
     {
@@ -53,6 +54,13 @@ public class SaveAndLoadManager : MonoBehaviour
         SaveConfig();
         inputFileTxt.SetCasetaString();
         floorChanger.SaveMaterial();
+        SaveSceneIndex();
+    }
+
+    private void SaveSceneIndex()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        ES3.Save("sceneIndex",sceneIndex, FileName);
     }
 
     private void SavePrefabs()
