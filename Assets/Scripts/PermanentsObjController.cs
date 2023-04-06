@@ -23,9 +23,12 @@ public class PermanentsObjController : MonoBehaviour
 
     [SerializeField] private SaveAndLoadManager saveManager;
 
+    AudioManager mgr;
+
     private IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
+        mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         actualDataInScene = FindObjectOfType<HouseConfigData>();
         actualObjHouseInScene = actualDataInScene.gameObject;
         actualHouseConfig = actualDataInScene.config;
@@ -83,6 +86,7 @@ public class PermanentsObjController : MonoBehaviour
 
     private void UpdateUI()
     {
+        mgr.CompraSFX();
         ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
         shopSystem.UpdateUI();
         NotificationCenter.DefaultCenter().PostNotification(this,"PriceChange");

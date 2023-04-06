@@ -17,14 +17,19 @@ public class BuildButtonController : MonoBehaviour
     [Header("Controller Reference")] 
     private GameModeController gm;
 
+    AudioManager mgr;
+
+
     private void Start()
     {
+        mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         gm = GetComponent<GameModeController>();
         gm.actualMode = GameModeController.GameActualMode.BUILD;
     }
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
+        mgr.ButtonSFX();
         if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
         {
             GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
@@ -41,11 +46,13 @@ public class BuildButtonController : MonoBehaviour
 
     public void RotatePreviewObjButton(float value)//Rotamos este objeto
     {
+        mgr.RotacionSFX();
         BuildingSystem.Instance.RotateSelectedObj(value);
     }
 
     public void CancelSelectedObjButton()//Cancelamos compra
     {
+        mgr.ButtonSFX();
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         if (objPLaced.isAlreadyBougth == false)
         {
@@ -57,6 +64,7 @@ public class BuildButtonController : MonoBehaviour
 
     public void PlaceSelectedObjButton()//Confirmamos la compra del objeto, gastamos dinero y actualizamos la UI
     {
+        mgr.CompraSFX();
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         ObjectDrag objDrag = objPLaced.GetComponent<ObjectDrag>();
         if (objPLaced.isAlreadyBougth == false && objDrag.canBePlaced)
@@ -76,6 +84,7 @@ public class BuildButtonController : MonoBehaviour
     
     public void StartEditObj()//Este metodo va en el boton de MOVER(Es para empezar a editar). Si el objeto ya está comprado volvemos a meterle el componente drag para mover y rotar
     {
+        mgr.ButtonSFX();
         if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
         {
             gm.actualMode = GameModeController.GameActualMode.EDITING;
@@ -98,6 +107,7 @@ public class BuildButtonController : MonoBehaviour
 
     public void ConfirmEdit(GameObject panel)//Cuando pulsamos en confirmar la edicion volvemos a quitar el componente drag(Igual mas alante activo y desactivo en vez de destruir y añadir)
     {
+        mgr.CompraSFX();
         if (BuildingSystem.Instance.objToPlace != null)
         {
             PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
@@ -120,6 +130,7 @@ public class BuildButtonController : MonoBehaviour
     
     public void SoldItemAfterBuy()
     {
+        mgr.CompraSFX();
         gm.actualMode = GameModeController.GameActualMode.WAIT;
         
         if (BuildingSystem.Instance.objToPlace != null)
@@ -136,6 +147,7 @@ public class BuildButtonController : MonoBehaviour
 
     public void CancelEdit()
     {
+        mgr.ButtonSFX();
         PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
         EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
         editableComponent.ReturnToLastPositionTest();

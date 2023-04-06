@@ -9,6 +9,7 @@ TagManager:
   - Edit Panel
   - Config
   - Pick
+  - Audio
   layers:
   - Default
   - TransparentFX

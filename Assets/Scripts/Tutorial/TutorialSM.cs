@@ -10,12 +10,17 @@ public class TutorialSM : MonoBehaviour
     [SerializeField] TextMeshProUGUI texto;
     [SerializeField] GameObject chatbox;
     [SerializeField] SceneTransitioner trans;
+    AudioManager mgr;
 
     int pos=0;
     public int casetatuto;
-
+    private void Start()
+    {
+        mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public void Avanzar()
     {
+        mgr.ButtonSFX();
         pos++;
         if(pos > 0)
         {
@@ -25,8 +30,9 @@ public class TutorialSM : MonoBehaviour
             }
             
         }
-        else if(pos > chat.Count)
+        if(pos > 24)
         {
+            Debug.Log("Cambiando escena");
             trans.CambiaEscena(casetatuto);
         }
         if (!marcos[pos].activeInHierarchy)
