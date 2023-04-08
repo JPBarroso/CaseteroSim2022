@@ -6,8 +6,8 @@ public class ChallengeBase : MonoBehaviour
 {
     public bool esDesafio;
     [SerializeField] private FurnitureData[] datas;
-    [SerializeField] private int artValue, luxValue,bars,chairs,tables,electronics;
-    [SerializeField] private int rojo, verde, blanco, negro, marron;
+    public int artValue, luxValue,bars,chairs,tables,electronics;
+    public int rojo, verde, blanco, negro, marron;
 
     // Start is called before the first frame update
     void Start()
