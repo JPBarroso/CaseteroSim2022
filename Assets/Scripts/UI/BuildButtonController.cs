@@ -33,15 +33,15 @@ public class BuildButtonController : MonoBehaviour
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
-        buyObjPanel.SetActive(true);
-        mgr.ButtonSFX();
-        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT || GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
         {
             GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
         }
         
         if (gm.actualMode == GameModeController.GameActualMode.BUILD)
         {
+            buyObjPanel.SetActive(true);
+            mgr.ButtonSFX();
             furnitureGlobal = furniture;
             BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
             PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
