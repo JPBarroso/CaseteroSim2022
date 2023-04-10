@@ -14,6 +14,6 @@ public class ActivateDesactivatePanel : MonoBehaviour
 
     private void OnDisable()
     {
-        panel.SetActive(true);
+        //panel.SetActive(true);
     }
 }

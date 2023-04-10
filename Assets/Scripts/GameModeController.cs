@@ -26,4 +26,9 @@ public class GameModeController : MonoBehaviour
         actualMode = GameActualMode.WAIT;
     }
 
+    public void ChangeModeToBuild()
+    {
+        actualMode = GameActualMode.BUILD;
+    }
+
 }

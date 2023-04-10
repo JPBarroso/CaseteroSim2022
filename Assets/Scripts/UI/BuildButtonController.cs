@@ -17,6 +17,10 @@ public class BuildButtonController : MonoBehaviour
     [Header("Controller Reference")] 
     private GameModeController gm;
 
+    [Header("Canvas Reference")] 
+    [SerializeField] private GameObject buyObjPanel;
+    
+    
     AudioManager mgr;
 
 
@@ -29,6 +33,7 @@ public class BuildButtonController : MonoBehaviour
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
+        buyObjPanel.SetActive(true);
         mgr.ButtonSFX();
         if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
         {
