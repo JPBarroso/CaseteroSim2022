@@ -35,7 +35,7 @@ public class BuildButtonController : MonoBehaviour
     {
         buyObjPanel.SetActive(true);
         mgr.ButtonSFX();
-        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
+        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT || GameModeController.Instance.actualMode == GameModeController.GameActualMode.EDIT)
         {
             GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
         }
