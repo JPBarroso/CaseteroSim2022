@@ -14,10 +14,12 @@ public class TutorialSM : MonoBehaviour
 
     int pos=0;
     public int casetatuto;
+    
     private void Start()
     {
         mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
+
     public void Avanzar()
     {
         mgr.ButtonSFX();

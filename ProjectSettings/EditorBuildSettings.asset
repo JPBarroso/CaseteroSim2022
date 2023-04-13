@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 48b103890e23a2b4c86e0875f91e5bec
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 2.unity
+    guid: e5187ac08b743bc4d8637f07f96bed55
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: afa7ec98f678d14498a915446abf3fad
   - enabled: 1
@@ -14,10 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CasetaMedianaEscena.unity
     guid: d43df4539caee9840932c48f6ab2316c
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 48b103890e23a2b4c86e0875f91e5bec
-  - enabled: 1
-    path: Assets/Scenes/Tutorial 2.unity
-    guid: e5187ac08b743bc4d8637f07f96bed55
   m_configObjects: {}

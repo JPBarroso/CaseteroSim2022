@@ -43,9 +43,12 @@ public class BuildButtonController : MonoBehaviour
             buyObjPanel.SetActive(true);
             mgr.ButtonSFX();
             furnitureGlobal = furniture;
-            BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
-            PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-            saveManager.AddGameObjToList(objPLaced.gameObject);
+            if (furnitureGlobal.furniturePrice < shopData.moneyAvailable)
+            {
+                BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
+                PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+                saveManager.AddGameObjToList(objPLaced.gameObject);
+            }
         }
     }
 
