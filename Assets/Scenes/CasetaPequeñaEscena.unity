@@ -39296,6 +39296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ea04fbd6cf5e54183588d73d25e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overlayCam: {fileID: 1681878}
 --- !u!1 &1070633342
 GameObject:
   m_ObjectHideFlags: 0
