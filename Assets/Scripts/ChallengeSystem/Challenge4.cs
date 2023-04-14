@@ -24,6 +24,7 @@ public class Challenge4 : MonoBehaviour
                     panel.rates[0] = "Tienes " + chalbase.bars + " artículos de bar. ¡Genial!";
                     panel.rates[1] = "Además, puedes sentar a " + chalbase.chairs + " personas.";
                     panel.rates[2] = "Y lo más importante: tienes " + chalbase.tables + " mesas preparadas";
+                    ChallengeSave.Instance.ChallengePased(challengeIndex);
                 }
                 else
                 {

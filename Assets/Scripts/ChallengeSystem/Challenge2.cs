@@ -28,6 +28,7 @@ public class Challenge2 : MonoBehaviour
                 panel.ChallengePassed = true;
                 panel.rates[0] = "¡Todo verde! ¡Buen trabajo!";
                 panel.rates[1] = "0";
+                ChallengeSave.Instance.ChallengePased(challengeIndex);
             }
             else
             {

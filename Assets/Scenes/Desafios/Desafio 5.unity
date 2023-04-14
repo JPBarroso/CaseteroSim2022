@@ -59813,7 +59813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651ab392cc932994bb2d01587655c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopData: {fileID: 11400000, guid: 38997ed5db9a39449a475fb3bce181f9, type: 2}
+  shopData: {fileID: 11400000, guid: 955877eeb201857449fa63d361836439, type: 2}
   furnitureGlobal: {fileID: 0}
   saveManager: {fileID: 1340036815}
   buyObjPanel: {fileID: 1288289356}

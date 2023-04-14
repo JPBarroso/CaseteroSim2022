@@ -22,6 +22,7 @@ public class Challenge3 : MonoBehaviour
                 panel.ChallengePassed = true;
                 panel.rates[0] = "¡Bien hecho! ¡Has elegido estupendamente!";
                 panel.rates[1] = "Tu valor de arte está en" + chalbase.artValue + ".";
+                ChallengeSave.Instance.ChallengePased(challengeIndex);
             }
             else
             {

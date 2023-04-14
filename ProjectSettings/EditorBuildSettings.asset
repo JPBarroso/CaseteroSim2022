@@ -27,6 +27,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Desafios/DesafioSelect.unity
     guid: ca1bb38fb17ec8f4d85805562da6353a
   - enabled: 1
-    path: Assets/Scenes/Desafios/Desafio.unity
-    guid: 82348c2fcba14544dba20be881a0e73d
+    path: Assets/Scenes/Desafios/Desafio 1.unity
+    guid: 3ab5c2b1f26a4444482eaa22b0fa67cd
+  - enabled: 1
+    path: Assets/Scenes/Desafios/Desafio 2.unity
+    guid: f323de284f4223e4fb676192d29373b9
+  - enabled: 1
+    path: Assets/Scenes/Desafios/Desafio 3.unity
+    guid: b913fcb44d1ed60408c2b1406d89e61e
+  - enabled: 1
+    path: Assets/Scenes/Desafios/Desafio 4.unity
+    guid: b7bbfeb8684a23a4fa187605ec94c166
+  - enabled: 1
+    path: Assets/Scenes/Desafios/Desafio 5.unity
+    guid: d32e6125d09303840b5873a663f7d106
   m_configObjects: {}
