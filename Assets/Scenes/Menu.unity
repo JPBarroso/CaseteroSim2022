@@ -1459,7 +1459,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4571,18 +4571,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335462875}
-        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
-        m_MethodName: ChangeToNewScene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 327950935}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: ButtonSFX
@@ -4591,6 +4579,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335462875}
+        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
+        m_MethodName: CambiaEscena
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5545,7 +5545,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7573,7 +7573,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8157,7 +8157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>Creado y dise\xF1ado por:</b>\nJavier Pan\nJos\xE9 Antonio Rodr\xEDguez<br>\n<b>M\xFAsica:</b>\nSevillanas
+  m_text: "<b>Creado y dise\xF1ado por:</b>\nJavier Pan\nJose Antonio Rodr\xEDguez<br>\n<b>M\xFAsica:</b>\nSevillanas
     del Super Feriante, de El Marchena.<br>\n<b>Fuentes:</b>\n\xB7 Liberation One,
     de Red Hat.\n\xB7 MuseoModerno, de Omnibus-Type.\n\xB7 Quicksand, de Andrew Paglinawan.\n\xB7
     Rubik, de Hubert & Fischer.\n\nTodos los assets usados cumplen con las licencias
