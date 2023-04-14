@@ -18,12 +18,6 @@ public class Change3DCameraPos : MonoBehaviour
         camera3D.transform.rotation = camera3DTransform[transformIndex].rotation;
     }
 
-    private void Update()
-    {
-        Debug.Log(camera3DTransform.Length);
-        Debug.Log(transformIndex);
-    }
-
 
     //Cambio el transform de la camara a otro punto
     public void ChangeCamera3DTransform()

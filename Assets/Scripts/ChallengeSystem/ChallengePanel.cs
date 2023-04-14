@@ -37,12 +37,12 @@ public class ChallengePanel : MonoBehaviour
         if (pass)
         {
             retryButton.SetActive(false);
-            completion.text = "¡Desafío completado!";
+            completion.text = "Desafï¿½o completado!";
         }
         else
         {
             shareButton.SetActive(false);
-            completion.text = "¡Desafío fracasado!";
+            completion.text = "ï¿½Desafï¿½o fracasado!";
         }
     }
     public void DescriptionSetter(string description)
@@ -54,7 +54,7 @@ public class ChallengePanel : MonoBehaviour
     {
         for (int i = 0; i < ratingstrings.Length; i++)
         {
-            if(ratingstrings[i] == "0") //Al llamar a la función, ponemos un 0 en las frases que no necesitemos
+            if(ratingstrings[i] == "0") //Al llamar a la funciï¿½n, ponemos un 0 en las frases que no necesitemos
             {
                 ratings[i].gameObject.SetActive(false);
             }

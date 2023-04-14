@@ -26,6 +26,7 @@ public class Challenge5 : MonoBehaviour
                         panel.rates[0] = "¡Espectacular! Tu valor de lujo es " + Mathf.Abs(chalbase.luxValue) + "." ;
                         panel.rates[1] = "Puedes sentar a " + chalbase.chairs + " personas.";
                         panel.rates[2] = "Tu valor de electrónica es " + chalbase.electronics + " y el de lujo, " + Mathf.Abs(chalbase.luxValue) + ".";
+                        ChallengeSave.Instance.ChallengePased(challengeIndex);
                     }
                     else
                     {

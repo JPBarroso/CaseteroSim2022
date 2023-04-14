@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87efc8f3c200814d9f0cb1d6ef8167c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  challengeNeededToUnlock: 3
+  challengeNeededToUnlock: 4
   buttonObj: {fileID: 1715974746}
 --- !u!114 &1715974749
 MonoBehaviour:
