@@ -37239,7 +37239,7 @@ MonoBehaviour:
   texto: {fileID: 1603805102}
   chatbox: {fileID: 1502946358}
   trans: {fileID: 1357022091}
-  casetatuto: 1
+  casetatuto: 2
 --- !u!114 &1008905412
 MonoBehaviour:
   m_ObjectHideFlags: 0
