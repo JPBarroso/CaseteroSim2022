@@ -8,6 +8,8 @@ public class ChallengeBase : MonoBehaviour
     [SerializeField] private FurnitureData[] datas;
     public int artValue, luxValue,bars,chairs,tables,electronics;
     public int rojo, verde, blanco, negro, marron;
+    public Material casetaMat;
+    public bool matRojo, matVerde;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +36,20 @@ public class ChallengeBase : MonoBehaviour
         blanco = 0;
         negro = 0;
         marron = 0;
+        matRojo = false;
+        matVerde = false;
 
         datas = FindObjectsOfType<FurnitureData>();
-
+        if(casetaMat.color.r > casetaMat.color.g)
+        {
+            rojo = rojo + 50;
+            matRojo = true;
+        }
+        else if(casetaMat.color.g > casetaMat.color.r)
+        {
+            verde = verde + 50;
+            matVerde = true;
+        }
         for (int i = 0; i < datas.Length; i++)
         {
             artValue += datas[i].Data.ArtisticValue;

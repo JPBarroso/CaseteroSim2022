@@ -14,6 +14,7 @@ public class ChallengeChat : MonoBehaviour
     void Start()
     {
         StartCoroutine(aparecer());
+        texto.text = mensajes[pos];
     }
 
     // Update is called once per frame
