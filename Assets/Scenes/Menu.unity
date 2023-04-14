@@ -5526,9 +5526,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335462873}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: QuitGameButton
+      - m_Target: {fileID: 327950935}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5538,10 +5538,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 327950935}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ButtonSFX
-        m_Mode: 1
+      - m_Target: {fileID: 1335462875}
+        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
+        m_MethodName: CambiaEscena
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8456,7 +8456,7 @@ PrefabInstance:
     - target: {fileID: 4632153781703523561, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4632153781703523565, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
