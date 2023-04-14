@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class ContinueButton : MonoBehaviour
 {
 
-    [SerializeField] private GameObject continuePanel;
     private Button button;
 
     private void Awake()
@@ -25,12 +24,11 @@ public class ContinueButton : MonoBehaviour
     {
         if (!ES3.FileExists(SaveAndLoadManager.FileName))
         {
-            continuePanel.SetActive(true);
-            button.enabled = false;
+            this.gameObject.SetActive(false);
         }
         else
         {
-            continuePanel.SetActive(false);
+            this.gameObject.SetActive(true);
         }
     }
 }
