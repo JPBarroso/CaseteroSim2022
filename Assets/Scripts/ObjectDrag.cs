@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ObjectDrag : MonoBehaviour
 {
@@ -65,8 +66,9 @@ public class ObjectDrag : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            int id = touch.fingerId;
 
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(id))
             {
                 Debug.Log("touching");
                 if (placeableObjects.isTouchingGround)
@@ -76,7 +78,7 @@ public class ObjectDrag : MonoBehaviour
                 }
             }
 
-            if (touch.phase == TouchPhase.Moved)
+            if (touch.phase == TouchPhase.Moved && !EventSystem.current.IsPointerOverGameObject(id))
             {
                 Debug.Log("moving");
                 if (placeableObjects.isTouchingGround && outOfMouse)

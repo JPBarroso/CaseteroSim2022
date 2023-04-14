@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CameraZoomer : MonoBehaviour
 {
     Slider _slider;
+    [SerializeField] private Camera overlayCam;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,7 @@ public class CameraZoomer : MonoBehaviour
     public void OnValueChange()
     {
         Camera.main.orthographicSize = 3.81f + _slider.value;
+        overlayCam.orthographicSize = 3.81f + _slider.value;
     }
     public void Reset()
     {
