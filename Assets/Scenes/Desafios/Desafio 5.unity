@@ -715,7 +715,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1783820913}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27694055
+  m_Size: 0.1703799
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11378,7 +11378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1910}
+  m_AnchoredPosition: {x: 220, y: -2820}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308756625
@@ -11549,7 +11549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &308918584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12366,7 +12366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &327240272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12388,7 +12388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -454}
+  m_AnchoredPosition: {x: 220, y: -636}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327240273
@@ -13162,7 +13162,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00012207031}
-  m_SizeDelta: {x: -21.700012, y: 362}
+  m_SizeDelta: {x: -21.700012, y: 2546}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &347846082
 MonoBehaviour:
@@ -15358,7 +15358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esDesafio: 0
-  shop: {fileID: 11400000, guid: b5e454d2e9ff13c44be2597bf05027a3, type: 2}
+  shop: {fileID: 11400000, guid: 955877eeb201857449fa63d361836439, type: 2}
   moneyText: {fileID: 1435499499}
   inicial: 0
 --- !u!114 &393899292
@@ -17463,7 +17463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &429284838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17486,7 +17486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1364}
+  m_AnchoredPosition: {x: 220, y: -1910}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429284839
@@ -20238,7 +20238,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -21.700012, y: 2910}
+  m_SizeDelta: {x: -21.700012, y: 4730}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &501784486
 MonoBehaviour:
@@ -22322,7 +22322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &556524858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24753,7 +24753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -2456}
+  m_AnchoredPosition: {x: 220, y: -3366}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642397773
@@ -25224,7 +25224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &651216653
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26045,8 +26045,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920916803}
   m_HandleRect: {fileID: 1920916805}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 0.9999999
+  m_Size: 0.31653452
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26795,7 +26795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1182}
+  m_AnchoredPosition: {x: 220, y: -1728}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681272351
@@ -28792,7 +28792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &744179290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29260,7 +29260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1364}
+  m_AnchoredPosition: {x: 220, y: -2092}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754696544
@@ -30825,7 +30825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -272}
+  m_AnchoredPosition: {x: 220, y: -1182}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796039337
@@ -31865,7 +31865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &821049353
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33314,7 +33314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1728}
+  m_AnchoredPosition: {x: 220, y: -2456}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841459689
@@ -34238,7 +34238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &859804039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38613,7 +38613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &978936529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38636,7 +38636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -636}
+  m_AnchoredPosition: {x: 220, y: -1364}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978936530
@@ -43000,7 +43000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1115106504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46386,12 +46386,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210915768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d038fb1e99d2e047bf97f206dbb0a85, type: 3}
+  m_Script: {fileID: 11500000, guid: f02f61774425151408dfdf74bd2162ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chalbase: {fileID: 393899292}
   panel: {fileID: 1210915773}
-  challengeIndex: 3
+  challengeIndex: 4
 --- !u!1 &1211273348
 GameObject:
   m_ObjectHideFlags: 0
@@ -47609,7 +47609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1254908275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47937,7 +47937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1261164479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49768,7 +49768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -2274}
+  m_AnchoredPosition: {x: 220, y: -3184}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315715220
@@ -50115,7 +50115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1326207801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60071,7 +60071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1358760740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60870,7 +60870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1376572171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61795,7 +61795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1400953246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64037,7 +64037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1461024785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65854,7 +65854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1499240421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66355,7 +66355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1510898956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70674,7 +70674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1632029999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75168,7 +75168,7 @@ PrefabInstance:
     - target: {fileID: 4632153781703523561, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4632153781703523565, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
@@ -75828,7 +75828,7 @@ RectTransform:
   m_Father: {fileID: 1817797968}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7230594}
+  m_AnchorMin: {x: 0, y: 0.8296201}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -78641,7 +78641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -2092}
+  m_AnchoredPosition: {x: 220, y: -3002}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875314921
@@ -80031,7 +80031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -2820}
+  m_AnchoredPosition: {x: 220, y: -4276}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916711910
@@ -80347,8 +80347,8 @@ RectTransform:
   m_Father: {fileID: 1501018652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.9999999}
+  m_AnchorMin: {x: 0, y: 0.6834654}
+  m_AnchorMax: {x: 1, y: 0.99999994}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -80655,7 +80655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -2638}
+  m_AnchoredPosition: {x: 220, y: -3912}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925603560
@@ -81334,7 +81334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1546}
+  m_AnchoredPosition: {x: 220, y: -2274}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939721827
@@ -84150,7 +84150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2054585638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -84561,7 +84561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2058795268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -84584,7 +84584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1364}
+  m_AnchoredPosition: {x: 220, y: -1546}
   m_SizeDelta: {x: 440, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058795269
@@ -92103,9 +92103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto: {fileID: 3599027183521646513}
   mensajes:
-  - "El desaf\xEDo de hoy requiere montar un bar."
-  - Este bar debe sentar al menos <b>20 invitados.</b>
-  - Vas a necesitar barras, barriles y algo de entretenimiento.
+  - "El desaf\xEDo de hoy requiere crear una caseta para que El Marchena d\xE9 un
+    concierto."
+  - "Necesitamos sentar a cuanta m\xE1s gente, mejor."
+  - "Adem\xE1s necesitaremos la electr\xF3nica necesaria para el concierto y algunos
+    elementos de bar."
+  - "Tambi\xE9n estar\xEDa bien que la caseta tuviera un toque de distinci\xF3n."
+  - "Para este desaf\xEDo, <b>te hemos desbloqueado el cat\xE1logo completo</b>."
   - "\xA1Buena suerte!"
   panel: {fileID: 242453095}
 --- !u!95 &3599027183555017771
