@@ -16,9 +16,9 @@ public class Challenge4 : MonoBehaviour
         chalbase.Calculate();
        if(chalbase.bars >= 5)
         {
-            if(chalbase.chairs >= 20)
+            if(chalbase.chairs >= 12)
             {
-                if(chalbase.tables > 5)
+                if(chalbase.tables > 3)
                 {
                     panel.ChallengePassed = true;
                     panel.rates[0] = "Tienes " + chalbase.bars + " artículos de bar. ¡Genial!";
@@ -54,7 +54,7 @@ public class Challenge4 : MonoBehaviour
         }
         
 
-        panel.descriptiontext = "Un bar que es una barbaridad (20px).";
+        panel.descriptiontext = "Un bar que es una barbaridad (12px).";
 
         panel.rates[3] = "0";
         panel.PanelSetter();

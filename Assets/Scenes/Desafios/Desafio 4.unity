@@ -91945,7 +91945,7 @@ MonoBehaviour:
   texto: {fileID: 3599027183521646513}
   mensajes:
   - "El desaf\xEDo de hoy requiere montar un bar."
-  - Este bar debe sentar al menos <b>20 invitados.</b>
+  - Este bar debe sentar al menos <b>12 invitados.</b>
   - Vas a necesitar barras, barriles y algo de entretenimiento.
   - "\xA1Buena suerte!"
   panel: {fileID: 242453095}
