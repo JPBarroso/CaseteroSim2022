@@ -46467,6 +46467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chalbase: {fileID: 393899292}
   panel: {fileID: 1210915773}
+  challengeIndex: 3
 --- !u!114 &1210915773
 MonoBehaviour:
   m_ObjectHideFlags: 0
