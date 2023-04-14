@@ -14,18 +14,29 @@ public class Challenge2 : MonoBehaviour
     void Start()
     {
         chalbase.Calculate();
-        if(chalbase.verde >= 60 && chalbase.rojo <= 0)
+        if(chalbase.rojo > 0)
         {
-            panel.ChallengePassed = true;
-            panel.rates[0] = "¡Todo verde! ¡Buen trabajo!";
-            panel.rates[1] = "Buen trabajo con esas paredes";
+            panel.ChallengePassed = false;
+            panel.rates[0] = "¡Rojo a la vista! ¡El cliente no quiere ese color!";
+            panel.rates[1] = "¿Te has fijado en que puedes cambiar el color de las paredes?";
+
         }
         else
         {
-            panel.ChallengePassed = false;
-            panel.rates[0] = "El color es incorrecto. Podrías haberlo hecho mejor.";
-            panel.rates[1] = "Las paredes también cuentan.";
+            if (chalbase.verde >= 60)
+            {
+                panel.ChallengePassed = true;
+                panel.rates[0] = "¡Todo verde! ¡Buen trabajo!";
+                panel.rates[1] = "0";
+            }
+            else
+            {
+                panel.ChallengePassed = false;
+                panel.rates[0] = "La caseta no es lo suficientemente verde. Necesitas algo más.";
+                panel.rates[1] = "Las paredes también cuentan.";
+            }
         }
+        
 
         panel.descriptiontext = "Una caseta muy verde, ¡el rojo ni verlo!";
 
