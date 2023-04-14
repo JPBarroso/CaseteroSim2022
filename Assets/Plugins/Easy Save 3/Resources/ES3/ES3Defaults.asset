@@ -32,6 +32,7 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - GoogleMobileAds.Editor
     - NativeShare.Editor
     - NativeShare.Runtime
     - PPv2URPConverters
