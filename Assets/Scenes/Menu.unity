@@ -157,8 +157,8 @@ RectTransform:
   - {fileID: 374560248}
   - {fileID: 1154469700}
   - {fileID: 1538328452}
-  - {fileID: 691507043}
   - {fileID: 866741655}
+  - {fileID: 691507043}
   m_Father: {fileID: 1335462872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1978,7 +1978,7 @@ RectTransform:
   - {fileID: 1536372530}
   - {fileID: 2083339917}
   m_Father: {fileID: 17966087}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3022,7 +3022,7 @@ RectTransform:
   - {fileID: 1337750188}
   - {fileID: 2060502822}
   m_Father: {fileID: 17966087}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8158,9 +8158,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>Creado y dise\xF1ado por:</b>\nJavier Pan\nJose Antonio Rodr\xEDguez<br>\n<b>M\xFAsica:</b>\nSevillanas
-    del Super Feriante, de El Marchena.<br>\n<b>Fuentes:</b>\n\xB7 Liberation One,
-    de Red Hat.\n\xB7 MuseoModerno, de Omnibus-Type.\n\xB7 Quicksand, de Andrew Paglinawan.\n\xB7
-    Rubik, de Hubert & Fischer.\n\nTodos los assets usados cumplen con las licencias
+    del Super Feriante, de El Marchena.<br>\n<b>Fuentes:</b>\nLiberation One (Red
+    Hat), MuseoModerno (Omnibus-Type), Quicksand (Andrew Paglinawan), Rubik (Hubert
+    & Fischer), FreePixel (Levelb), Engebrechtre (Typodermic Fonts), Pacifico SDF
+    (Vernon Adams).\n\nTodas las fuentes y recursos usados cumplen con las licencias
     requeridas.<br>\n<align=\"center\"><b>Pulsa en el panel para cerrar.</b></align>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8188,7 +8189,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 24
   m_fontSizeBase: 30.41
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8456,7 +8457,7 @@ PrefabInstance:
     - target: {fileID: 4632153781703523561, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4632153781703523565, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
