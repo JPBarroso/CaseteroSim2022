@@ -18,6 +18,8 @@ public class EditableObject : MonoBehaviour
     [SerializeField] private Material newmaterial;
     [SerializeField] private Material redMaterial;
 
+    private SpecialObjMaterials specialObjMaterials;
+
     private void Start()
     {
         placeableObjects = GetComponent<PlaceableObjects>();
@@ -29,6 +31,8 @@ public class EditableObject : MonoBehaviour
         {
             originalMaterials[i] = meshRenderer[i].material;
         }
+        
+        FindToSpecialMaterials();
         
         if (ES3.FileExists(SaveAndLoadManager.FileName) && placeableObjects.isAlreadyBougth)
         {
@@ -98,6 +102,11 @@ public class EditableObject : MonoBehaviour
         {
             meshRenderer[i].material = newmaterial;
         }
+
+        if (specialObjMaterials != null)
+        {
+            specialObjMaterials.ChangeMaterialsToBlue();
+        }
     }
 
     public void ChangeMaterialWhenCantPlace()
@@ -105,6 +114,11 @@ public class EditableObject : MonoBehaviour
         for (int i = 0; i < meshRenderer.Length; i++)
         {
             meshRenderer[i].material = redMaterial;
+        }
+        
+        if (specialObjMaterials != null)
+        {
+            specialObjMaterials.ChangeMaterialsToRed();
         }
     }
 
@@ -114,6 +128,16 @@ public class EditableObject : MonoBehaviour
         {
             meshRenderer[i].material = originalMaterials[i];
         }
+        
+        if (specialObjMaterials != null)
+        {
+            specialObjMaterials.ChangeMaterialToOriginals();
+        }
+    }
+
+    private void FindToSpecialMaterials()
+    {
+        specialObjMaterials = GetComponentInChildren<SpecialObjMaterials>();
     }
 
     public void SaveMaterials()
@@ -130,6 +154,11 @@ public class EditableObject : MonoBehaviour
             for (int i = 0; i < meshRenderer.Length; i++)
             {
                 meshRenderer[i].material = originalMaterials[i];
+            }
+            
+            if (specialObjMaterials != null)
+            {
+                specialObjMaterials.ChangeMaterialToOriginals();
             }
         }
     }
