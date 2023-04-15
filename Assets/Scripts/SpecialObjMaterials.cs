@@ -20,6 +20,13 @@ public class SpecialObjMaterials : MonoBehaviour
         originalMaterials = allMaterials;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            ChangeMaterialToOriginals();
+        }
+    }
 
     public void ChangeMaterialsToBlue()
     {
@@ -58,8 +65,26 @@ public class SpecialObjMaterials : MonoBehaviour
 
     public void LoadThisSpecialsMaterials()
     {
-        
+        if (ES3.FileExists(SaveAndLoadManager.FileName))
+        {
+            originalMaterials = ES3.Load<Material[]>(this.gameObject.name, SaveAndLoadManager.FileName);
+            mesh.materials = originalMaterials;
+            mesh.materials = allMaterials;
+        }
     }
     
-    
+    //Me quiero morir no se que ocurre
+    private IEnumerator WaitAFrameToPutOriginalMaterials()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log("Lacorrutinafunciona");
+        ChangeMaterialToOriginals();
+    }
+
+    public void StartMaterialsCorroutine()
+    {
+        StartCoroutine(WaitAFrameToPutOriginalMaterials());
+    }
+
+
 }

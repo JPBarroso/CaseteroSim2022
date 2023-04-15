@@ -157,7 +157,9 @@ MonoBehaviour:
     - {fileID: 163680444591599360}
     - {fileID: 2100000, guid: 07984bf07fc2dd846b79d1c8ac86c632, type: 2}
     - {fileID: 2100000, guid: 5cc2814dfb4f8a240a45817ab3dc3250, type: 2}
-    _Values: 6df257b8cdc3723837df298ad43ee179450397bc1ba98406fe467876f932bf70f0e5ea187677d631bd6c98f2af63c953807fbb4de2c2031789a24679b503c069ada988e8d8d0c942366155c0e83d61122bcc858b8c6ba45e40881a28ccde323160668546d6050f43dac979884277b6646b21ef5f173d8b1e7d24f57a77728d2d1f2c5ee742b0193f2d019249dd827c7b9188d854c474a611ee5cc1460d3b5f2328a79bfc9c087929b139b54409ff4205a7790aff4ae2f1557ab3049e46c0b968e2a371851e791878f1505b75419df7139ff1817245df5c0999f1774f0d187070
+    - {fileID: 8292593936805802309}
+    - {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
+    _Values: 6df257b8cdc3723837df298ad43ee179450397bc1ba98406fe467876f932bf70f0e5ea187677d631bd6c98f2af63c953807fbb4de2c2031789a24679b503c069ada988e8d8d0c942366155c0e83d61122bcc858b8c6ba45e40881a28ccde323160668546d6050f43dac979884277b6646b21ef5f173d8b1e7d24f57a77728d2d1f2c5ee742b0193f2d019249dd827c7b9188d854c474a611ee5cc1460d3b5f2328a79bfc9c087929b139b54409ff4205a7790aff4ae2f1557ab3049e46c0b968e2a371851e791878f1505b75419df7139ff1817245df5c0999f1774f0d187070c40f336838b707240b97a844a1d84c4a
 --- !u!1001 &1550390416492065668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245,6 +247,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1550390416492065668}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8292593936805802309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821000229145595605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  allMaterials: []
+  originalMaterials: []
+  newMaterialBlue: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
+  newMaterialRed: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
 --- !u!33 &2711577328372128714 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 0b3fc8e2bdc008840aeb0241d19cafd3,

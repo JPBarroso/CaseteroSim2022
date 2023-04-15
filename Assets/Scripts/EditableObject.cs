@@ -18,7 +18,7 @@ public class EditableObject : MonoBehaviour
     [SerializeField] private Material newmaterial;
     [SerializeField] private Material redMaterial;
 
-    private SpecialObjMaterials specialObjMaterials;
+    [SerializeField] private SpecialObjMaterials specialObjMaterials;
 
     private void Start()
     {
@@ -143,12 +143,17 @@ public class EditableObject : MonoBehaviour
     public void SaveMaterials()
     {
         ES3.Save(this.gameObject.name, originalMaterials, SaveAndLoadManager.FileName);
+        if (specialObjMaterials != null)
+        {
+            specialObjMaterials.SaveThisSpecialsAndConcreteMaterials();
+        }
     }
 
     public void LoadMaterials()
     {
         if (ES3.FileExists(SaveAndLoadManager.FileName))
         {
+            Debug.Log("CargandoMaterialesbro");
             originalMaterials = ES3.Load<Material[]>(this.gameObject.name, SaveAndLoadManager.FileName);
             meshRenderer = GetComponentsInChildren<MeshRenderer>();
             for (int i = 0; i < meshRenderer.Length; i++)
@@ -156,10 +161,18 @@ public class EditableObject : MonoBehaviour
                 meshRenderer[i].material = originalMaterials[i];
             }
             
+            FindToSpecialMaterials();
+            
             if (specialObjMaterials != null)
             {
+                Debug.Log("DetectospecialsobjMaterials");
                 specialObjMaterials.ChangeMaterialToOriginals();
+                specialObjMaterials.LoadThisSpecialsMaterials();
+                specialObjMaterials.StartMaterialsCorroutine();
             }
+            
+            //Esto aqui esta feisimo pero queda poco. Guardo su ultima posicion al cargar para tener esta posicion como nueva ultima posicion
+            SaveLastPositionBeforeEdite();
         }
     }
 
@@ -172,7 +185,6 @@ public class EditableObject : MonoBehaviour
 
     public void ReturnToLastPositionTest()
     {
-        Debug.Log("return to" + lastPosition + triple);
         var transform1 = this.transform;
         transform1.position = lastPosition;
         transform1.rotation = triple;
