@@ -11,7 +11,7 @@ public class BannerAds : MonoBehaviour
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
-            CreateBannerView();
+            
         });
         
         LoadAd();
@@ -31,11 +31,11 @@ public class BannerAds : MonoBehaviour
         // If we already have a banner, destroy the old one.
         if (_bannerView != null)
         {
-            //DestroyAd();
+            DestroyAd();
         }
 
         // Create a 320x50 banner at top of the screen
-        _bannerView = new BannerView(_adUnitId, AdSize.Banner, AdPosition.Bottom);
+        _bannerView = new BannerView(_adUnitId, new AdSize(320,50), AdPosition.Bottom);
     }
     
     /// <summary>
