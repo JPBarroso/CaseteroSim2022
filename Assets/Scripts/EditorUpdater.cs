@@ -13,7 +13,7 @@ public class EditorUpdater : MonoBehaviour
     public TextMeshProUGUI precioTMP;
     public Image muebleSprite;
     Furniture.FurnitureColor colormueble;
-    public Image Base,Effect;
+    public Image Base;
 
     Color32 rojobase = new Color32(226, 79, 71, 255);
     Color32 rojoHL = new Color32(144, 47, 47, 167);
@@ -35,37 +35,37 @@ public class EditorUpdater : MonoBehaviour
         nombreTMP.text = datos.furnitureName;
         precioTMP.text = datos.furniturePrice.ToString();
         muebleSprite.sprite = datos.spriteFurniture;
-        EffectColourer();
+        //EffectColourer();
         StatsShow();
         this.enabled = false;
     }
 
-    void EffectColourer()
-    {
-        switch (colormueble)
-        {
-            case Furniture.FurnitureColor.RED:
-                Base.color = rojobase;
-                Effect.color = rojoHL;
-                break;
-            case Furniture.FurnitureColor.BROWN:
-                Base.color = marronbase;
-                Effect.color = marronHL;
-                break;
-            case Furniture.FurnitureColor.GREEN:
-                Base.color = verdebase;
-                Effect.color = verdeHL;
-                break;
-            case Furniture.FurnitureColor.WHITE:
-                Base.color = blancobase;
-                Effect.color = blancoHL;
-                break;
-            case Furniture.FurnitureColor.BLACK:
-                Base.color = negrobase;
-                Effect.color = negroHL;
-                break;
-        }
-    }
+    //void EffectColourer()
+    //{
+    //    switch (colormueble)
+    //    {
+    //        case Furniture.FurnitureColor.RED:
+    //            Base.color = rojobase;
+    //            Effect.color = rojoHL;
+    //            break;
+    //        case Furniture.FurnitureColor.BROWN:
+    //            Base.color = marronbase;
+    //            Effect.color = marronHL;
+    //            break;
+    //        case Furniture.FurnitureColor.GREEN:
+    //            Base.color = verdebase;
+    //            Effect.color = verdeHL;
+    //            break;
+    //        case Furniture.FurnitureColor.WHITE:
+    //            Base.color = blancobase;
+    //            Effect.color = blancoHL;
+    //            break;
+    //        case Furniture.FurnitureColor.BLACK:
+    //            Base.color = negrobase;
+    //            Effect.color = negroHL;
+    //            break;
+    //    }
+    //}
     void StatsShow()
     {
         lujo.SetActive(false);
