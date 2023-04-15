@@ -6,15 +6,19 @@ public class LogoSceneTransition : MonoBehaviour
 {
 
     private string sceneToLoad;
+    private int sceneIndexToLoad;
     private bool tPlayed;
+    [SerializeField] GameObject fader;
+    private Animator anim;
     
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        anim = fader.GetComponent<Animator>();
         yield return new WaitForSeconds(2f);
         SetSceneName();
-        SceneManager.LoadScene(sceneToLoad);
-
+        //SceneManager.LoadScene(sceneToLoad);
+        StartCoroutine(waiter(sceneIndexToLoad));
     }
 
     private void SetSceneName()
@@ -22,10 +26,12 @@ public class LogoSceneTransition : MonoBehaviour
         if (TutorialHasBeenPlayed())
         {
             sceneToLoad = "Menu";
+            sceneIndexToLoad = 3;
         }
         else
         {
             sceneToLoad = "Tutorial";
+            sceneIndexToLoad = 1;
         }
     }
     
@@ -42,5 +48,11 @@ public class LogoSceneTransition : MonoBehaviour
 
         return tPlayed;
     }
-    
+    IEnumerator waiter(int escena)
+    {
+        anim.SetTrigger("Fade");
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene(escena);
+    }
+
 }
