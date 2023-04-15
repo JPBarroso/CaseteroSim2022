@@ -2475,7 +2475,7 @@ PrefabInstance:
     - target: {fileID: 4632153781703523561, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4632153781703523565, guid: 2f37c5550ed36e74381f5d47fe8d68cc,
         type: 3}
@@ -5677,6 +5677,7 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 0}
   redMaterial: {fileID: 0}
+  specialObjMaterials: {fileID: 0}
 --- !u!114 &2651253529063987089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6328,6 +6329,7 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 0}
   redMaterial: {fileID: 0}
+  specialObjMaterials: {fileID: 0}
 --- !u!114 &2651253529563204117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6791,6 +6793,7 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 0}
   redMaterial: {fileID: 0}
+  specialObjMaterials: {fileID: 0}
 --- !u!1 &2651253529741421844
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,6 +7242,7 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 0}
   redMaterial: {fileID: 0}
+  specialObjMaterials: {fileID: 0}
 --- !u!1 &2651253530437465796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,6 +7369,7 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 0}
   redMaterial: {fileID: 0}
+  specialObjMaterials: {fileID: 0}
 --- !u!1 &2651253530478647356
 GameObject:
   m_ObjectHideFlags: 0
