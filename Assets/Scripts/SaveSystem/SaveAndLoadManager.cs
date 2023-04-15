@@ -153,6 +153,7 @@ public class SaveAndLoadManager : MonoBehaviour
     {
         Debug.Log("Borrando");
         ES3.DeleteFile(FileName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadScene()
