@@ -188,8 +188,19 @@ public class EditableObject : MonoBehaviour
 
     public void ReturnToLastPositionTest()
     {
+        StartCoroutine(ReturtToLastPosCorroutine());
+    }
+
+    //No puedo más solo se hacer putos crimenes lo siento espero que nunca nadie veo esto
+    private IEnumerator ReturtToLastPosCorroutine()
+    {
+        yield return new WaitForEndOfFrame();
         var transform1 = this.transform;
         transform1.position = lastPosition;
         transform1.rotation = triple;
+
+        yield return new WaitForSeconds(0.01f);
+        ReturnMaterialsWhenFinishEdit();
+        
     }
 }

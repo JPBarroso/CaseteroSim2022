@@ -19,6 +19,7 @@ public class BuildButtonController : MonoBehaviour
 
     [Header("Canvas Reference")] 
     [SerializeField] private GameObject buyObjPanel;
+    [SerializeField] private GameObject editPanel;
     
     
     AudioManager mgr;
@@ -126,6 +127,7 @@ public class BuildButtonController : MonoBehaviour
             ObjectDrag objDrag = objPLaced.GetComponent<ObjectDrag>();
             if (objPLaced.isAlreadyBougth  && objDrag.canBePlaced)
             {
+                FindSimsPickAndDestro();
                 panel.SetActive(false);
                 objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
@@ -135,16 +137,7 @@ public class BuildButtonController : MonoBehaviour
                 Destroy(drag);
                 objPLaced = null;
                 gm.actualMode = GameModeController.GameActualMode.WAIT;
-            }
-            else
-            {
-                CancelEdit();
-                EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
-                editableComponent.ReturnMaterialsWhenFinishEdit();
-                ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
-                Destroy(drag);
-                objPLaced = null;
-                gm.actualMode = GameModeController.GameActualMode.WAIT;
+                editPanel.SetActive(false);
             }
         }
 
