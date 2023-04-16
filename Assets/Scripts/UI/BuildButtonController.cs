@@ -153,6 +153,7 @@ public class BuildButtonController : MonoBehaviour
             PlaceableObjects objPlaced = BuildingSystem.Instance.objToPlace;
             FurnitureData data = objPlaced.GetComponent<FurnitureData>();
             shopData.ReturnMoney(data.Data);
+            saveManager.DeleteFromList(objPlaced.gameObject);
             ShopSystem shopSystem = FindObjectOfType<ShopSystem>();
             shopSystem.UpdateUI();
             Destroy(objPlaced.gameObject);
