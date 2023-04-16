@@ -89,7 +89,7 @@ public class SaveAndLoadManager : MonoBehaviour
 
     private void SaveConfig()
     {
-        ES3.Save("Config", prefabConfigSave, FileName);
+        ES3.Save("CasetaConfig", prefabConfigSave, FileName);
     }
 
     private void LoadPlaceableBooleans()
@@ -126,7 +126,7 @@ public class SaveAndLoadManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
             Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
-            prefabConfigSave = ES3.Load<GameObject>("Config", FileName);
+            prefabConfigSave = ES3.Load<GameObject>("CasetaConfig", FileName);
             prefabConfigSave.SetActive(true);
             LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
