@@ -33,23 +33,27 @@ public class BuildButtonController : MonoBehaviour
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto
     {
-        if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
+        if (furniture.furniturePrice <= shopData.moneyAvailable)
         {
-            GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
-        }
-        
-        if (gm.actualMode == GameModeController.GameActualMode.BUILD)
-        {
-            buyObjPanel.SetActive(true);
-            mgr.ButtonSFX();
-            furnitureGlobal = furniture;
-            if (furnitureGlobal.furniturePrice < shopData.moneyAvailable)
+            if (GameModeController.Instance.actualMode == GameModeController.GameActualMode.WAIT)
             {
-                BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
-                PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
-                saveManager.AddGameObjToList(objPLaced.gameObject);
+                GameModeController.Instance.actualMode = GameModeController.GameActualMode.BUILD;
+            }
+        
+            if (gm.actualMode == GameModeController.GameActualMode.BUILD)
+            {
+                buyObjPanel.SetActive(true);
+                mgr.ButtonSFX();
+                furnitureGlobal = furniture;
+                if (furnitureGlobal.furniturePrice <= shopData.moneyAvailable)
+                {
+                    BuildingSystem.Instance.PreviewSelectedObj(furnitureGlobal);
+                    PlaceableObjects objPLaced = BuildingSystem.Instance.objToPlace;
+                    saveManager.AddGameObjToList(objPLaced.gameObject);
+                }
             }
         }
+
     }
 
     public void RotatePreviewObjButton(float value)//Rotamos este objeto
@@ -127,6 +131,16 @@ public class BuildButtonController : MonoBehaviour
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
                 editableComponent.ReturnMaterialsWhenFinishEdit();
                 editableComponent.SaveLastPositionBeforeEdite();
+                ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
+                Destroy(drag);
+                objPLaced = null;
+                gm.actualMode = GameModeController.GameActualMode.WAIT;
+            }
+            else
+            {
+                CancelEdit();
+                EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
+                editableComponent.ReturnMaterialsWhenFinishEdit();
                 ObjectDrag drag = objPLaced.GetComponent<ObjectDrag>();
                 Destroy(drag);
                 objPLaced = null;

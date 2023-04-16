@@ -99,6 +99,8 @@ public class EditableObject : MonoBehaviour
 
     public void ChangeMaterialWhenEdit()
     {
+        Debug.Log("Metodo que pone asulito");
+        
         for (int i = 0; i < meshRenderer.Length; i++)
         {
             meshRenderer[i].material = newmaterial;

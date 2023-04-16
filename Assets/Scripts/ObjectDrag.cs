@@ -70,7 +70,6 @@ public class ObjectDrag : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(id))
             {
-                Debug.Log("touching");
                 if (placeableObjects.isTouchingGround)
                 {
                     offset = transform.position - BuildingSystem.Instance.GetTouchPosition();
@@ -80,7 +79,6 @@ public class ObjectDrag : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved && !EventSystem.current.IsPointerOverGameObject(id))
             {
-                Debug.Log("moving");
                 if (placeableObjects.isTouchingGround && outOfMouse)
                 {
                     Vector3 pos = BuildingSystem.Instance.GetTouchPosition() + offset;         
