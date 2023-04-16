@@ -49,12 +49,16 @@ public class SaveAndLoadManager : MonoBehaviour
     
     public void SaveGame()
     {
+        Debug.Log("Borrando");
+        ES3.DeleteFile(FileName);
+        Debug.Log("empieza");
         SavePrefabs();
         SaveMoney();
         SaveConfig();
         inputFileTxt.SetCasetaString();
         floorChanger.SaveMaterial();
         SaveSceneIndex();
+        Debug.Log("acaba");
     }
 
     private void SaveSceneIndex()
@@ -65,10 +69,8 @@ public class SaveAndLoadManager : MonoBehaviour
 
     private void SavePrefabs()
     {
-        Debug.Log("Estoy guardando");
         if (prefabsToSaveList.Count > 0)
         {
-            Debug.Log("guardado con exito");
             ES3.Save("furnituresInstance", prefabsToSaveList, FileName);
             
             //Guardado de materiales
