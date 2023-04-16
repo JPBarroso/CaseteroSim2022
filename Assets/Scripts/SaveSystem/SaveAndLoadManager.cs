@@ -141,10 +141,11 @@ public class SaveAndLoadManager : MonoBehaviour
 
     private void DesactiveAllConfigBeforeActive()
     {
-        allConfigInScene = GameObject.FindGameObjectsWithTag("Config");
-        foreach (var config in allConfigInScene)
+        HouseConfigData[] houseConfigDatas = FindObjectsOfType<HouseConfigData>();
+        
+        foreach (var config in houseConfigDatas)
         {
-            config.SetActive(false);
+            config.gameObject.SetActive(false);
         }
 
     }
