@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class HouseConfigData : MonoBehaviour
 {
     public HouseConfig config;
-    private float thisConfigPrice;
+    public float thisConfigPrice;
     
     
     // Start is called before the first frame update

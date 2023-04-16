@@ -6,6 +6,7 @@ using UnityEngine;
 public class FloorChanger : MonoBehaviour
 {
     public MeshRenderer suelo;
+    public PermanentsObjController objController;
 
     private void Start()
     {

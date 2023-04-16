@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 //Clase que controlla la construccion de los items fijos. Estan las cosas con serialized para hacer comprobaciones en el editor
 public class PermanentsObjController : MonoBehaviour
@@ -39,11 +40,15 @@ public class PermanentsObjController : MonoBehaviour
 
     public void BuildANewConfig(GameObject newBuy)
     {
-        if (newBuy.activeInHierarchy) return;//Si clicamos en un objeto ya existentes nada
+        HouseConfig houseConfigData = newBuy.GetComponent<HouseConfigData>().config;
+        EventTest eventTest = EventSystem.current.currentSelectedGameObject.GetComponent<EventTest>();
+
+        if (newBuy.activeInHierarchy || houseConfigData.price > shopData.moneyAvailable) return;//Si clicamos en un objeto ya existentes nada
 
         LatestHouseReference();//Guardamos los datos en la "ultima compra"
         actualObjHouseInScene.SetActive(false);//Desactivamos este objeto
         newBuy.SetActive(true);//Activamos la nueva configuracion de caseta
+        eventTest.InvokeEventIfMoney();
         //Aplicamos referencias sobre el nuevo objeto
         actualObjHouseInScene = newBuy;
         NewHouseReferences(newBuy);
@@ -78,8 +83,6 @@ public class PermanentsObjController : MonoBehaviour
 
     private void CheckForPriceDifference()
     {
-        Debug.Log("CheckPrice");
-        Debug.Log("el valor es" + actualHouseConfig.price);
         shopData.ReturnBuyConfigurationMoney(latestHouseConfig);
         shopData.BuyAConfiguration(actualHouseConfig);
     }

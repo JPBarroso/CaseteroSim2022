@@ -23311,8 +23311,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920916803}
   m_HandleRect: {fileID: 1920916805}
   m_Direction: 2
-  m_Value: 0.9999996
-  m_Size: 0.7393549
+  m_Value: 0.99999917
+  m_Size: 0.739355
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28468,6 +28468,7 @@ GameObject:
   - component: {fileID: 821049358}
   - component: {fileID: 821049357}
   - component: {fileID: 821049356}
+  - component: {fileID: 821049359}
   - component: {fileID: 821049354}
   m_Layer: 5
   m_Name: Basica II
@@ -28570,19 +28571,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &821049357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28621,6 +28609,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821049352}
   m_CullTransparentMesh: 1
+--- !u!114 &821049359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821049352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &824415859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44524,6 +44540,7 @@ GameObject:
   - component: {fileID: 1326207806}
   - component: {fileID: 1326207805}
   - component: {fileID: 1326207804}
+  - component: {fileID: 1326207807}
   - component: {fileID: 1326207802}
   m_Layer: 5
   m_Name: Lujo I
@@ -44626,19 +44643,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 42e67f2d27a4d384ca5295000a7e92d2,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1326207805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44677,6 +44681,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326207800}
   m_CullTransparentMesh: 1
+--- !u!114 &1326207807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326207800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 42e67f2d27a4d384ca5295000a7e92d2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1328572712
 GameObject:
   m_ObjectHideFlags: 0
@@ -52409,6 +52441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suelo: {fileID: 584821684}
+  objController: {fileID: 0}
 --- !u!114 &1357022089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53286,6 +53319,7 @@ GameObject:
   - component: {fileID: 1376572176}
   - component: {fileID: 1376572175}
   - component: {fileID: 1376572174}
+  - component: {fileID: 1376572177}
   - component: {fileID: 1376572172}
   m_Layer: 5
   m_Name: Basica III
@@ -53388,19 +53422,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1376572175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53439,6 +53460,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376572170}
   m_CullTransparentMesh: 1
+--- !u!114 &1376572177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376572170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1381852006
 GameObject:
   m_ObjectHideFlags: 0
@@ -53976,6 +54025,7 @@ GameObject:
   - component: {fileID: 1400953251}
   - component: {fileID: 1400953250}
   - component: {fileID: 1400953249}
+  - component: {fileID: 1400953252}
   - component: {fileID: 1400953247}
   m_Layer: 5
   m_Name: Madera I
@@ -54078,19 +54128,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 6eb1640ecfe521a42beeef72f7440d17,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1400953250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54129,6 +54166,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400953245}
   m_CullTransparentMesh: 1
+--- !u!114 &1400953252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400953245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 6eb1640ecfe521a42beeef72f7440d17,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1401519988
 GameObject:
   m_ObjectHideFlags: 0
@@ -56027,6 +56092,7 @@ GameObject:
   - component: {fileID: 1461024790}
   - component: {fileID: 1461024789}
   - component: {fileID: 1461024788}
+  - component: {fileID: 1461024791}
   - component: {fileID: 1461024786}
   m_Layer: 5
   m_Name: Madera II
@@ -56129,19 +56195,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 6eb1640ecfe521a42beeef72f7440d17,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1461024789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56180,6 +56233,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461024784}
   m_CullTransparentMesh: 1
+--- !u!114 &1461024791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461024784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 6eb1640ecfe521a42beeef72f7440d17,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1462656122
 GameObject:
   m_ObjectHideFlags: 0
@@ -56446,7 +56527,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936782497}
   m_HandleRect: {fileID: 936782496}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -70776,8 +70857,8 @@ RectTransform:
   m_Father: {fileID: 1501018652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.26064485}
-  m_AnchorMax: {x: 1, y: 0.9999999}
+  m_AnchorMin: {x: 0, y: 0.26064476}
+  m_AnchorMax: {x: 1, y: 0.99999976}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -77145,6 +77226,7 @@ GameObject:
   - component: {fileID: 2141615251}
   - component: {fileID: 2141615250}
   - component: {fileID: 2141615249}
+  - component: {fileID: 2141615253}
   - component: {fileID: 2141615252}
   m_Layer: 5
   m_Name: Basica I
@@ -77232,19 +77314,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1357022088}
-        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
-        m_MethodName: CambiaSuelo
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2141615250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77298,6 +77367,34 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 958864be1305e3545b033876315131f1, type: 2}
   nombre: {fileID: 4019093}
   precio: {fileID: 417920522}
+--- !u!114 &2141615253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141615245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c499105ae9d1d2e458ab176389e28fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventMaterial:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357022088}
+        m_TargetAssemblyTypeName: FloorChanger, Assembly-CSharp
+        m_MethodName: CambiaSuelo
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 9bdc6e39e885bc145b24f164d3771ff0,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2145295881 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6830027508067128142, guid: 5e1f1a1b3f2bece4da721a66daec4ad6,
