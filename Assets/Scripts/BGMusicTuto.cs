@@ -25,9 +25,14 @@ public class BGMusicTuto : MonoBehaviour
     {
         Scene thisscene;
         thisscene = SceneManager.GetActiveScene();
-        if(thisscene.buildIndex != 1 && thisscene.buildIndex != 2)
+        if (thisscene.buildIndex == 1 || thisscene.buildIndex == 2)
+        {
+            return;
+        }
+        else
         {
             Destroy(this.gameObject);
         }
+        
     }
 }
