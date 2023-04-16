@@ -10,12 +10,21 @@ public class LogoSceneTransition : MonoBehaviour
     private bool tPlayed;
     [SerializeField] GameObject fader;
     private Animator anim;
+    [SerializeField] GameObject tutotext;
     
     // Start is called before the first frame update
     IEnumerator Start()
     {
         anim = fader.GetComponent<Animator>();
-        yield return new WaitForSeconds(2f);
+        if (TutorialHasBeenPlayed())
+        {
+            tutotext.SetActive(false);
+        }
+        else
+        {
+            tutotext.SetActive(true);
+        }
+        yield return new WaitForSeconds(3f);
         SetSceneName();
         //SceneManager.LoadScene(sceneToLoad);
         StartCoroutine(waiter(sceneIndexToLoad));
