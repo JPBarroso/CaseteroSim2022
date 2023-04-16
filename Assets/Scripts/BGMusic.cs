@@ -26,9 +26,14 @@ public class BGMusic : MonoBehaviour
         Scene thisscene;
         thisscene = SceneManager.GetActiveScene();
         Debug.Log(thisscene.buildIndex);
-        if(thisscene.buildIndex != 3 || thisscene.buildIndex != 6)
+        if(thisscene.buildIndex == 3 || thisscene.buildIndex == 6)
+        {
+            return;
+        }
+        else
         {
             Destroy(this.gameObject);
         }
+
     }
 }
