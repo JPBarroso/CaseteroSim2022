@@ -8,20 +8,22 @@ public class BGMusicTuto : MonoBehaviour
     public static BGMusicTuto instance;
     private void Awake()
     {
-        SceneManager.activeSceneChanged += SceneDestruction;
-            if (instance != null)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                instance = this;
-                DontDestroyOnLoad(this.gameObject);
-            }
+        SceneManager.sceneLoaded += SceneDestruction;
 
-        
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+
     }
-    void SceneDestruction(Scene actual, Scene previa)
+    
+    
+    void SceneDestruction(Scene actual, LoadSceneMode mode)
     {
         Scene thisscene;
         thisscene = SceneManager.GetActiveScene();

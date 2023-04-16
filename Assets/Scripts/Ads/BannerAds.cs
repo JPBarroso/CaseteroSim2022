@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
+using UnityEngine.SceneManagement;
 
 public class BannerAds : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class BannerAds : MonoBehaviour
         
         LoadAd();
 
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
         StartCoroutine(DestroyBannerCorroutine());
     }
 
@@ -123,6 +125,12 @@ public class BannerAds : MonoBehaviour
     private IEnumerator DestroyBannerCorroutine()
     {
         yield return new WaitForSeconds(10f);
+        DestroyAd();
+    }
+
+    private void OnSceneUnloaded(Scene current)
+    {
+        Debug.Log("ad destruida");
         DestroyAd();
     }
     
