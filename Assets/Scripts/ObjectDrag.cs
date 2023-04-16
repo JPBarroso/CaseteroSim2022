@@ -31,6 +31,17 @@ public class ObjectDrag : MonoBehaviour
     {
         //Voy a testear los touch del movil
         TouchItemsPosition();
+
+        if (!placeableObjects.isTouchingGround)
+        {
+            canBePlaced = false;
+            editableObject.ChangeMaterialWhenCantPlace();
+        }
+        else if (placeableObjects.isTouchingGround && isTouchAFurniture == false)
+        {
+            canBePlaced = true;
+            editableObject.ChangeMaterialWhenEdit();
+        }
     }
     
     
@@ -96,11 +107,13 @@ public class ObjectDrag : MonoBehaviour
     
 
     public bool canBePlaced = true;
+    private bool isTouchAFurniture;
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = false;
+            isTouchAFurniture = true;
             editableObject.ChangeMaterialWhenCantPlace();
         }
     }
@@ -110,6 +123,7 @@ public class ObjectDrag : MonoBehaviour
         if (other.gameObject.CompareTag("Furniture") || other.gameObject.CompareTag("Config"))
         {
             canBePlaced = true;
+            isTouchAFurniture = false;
             editableObject.ChangeMaterialWhenEdit();
         }
     }
