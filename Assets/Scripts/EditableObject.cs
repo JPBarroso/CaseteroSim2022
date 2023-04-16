@@ -9,6 +9,7 @@ public class EditableObject : MonoBehaviour
     private GameObject editPanel;
     private PlaceableObjects placeableObjects;
     [SerializeField] private GameObject objTop;
+    [SerializeField] private Vector3 addPosArrow;
 
     private Vector3 lastPosition;
     private Quaternion triple;
@@ -90,7 +91,7 @@ public class EditableObject : MonoBehaviour
             Destroy(temp);
         }
 
-        Vector3 add = new Vector3(0f, 1.25f, 0f);
+        Vector3 add = addPosArrow;
         Vector3 pos = this.transform.position + add;
         GameObject pick = Instantiate(objTop, pos, Quaternion.identity);
         pick.transform.parent = gameObject.transform;

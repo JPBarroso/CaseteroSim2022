@@ -96,11 +96,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objTop: {fileID: 4247381100049407294, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
+  addPosArrow: {x: 0, y: 1.25, z: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
   redMaterial: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
+  specialObjMaterials: {fileID: 0}
 --- !u!114 &-5792707406633568780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +159,9 @@ MonoBehaviour:
     - {fileID: 5801574737408901406}
     - {fileID: 2100000, guid: 4345c7a6c48ff60419a2638924a30c31, type: 2}
     - {fileID: 2100000, guid: 562540bc643a2304581cf24d3afee65d, type: 2}
-    _Values: 003b8cf203c2d049e2a69d13205b135ead17789b0f572361bc1254658ff2127c97c2379747a2f4502f70f8e8d407b82d1cdb5ebfae77a257182aae161736d91079529bd5d4e5ac1ce9456ead277cbd36d49e74cacf6b6f6cd96a61432303d86f6cde551c6c55590a2327ca7f500c364bb261fcbd3c8a7f1aa5d8b64c6cac320e9b7080e20c22c7654a0855b35cd49970ca961d29bddd570b4960bd948b65732bac46b7dcd53c1645ee2fc85961eaa77a8fd87e2970f7ae78377329916cf91a29ad145fa28c7646717fd73b8d14fea909460932a7f432d05c245329892781c547
+    - {fileID: 6618853173930422974}
+    - {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
+    _Values: 003b8cf203c2d049e2a69d13205b135ead17789b0f572361bc1254658ff2127c97c2379747a2f4502f70f8e8d407b82d1cdb5ebfae77a257182aae161736d91079529bd5d4e5ac1ce9456ead277cbd36d49e74cacf6b6f6cd96a61432303d86f6cde551c6c55590a2327ca7f500c364bb261fcbd3c8a7f1aa5d8b64c6cac320e9b7080e20c22c7654a0855b35cd49970ca961d29bddd570b4960bd948b65732bac46b7dcd53c1645ee2fc85961eaa77a8fd87e2970f7ae78377329916cf91a29ad145fa28c7646717fd73b8d14fea909460932a7f432d05c245329892781c547389119e15dc3552907324671dab61515
 --- !u!1001 &5134878582782418330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,6 +253,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5134878582782418330}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6618853173930422974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5441378645535678667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  allMaterials: []
+  originalMaterials: []
+  newMaterialBlue: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
+  newMaterialRed: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
 --- !u!23 &5801574737408901406 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bf2b9ab5eaa8aef42b3a9ea846de6daf,

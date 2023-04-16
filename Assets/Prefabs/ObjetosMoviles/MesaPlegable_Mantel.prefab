@@ -96,11 +96,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objTop: {fileID: 4247381100049407294, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
+  addPosArrow: {x: 0, y: 1.25, z: 0}
   meshRenderer:
   - {fileID: 0}
   originalMaterials: []
   newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
   redMaterial: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
+  specialObjMaterials: {fileID: 0}
 --- !u!114 &1209362511167643965
 MonoBehaviour:
   m_ObjectHideFlags: 0
