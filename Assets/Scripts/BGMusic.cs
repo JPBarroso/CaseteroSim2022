@@ -32,6 +32,7 @@ public class BGMusic : MonoBehaviour
         }
         else
         {
+            SceneManager.activeSceneChanged -= SceneDestruction;
             Destroy(this.gameObject);
         }
 

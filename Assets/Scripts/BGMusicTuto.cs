@@ -5,25 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class BGMusicTuto : MonoBehaviour
 {
-    public static BGMusicTuto instance;
+    public static BGMusicTuto instance1;
     private void Awake()
     {
-        SceneManager.sceneLoaded += SceneDestruction;
+        SceneManager.activeSceneChanged += SceneDestruction;
 
-        if (instance != null)
+        if (instance1 != null)
         {
             Destroy(gameObject);
         }
         else
         {
-            instance = this;
+            instance1 = this;
             DontDestroyOnLoad(this.gameObject);
         }
 
     }
     
     
-    void SceneDestruction(Scene actual, LoadSceneMode mode)
+    void SceneDestruction(Scene actual, Scene otra)
     {
         Scene thisscene;
         thisscene = SceneManager.GetActiveScene();
@@ -33,6 +33,7 @@ public class BGMusicTuto : MonoBehaviour
         }
         else
         {
+            SceneManager.activeSceneChanged -= SceneDestruction;
             Destroy(this.gameObject);
         }
         
