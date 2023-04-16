@@ -18,6 +18,9 @@ public class ChallengePanel : MonoBehaviour
     [Header("Condiciones")]
     public string[] rates;
     [SerializeField] TextMeshProUGUI[] ratings;
+
+    [Header("Textos")] 
+    [SerializeField] private string[] desafioTxt;
    
     // Start is called before the first frame update
     void Start()
@@ -37,12 +40,12 @@ public class ChallengePanel : MonoBehaviour
         if (pass)
         {
             retryButton.SetActive(false);
-            completion.text = "Desaf�o completado!";
+            completion.text = desafioTxt[0];
         }
         else
         {
             shareButton.SetActive(false);
-            completion.text = "�Desaf�o fracasado!";
+            completion.text = desafioTxt[1];
         }
     }
     public void DescriptionSetter(string description)

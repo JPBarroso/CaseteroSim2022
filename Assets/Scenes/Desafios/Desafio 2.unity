@@ -41552,6 +41552,9 @@ MonoBehaviour:
   - {fileID: 2137031745}
   - {fileID: 292736323}
   - {fileID: 665107616}
+  desafioTxt:
+  - "\xA1Desaf\xEDo Completado!"
+  - "\xA1Desaf\xEDo Fracasado!"
 --- !u!114 &1210915774
 MonoBehaviour:
   m_ObjectHideFlags: 0
