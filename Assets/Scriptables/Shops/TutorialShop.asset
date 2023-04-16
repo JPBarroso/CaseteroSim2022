@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e38982adeb8e94a8a18611c53345cd, type: 3}
   m_Name: TutorialShop
   m_EditorClassIdentifier: 
-  maxMoney: 100
-  moneyAvailable: 100
+  maxMoney: 300
+  moneyAvailable: 300
