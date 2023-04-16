@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
@@ -15,6 +16,8 @@ public class BannerAds : MonoBehaviour
         });
         
         LoadAd();
+
+        StartCoroutine(DestroyBannerCorroutine());
     }
 
     // These ad units are configured to always serve test ads.
@@ -115,6 +118,12 @@ public class BannerAds : MonoBehaviour
             _bannerView.Destroy();
             _bannerView = null;
         }
+    }
+
+    private IEnumerator DestroyBannerCorroutine()
+    {
+        yield return new WaitForSeconds(10f);
+        DestroyAd();
     }
     
 }
