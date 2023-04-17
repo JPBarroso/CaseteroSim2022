@@ -130,6 +130,7 @@ public class SaveAndLoadManager : MonoBehaviour
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
             prefabConfigSave = ES3.Load<GameObject>("CasetaConfig", FileName);
             prefabConfigSave.SetActive(true);
+            floorChanger.LoadFloorMaterial();
             LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
             shopSystem.UpdateUI();

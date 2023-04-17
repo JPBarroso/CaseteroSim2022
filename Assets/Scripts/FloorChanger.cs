@@ -8,7 +8,7 @@ public class FloorChanger : MonoBehaviour
     public MeshRenderer suelo;
     public PermanentsObjController objController;
 
-    private void Start()
+    public void LoadFloorMaterial()
     {
         if (ES3.FileExists(SaveAndLoadManager.FileName))
         {
