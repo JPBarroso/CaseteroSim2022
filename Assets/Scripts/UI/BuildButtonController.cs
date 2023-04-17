@@ -29,7 +29,7 @@ public class BuildButtonController : MonoBehaviour
     {
         mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         gm = GetComponent<GameModeController>();
-        gm.actualMode = GameModeController.GameActualMode.BUILD;
+        //gm.actualMode = GameModeController.GameActualMode.BUILD;
     }
 
     public void BuildPreviewObjectButton(Furniture furniture)//Construimos el preview del objeto

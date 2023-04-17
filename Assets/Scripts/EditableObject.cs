@@ -126,7 +126,6 @@ public class EditableObject : MonoBehaviour
     {
         if (ES3.FileExists(SaveAndLoadManager.FileName))
         {
-            Debug.Log("CargandoMaterialesbro");
             originalMaterials = ES3.Load<Material[]>(this.gameObject.name, SaveAndLoadManager.FileName);
             meshRenderer = GetComponentsInChildren<MeshRenderer>();
             for (int i = 0; i < meshRenderer.Length; i++)

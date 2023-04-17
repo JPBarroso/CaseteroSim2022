@@ -116,6 +116,8 @@ public class PlaceableObjects : MonoBehaviour
     {
         ES3.Save("isAlreadyBougth",isAlreadyBougth, SaveAndLoadManager.FileName);
         ES3.Save("isAlreadyPlaced",placed, SaveAndLoadManager.FileName);
+        
+        Debug.Log("alreadybough is saved");
     }
 
 }
