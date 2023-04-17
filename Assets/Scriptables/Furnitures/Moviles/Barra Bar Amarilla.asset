@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Barra Bar Naranja
   typeEnum: 3
   colorEnum: 0
-  furniturePrefab: {fileID: 8647070881885082722, guid: 5d642f945f21ab540a223f6df201adc4,
+  furniturePrefab: {fileID: 5861072144280586971, guid: 76ff2fd20d8042348b60afe6540d43bd,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 6ba404346cfe84e44a4e9d432fafadbb, type: 3}
   ArtisticValue: 0
