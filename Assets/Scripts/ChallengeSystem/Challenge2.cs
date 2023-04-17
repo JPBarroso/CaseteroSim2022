@@ -23,7 +23,7 @@ public class Challenge2 : MonoBehaviour
         }
         else
         {
-            if (chalbase.verde >= 60)
+            if (chalbase.verde >= 58)
             {
                 panel.ChallengePassed = true;
                 panel.rates[0] = "¡Todo verde! ¡Buen trabajo!";
