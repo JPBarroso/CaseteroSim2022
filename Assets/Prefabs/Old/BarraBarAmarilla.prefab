@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 5134878583493897745}
   - component: {fileID: -3081161995674337116}
   - component: {fileID: -5792707406633568780}
-  - component: {fileID: -4782283866486237945}
   m_Layer: 0
-  m_Name: BarraBarRoja
+  m_Name: BarraBarAmarilla
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,8 +48,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39531493, y: 1.0847578, z: 1.6611227}
-  m_Center: {x: 0.00006234646, y: 0.55074644, z: 0.005513966}
+  m_Size: {x: 0.39531493, y: 1.0893847, z: 1.6629575}
+  m_Center: {x: 0.00006234646, y: 0.5530599, z: 0.0018045306}
 --- !u!54 &5134878583493897744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -102,7 +101,6 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
   redMaterial: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
-  specialObjMaterials: {fileID: 0}
 --- !u!114 &-5792707406633568780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,53 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35ce645337da9f4f96540e59a09bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 18d0490670e545a41afade4d1a82a4c4, type: 2}
---- !u!114 &-4782283866486237945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5134878583493897746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baff8732cd3074ef88b34f9cc487846d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabId: 7792574632078790774
-  localRefs:
-    _Keys:
-    - {fileID: 5134878583493897746}
-    - {fileID: 5134878583493897750}
-    - {fileID: 5134878583493897751}
-    - {fileID: 5134878583493897744}
-    - {fileID: 5134878583493897745}
-    - {fileID: 11500000, guid: a9e5abe73b51a5847beef0a2b1f37f81, type: 3}
-    - {fileID: -3081161995674337116}
-    - {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
-    - {fileID: 4247381100049407294, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 3904853194620504341, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 2630419368162617662, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 9044916233730627411, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
-    - {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-    - {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
-    - {fileID: -5792707406633568780}
-    - {fileID: 11500000, guid: f35ce645337da9f4f96540e59a09bf4d, type: 3}
-    - {fileID: 11400000, guid: 18d0490670e545a41afade4d1a82a4c4, type: 2}
-    - {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-    - {fileID: 21300000, guid: d748355fb351fcd4e9b22b5be6029504, type: 3}
-    - {fileID: -4782283866486237945}
-    - {fileID: 5441378645535678667}
-    - {fileID: 4668114746119862897}
-    - {fileID: 8604023964772316628}
-    - {fileID: -5495902117074765545, guid: bf2b9ab5eaa8aef42b3a9ea846de6daf, type: 3}
-    - {fileID: 5801574737408901406}
-    - {fileID: 2100000, guid: 4345c7a6c48ff60419a2638924a30c31, type: 2}
-    - {fileID: 2100000, guid: 562540bc643a2304581cf24d3afee65d, type: 2}
-    - {fileID: 6618853173930422974}
-    - {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
-    _Values: 003b8cf203c2d049e2a69d13205b135ead17789b0f572361bc1254658ff2127c97c2379747a2f4502f70f8e8d407b82d1cdb5ebfae77a257182aae161736d91079529bd5d4e5ac1ce9456ead277cbd36d49e74cacf6b6f6cd96a61432303d86f6cde551c6c55590a2327ca7f500c364bb261fcbd3c8a7f1aa5d8b64c6cac320e9b7080e20c22c7654a0855b35cd49970ca961d29bddd570b4960bd948b65732bac46b7dcd53c1645ee2fc85961eaa77a8fd87e2970f7ae78377329916cf91a29ad145fa28c7646717fd73b8d14fea909460932a7f432d05c245329892781c547389119e15dc3552907324671dab61515
+  Data: {fileID: 11400000, guid: d4bef5a68a3ee1140b7ebf93a69a4336, type: 2}
 --- !u!1001 &5134878582782418330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,7 +185,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 562540bc643a2304581cf24d3afee65d, type: 2}
+      objectReference: {fileID: 2100000, guid: 8184391055bd819408ec29097159bf1b, type: 2}
     - target: {fileID: 919132149155446097, guid: bf2b9ab5eaa8aef42b3a9ea846de6daf,
         type: 3}
       propertyPath: m_Name
@@ -253,7 +205,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5134878582782418330}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6618853173930422974
+--- !u!114 &3578555854287964117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,15 +222,3 @@ MonoBehaviour:
   originalMaterials: []
   newMaterialBlue: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
   newMaterialRed: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
---- !u!23 &5801574737408901406 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bf2b9ab5eaa8aef42b3a9ea846de6daf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5134878582782418330}
-  m_PrefabAsset: {fileID: 0}
---- !u!33 &8604023964772316628 stripped
-MeshFilter:
-  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: bf2b9ab5eaa8aef42b3a9ea846de6daf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5134878582782418330}
-  m_PrefabAsset: {fileID: 0}

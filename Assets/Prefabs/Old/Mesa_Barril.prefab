@@ -68,7 +68,6 @@ GameObject:
   - component: {fileID: 6913610839539932056}
   - component: {fileID: 6913610839539932039}
   - component: {fileID: 6913610839539932038}
-  - component: {fileID: 3977744372592462240}
   - component: {fileID: 727083254967817453}
   m_Layer: 0
   m_Name: Mesa_Barril
@@ -157,7 +156,6 @@ MonoBehaviour:
   originalMaterials: []
   newmaterial: {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
   redMaterial: {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
-  specialObjMaterials: {fileID: 0}
 --- !u!114 &6913610839539932038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,63 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 369a6c17896e27f4dade03472181d4f6, type: 2}
---- !u!114 &3977744372592462240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6913610839539932037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baff8732cd3074ef88b34f9cc487846d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabId: 2011798849021271461
-  localRefs:
-    _Keys:
-    - {fileID: 6913610839539932037}
-    - {fileID: 6913610839539932059}
-    - {fileID: 6913610839539932058}
-    - {fileID: 6913610839539932057}
-    - {fileID: 6913610839539932056}
-    - {fileID: 11500000, guid: a9e5abe73b51a5847beef0a2b1f37f81, type: 3}
-    - {fileID: 6913610839539932039}
-    - {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
-    - {fileID: 4247381100049407294, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 3904853194620504341, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 2630419368162617662, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 9044916233730627411, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
-    - {fileID: 2100000, guid: bcaaa24016dadb14d99d099d0d72e646, type: 2}
-    - {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-    - {fileID: 2100000, guid: 655a5ddf1aa105745912c97451f07d5a, type: 2}
-    - {fileID: 6913610839539932038}
-    - {fileID: 11500000, guid: f35ce645337da9f4f96540e59a09bf4d, type: 3}
-    - {fileID: 11400000, guid: 369a6c17896e27f4dade03472181d4f6, type: 2}
-    - {fileID: 11500000, guid: da04425fe91651d4b8d349b015b03727, type: 3}
-    - {fileID: 21300000, guid: 184d86656e83b9f44a59db1c51f2f05f, type: 3}
-    - {fileID: 3977744372592462240}
-    - {fileID: 5995273776168349052}
-    - {fileID: 6375035559811413958}
-    - {fileID: 7875458693708160557}
-    - {fileID: 272645794198227484}
-    - {fileID: 1552187156356524136}
-    - {fileID: 2534964839176971238, guid: 32f42e137a861d64d9d057f0359bb16d, type: 3}
-    - {fileID: 4323895272336140018}
-    - {fileID: 2100000, guid: 403372f114888a8488d838cd9311dbbb, type: 2}
-    - {fileID: 2800000, guid: 0c286328af1731349b527efa3c62cd8b, type: 3}
-    - {fileID: 2800000, guid: 602e3effbcfb79949b38e107a3ed2a7b, type: 3}
-    - {fileID: 2800000, guid: a1a670ee1df18a14e97f6d1287bfc861, type: 3}
-    - {fileID: 2800000, guid: 291e9f16b892c7341b30afe42d2175f9, type: 3}
-    - {fileID: 2800000, guid: bb024aeb36059c441b256bc1dcd43d19, type: 3}
-    - {fileID: 2100000, guid: 9c8977c7d4018184b977be7cb50aea5c, type: 2}
-    - {fileID: 2800000, guid: 360ccf6608ef9af48b57eed6de02dd87, type: 3}
-    - {fileID: 2800000, guid: 85048dc85ca07f7459d69ef0122e4ffb, type: 3}
-    - {fileID: 2800000, guid: 0e1998f941eea6a489152c3adcf84878, type: 3}
-    - {fileID: 2800000, guid: e7b0143153eaf5749a8c23a82ef8d005, type: 3}
-    - {fileID: 5483113672665434442}
-    - {fileID: 11500000, guid: 4dd24e71115fcb64c873f54a0dc6bd21, type: 3}
-    _Values: 969124077e7c806baeb8b7cb0ceb137ef2075b838174275fa9cc60b3efb44c6e56346124fc648b2cfe203c5d2d0f8070f2f2de6bb36e9d0aba83b04add335b0631f608b7c523182612fd72e536fcb132b82b6fcd67898139e2ac3770976f1c2c6c4921404c377b576e777b9ec735ce65d897ed462ac749274befa4e292b7211968a994874cbfb03285bd0e1b11c0db2892ca01c40c01bd7c02627b6f88c6295bd9f8285c5d0bf42cd752e5f5d94dab0bcbcd4fc8b65d0c6715e7c368aa82f54625c34319977ecb6242d11345e4385d03f7a297a58d610135fa70b78ab7737d5a472c199c91c4a34998b2098770524b2475408df715af463d3ef2ecf8caa9e64bb09272efae066b4446e13e3f6b89a657dc6ceb891979ba671a23a16027548010cbbed7dedf5c756f2bb6c209127a57379844d336946f642a70dcc58619674144551b0de1ae3eaa67
 --- !u!114 &727083254967817453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +194,6 @@ MonoBehaviour:
   - {fileID: 6913610839539932056}
   - {fileID: 6913610839539932039}
   - {fileID: 6913610839539932038}
-  - {fileID: 3977744372592462240}
   - {fileID: 727083254967817453}
 --- !u!1 &7875458693708160557
 GameObject:
