@@ -26,9 +26,8 @@ public class PermanentsObjController : MonoBehaviour
 
     AudioManager mgr;
 
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return new WaitForEndOfFrame();
         mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         actualDataInScene = FindObjectOfType<HouseConfigData>();
         actualObjHouseInScene = actualDataInScene.gameObject;

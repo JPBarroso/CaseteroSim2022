@@ -24,7 +24,7 @@ public class SaveAndLoadManager : MonoBehaviour
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
-    private void Awake()
+    private void Start()
     {
         if (ES3.FileExists(FileName))
         {
@@ -126,7 +126,6 @@ public class SaveAndLoadManager : MonoBehaviour
             }
             DesactiveAllConfigBeforeActive();
             yield return new WaitForEndOfFrame();
-            Debug.Log("Estoy cargando");
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
             prefabConfigSave = ES3.Load<GameObject>("CasetaConfig", FileName);
             prefabConfigSave.SetActive(true);
@@ -159,20 +158,13 @@ public class SaveAndLoadManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void LoadScene()
+    private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);    
-    }
-    
-    public void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Level Loaded");
-        //LoadGame();
+
     }
     
     void OnDisable()
     {
-        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as t$$anonymous$$s script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
     

@@ -19,6 +19,7 @@ public class GameModeController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        actualMode = GameActualMode.WAIT;
     }
 
     public void ChangeGameModeToWait()
