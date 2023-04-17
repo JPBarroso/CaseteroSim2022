@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Escenario
   typeEnum: 3
   colorEnum: 4
-  furniturePrefab: {fileID: 6904745059013160807, guid: ccd51f646a6c9ec4abbf0807a61df88e,
+  furniturePrefab: {fileID: 7825931738845553735, guid: bcd29b538eb55b24484c11d5df3c2e8f,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 1a8b60df718dc03439266235e3f598ba, type: 3}
   ArtisticValue: 3

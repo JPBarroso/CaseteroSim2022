@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dcb02a1dfaa0b4187a2a292302105c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objTop: {fileID: 0}
+  objTop: {fileID: 4247381100049407294, guid: 6e59c2ff9f46eb24793d95da4004c783, type: 3}
   addPosArrow: {x: 0, y: 0, z: 0}
   meshRenderer: []
   originalMaterials: []

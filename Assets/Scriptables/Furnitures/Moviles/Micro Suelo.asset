@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Micro Suelo
   typeEnum: 4
   colorEnum: 3
-  furniturePrefab: {fileID: 6545699917571888087, guid: dc99f38fb66811e43bed9b96e87ae864,
+  furniturePrefab: {fileID: 8668740866988270095, guid: 6059bc8c145a45c46bead5ca3a1f8f90,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 8fbb2bc24e66e4a4cb6b41b977385f3f, type: 3}
   ArtisticValue: 1

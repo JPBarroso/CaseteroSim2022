@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Guitarra
   typeEnum: 3
   colorEnum: 4
-  furniturePrefab: {fileID: 2772776716128691452, guid: 13b8e9ff7dcecd84b960c01733cb797f,
+  furniturePrefab: {fileID: 2554253018584947126, guid: 0060284f7cf35c04dba5241e9b08478f,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: e6ad2d5459a83ff408e715f6bb9e3820, type: 3}
   ArtisticValue: 2

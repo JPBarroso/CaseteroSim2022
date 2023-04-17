@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Altavoz Pie
   typeEnum: 4
   colorEnum: 3
-  furniturePrefab: {fileID: 7068575081943612825, guid: 738a7f45712df774db77851d6fd9e393,
+  furniturePrefab: {fileID: 8459728761694231924, guid: 24d49cfc78592d244bcec2d40b7b9bdf,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 00c7160cdf93de447a7abd1e6e1d5806, type: 3}
   ArtisticValue: 1
