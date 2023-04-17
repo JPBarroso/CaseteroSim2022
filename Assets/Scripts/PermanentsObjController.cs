@@ -29,7 +29,7 @@ public class PermanentsObjController : MonoBehaviour
     private IEnumerator Start()
     {
         mgr = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.15f);
         actualDataInScene = FindObjectOfType<HouseConfigData>();
         actualObjHouseInScene = actualDataInScene.gameObject;
         actualHouseConfig = actualDataInScene.config;
