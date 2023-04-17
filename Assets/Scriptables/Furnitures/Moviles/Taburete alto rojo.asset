@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Taburete alto rojo
   typeEnum: 0
   colorEnum: 0
-  furniturePrefab: {fileID: 2768071926963872635, guid: cb4f197c3900e344f88b7d7a83643779,
+  furniturePrefab: {fileID: 1916650002170049420, guid: c929236c44e025d41b616ba11b9ef2b5,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 7fb8a95b4ab336044af900f9fa745096, type: 3}
   ArtisticValue: 1

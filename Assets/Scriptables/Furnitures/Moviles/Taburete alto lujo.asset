@@ -15,7 +15,7 @@ MonoBehaviour:
   furnitureName: Taburete alto lujo
   typeEnum: 0
   colorEnum: 4
-  furniturePrefab: {fileID: 4709650731116682208, guid: 99803679c9dbd334b9132fcff6640e48,
+  furniturePrefab: {fileID: 5960339533489920337, guid: f071e9ff5b5f7d54b8b19443770fd073,
     type: 3}
   spriteFurniture: {fileID: 21300000, guid: 66fc9d94614af424e929c79347030a13, type: 3}
   ArtisticValue: 0
