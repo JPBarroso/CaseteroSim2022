@@ -93,6 +93,12 @@ public class FinishPanel : MonoBehaviour
         }
         moneyValue = Mathf.Abs(sistema.EndMoney());
         moneyText.text = totalDinero + " " + moneyValue.ToString() + ".";
+        if(moneyValue <= 10)
+        {
+            artTxt.text = "No hay datos.";
+            luxTxt.text = "No hay datos.";
+            moneyText.text = "Prueba a seguir decorando...";
+        }
         
         //artTxt.text = "El valor de arte es" + artValue.ToString();
         //luxTxt.text = "El valor de lujo es" + luxValue.ToString();
