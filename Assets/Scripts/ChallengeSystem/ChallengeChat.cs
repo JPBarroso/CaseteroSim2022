@@ -36,7 +36,7 @@ public class ChallengeChat : MonoBehaviour
     }
     IEnumerator aparecer()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         this.GetComponent<Animator>().enabled = true;
     }
 }
