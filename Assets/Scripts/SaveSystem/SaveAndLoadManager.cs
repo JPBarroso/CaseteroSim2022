@@ -24,12 +24,17 @@ public class SaveAndLoadManager : MonoBehaviour
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
-    private void Start()
+    private void Awake()
     {
         if (ES3.FileExists(FileName))
         {
             LoadGame();
         }
+    }
+
+    private void Start()
+    {
+
     }
 
     public void AddGameObjToList(GameObject prefabToAdd)
@@ -49,7 +54,6 @@ public class SaveAndLoadManager : MonoBehaviour
     
     public void SaveGame()
     {
-        Debug.Log("Borrando");
         ES3.DeleteFile(FileName);
         Debug.Log("empieza");
         SavePrefabs();
@@ -100,8 +104,8 @@ public class SaveAndLoadManager : MonoBehaviour
         {
             PlaceableObjects p = prefabsToSaveList[i].GetComponent<PlaceableObjects>();
             EditableObject e = prefabsToSaveList[i].GetComponent<EditableObject>();
-            p.placed = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
-            p.isAlreadyBougth = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
+            p.isAlreadyBougth = ES3.Load<bool>("isAlreadyBougth", SaveAndLoadManager.FileName);
+            p.placed = ES3.Load<bool>("isAlreadyPlaced", SaveAndLoadManager.FileName);
             Debug.Log("Cargo cosas y esta comprado?" + p.isAlreadyBougth);
             e.LoadMaterials();
         }
@@ -128,10 +132,10 @@ public class SaveAndLoadManager : MonoBehaviour
             DesactiveAllConfigBeforeActive();
             yield return new WaitForEndOfFrame();
             prefabsToSaveList = ES3.Load("furnituresInstance", FileName, new List<GameObject>());
+            LoadPlaceableBooleans();
             prefabConfigSave = ES3.Load<GameObject>("CasetaConfig", FileName);
             prefabConfigSave.SetActive(true);
             floorChanger.LoadFloorMaterial();
-            LoadPlaceableBooleans();
             shopAvailable.LoadAmountOfMoney();
             shopSystem.UpdateUI();
             pObjController.FindForActualHouseReferences();

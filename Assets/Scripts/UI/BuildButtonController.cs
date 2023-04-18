@@ -130,6 +130,7 @@ public class BuildButtonController : MonoBehaviour
                 FindSimsPickAndDestro();
                 panel.SetActive(false);
                 objPLaced.furnitureMode = PlaceableObjects.MODE.Putmode;
+                objPLaced.placed = true;
                 EditableObject editableComponent = objPLaced.GetComponent<EditableObject>();
                 editableComponent.ReturnMaterialsWhenFinishEdit();
                 editableComponent.SaveLastPositionBeforeEdite();

@@ -34,7 +34,6 @@ public class TutorialSM : MonoBehaviour
         }
         if(pos > 24)
         {
-            Debug.Log("Cambiando escena");
             trans.CambiaEscena(casetatuto);
         }
         if (!marcos[pos].activeInHierarchy)

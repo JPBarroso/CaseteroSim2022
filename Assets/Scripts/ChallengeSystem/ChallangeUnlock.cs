@@ -20,8 +20,7 @@ public class ChallangeUnlock : MonoBehaviour
         if (ES3.FileExists(ChallengeSave.Instance.ChallengeData))
         {
             int challengeLastIndex = ES3.Load<int>("ChallengeIndex", ChallengeSave.Instance.ChallengeData);
-            Debug.Log(challengeLastIndex);
-        
+
             if (challengeNeededToUnlock <= challengeLastIndex)
             {
                 buttonObj.SetActive(true);

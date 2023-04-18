@@ -24,7 +24,6 @@ public class ChallengeBase : MonoBehaviour
     }
     public void Calculate()
     {
-        Debug.Log("Se calcula");
         artValue = 0;
         luxValue = 0;
         bars = 0;

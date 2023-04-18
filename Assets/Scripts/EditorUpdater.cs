@@ -31,7 +31,6 @@ public class EditorUpdater : MonoBehaviour
     {
         this.transform.name = datos.name;
         colormueble = datos.colorEnum;
-        Debug.Log("Ejecutando cambios...");
         nombreTMP.text = datos.furnitureName;
         precioTMP.text = datos.furniturePrice.ToString();
         muebleSprite.sprite = datos.spriteFurniture;

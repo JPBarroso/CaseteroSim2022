@@ -10,7 +10,6 @@ public class EventTest : MonoBehaviour
 
     public void InvokeEventIfMoney()
     {
-        Debug.Log("lanzando el evento segun el boton");
         eventMaterial.Invoke();
     }
     
