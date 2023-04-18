@@ -36859,8 +36859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 1357022078}
-  sujeto: Casetero Simulator 2023
-  mensaje: 'Mira mi caseta de #CaseteroSimulator2023:'
+  sujeto: Casetero Simulator 23
+  mensaje: Mira mi caseta de #CaseteroSimulator23, disponible en https://play.google.com/store/apps/details?id=com.LoFregaoGames.Casetero23
   rtex: {fileID: 8400000, guid: e905572ed1f827b47b4ba43112876282, type: 2}
 --- !u!1 &1068280462
 GameObject:
